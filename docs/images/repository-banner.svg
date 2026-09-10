@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="360" viewBox="0 0 1280 360" role="img" aria-labelledby="title desc">
+  <title id="title">Specter — Your shell. Your colors. Your flow.</title>
+  <desc id="desc">Original typographic Specter identity on a warm paper surface with an abstract terminal cursor.</desc>
+  <rect width="1280" height="360" rx="18" fill="#F7F7F2"/>
+  <path d="M0 292 Q240 200 480 280 T960 260 T1280 280 V360 H0Z" fill="#EEEFE7"/>
+  <circle cx="1110" cy="90" r="140" fill="#E3E8DC"/>
+  <g fill="none" stroke="#3D5E46" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M1000 135 l48 42 -48 42"/><path d="M1080 219 h58"/>
+  </g>
+  <text x="76" y="80" fill="#3D5E46" font-family="-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif" font-size="16" letter-spacing="4">NATIVE MACOS TERMINAL</text>
+  <text x="70" y="182" fill="#282A24" font-family="-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif" font-size="94" font-weight="500" letter-spacing="-4">Specter</text>
+  <text x="76" y="235" fill="#67695F" font-family="-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif" font-size="27">Your shell. Your colors. Your flow.</text>
+  <text x="76" y="308" fill="#67695F" font-family="-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif" font-size="15" letter-spacing="2">SWIFT  /  METAL  /  REAL PTYS</text>
+</svg>

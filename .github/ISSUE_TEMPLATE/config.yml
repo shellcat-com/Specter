@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report a security vulnerability privately
+    url: https://github.com/shellcat-com/Specter/security/advisories/new
+    about: Use private reporting for sensitive security findings.
+  - name: Read the Specter handbook
+    url: https://github.com/shellcat-com/Specter/blob/main/docs/handbook.md
+    about: Build instructions, themes, sessions, and compatibility.

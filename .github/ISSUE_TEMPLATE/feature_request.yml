@@ -1,0 +1,18 @@
+name: Feature request
+description: Suggest a terminal capability or native workflow improvement.
+title: "feature: "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What would this help you do?
+      description: Describe the workflow or compatibility gap.
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Proposed behavior
+      description: Include alternatives or primary protocol documentation if relevant.
+    validations:
+      required: true

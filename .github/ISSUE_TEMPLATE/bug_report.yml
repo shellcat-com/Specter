@@ -1,0 +1,32 @@
+name: Bug report
+description: Report a reproducible problem with Specter.
+title: "bug: "
+body:
+  - type: markdown
+    attributes:
+      value: Please use synthetic terminal content. Never include credentials, private commands, or real session transcripts. See SECURITY.md for security reports.
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: macOS version, Mac architecture, Specter commit, shell, and affected terminal program.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Include a minimal command or escaped byte fixture when possible.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Optional evidence
+      description: Screenshots or logs containing synthetic content only.

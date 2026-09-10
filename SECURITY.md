@@ -12,4 +12,4 @@ No terminal-content logs, telemetry, cloud connections or output persistence are
 
 The helper detects application-side socket closure, hangs up owned terminal process groups and reaps its shell. Processes that deliberately detach into another session are outside this lifecycle boundary. Restoration starts fresh shells; it never replays commands or restores process memory.
 
-Report suspected vulnerabilities privately to the repository maintainers. Include a minimal synthetic byte fixture, expected behavior, observed behavior, OS version and revision. Do not include credentials, clipboard contents or real session transcripts. A public security-reporting address has not yet been established; do not invent one or publish sensitive reports in issues.
+Report suspected vulnerabilities through [GitHub private vulnerability reporting](https://github.com/shellcat-com/Specter/security/advisories/new). Include a minimal synthetic byte fixture, expected behavior, observed behavior, OS version and revision. Do not include credentials, clipboard contents or real session transcripts. Do not publish sensitive reports in public issues.
