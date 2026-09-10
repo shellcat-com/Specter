@@ -1,0 +1,7 @@
+.build/
+.artifacts/
+DerivedData/
+.worktrees/
+*.xcuserstate
+xcuserdata/
+.DS_Store
