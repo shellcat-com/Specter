@@ -1,0 +1,48 @@
+name: Specter
+options:
+  deploymentTarget:
+    macOS: '14.0'
+packages:
+  SpecterModules:
+    path: .
+settings:
+  base:
+    SWIFT_VERSION: '6.0'
+    MACOSX_DEPLOYMENT_TARGET: '14.0'
+    ARCHS: arm64
+    CODE_SIGN_IDENTITY: '-'
+    CODE_SIGN_STYLE: Manual
+    ENABLE_APP_SANDBOX: NO
+    PRODUCT_BUNDLE_IDENTIFIER: app.specter.terminal
+    GENERATE_INFOPLIST_FILE: YES
+    INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.developer-tools
+    MARKETING_VERSION: 0.1.0
+    CURRENT_PROJECT_VERSION: 1
+targets:
+  Specter:
+    type: application
+    platform: macOS
+    sources:
+      - Sources/SpecterApp
+    dependencies:
+      - package: SpecterModules
+        product: TerminalUI
+    postBuildScripts:
+      - name: Build and embed PTY helper and terminfo
+        basedOnDependencyAnalysis: false
+        script: |
+          set -eu
+          /usr/bin/xcrun clang -O2 -Wall -Wextra -mmacosx-version-min=14.0 "$SRCROOT/Sources/PTYLauncher/main.c" -o "$TARGET_BUILD_DIR/$EXECUTABLE_FOLDER_PATH/SpecterPTY"
+          mkdir -p "$TARGET_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/terminfo"
+          /usr/bin/tic -x -o "$TARGET_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/terminfo" "$SRCROOT/Resources/specter.terminfo"
+          /usr/bin/xattr -cr "$TARGET_BUILD_DIR/$WRAPPER_NAME"
+          /usr/bin/codesign --force --sign - "$TARGET_BUILD_DIR/$EXECUTABLE_FOLDER_PATH/SpecterPTY"
+schemes:
+  Specter:
+    build:
+      targets:
+        Specter: all
+    run:
+      config: Debug
+    archive:
+      config: Release

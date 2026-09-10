@@ -1,0 +1,2 @@
+# Preserve upstream Unicode test fixtures verbatim.
+Tests/TerminalCoreTests/Fixtures/*.txt -whitespace
