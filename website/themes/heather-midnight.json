@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "heather-midnight",
+  "name": "Heather Midnight",
+  "background": "#120F17",
+  "foreground": "#E2DEE7",
+  "isDark": true,
+  "cursor": "#C2A8E6",
+  "selection": "#423654",
+  "palette": [
+    "#29313B",
+    "#D59A90",
+    "#90D5A5",
+    "#D5C890",
+    "#90A3D5",
+    "#C890D5",
+    "#90D1D5",
+    "#D5DBE3",
+    "#77828F",
+    "#E5B6AE",
+    "#AEE5BF",
+    "#E5DAAE",
+    "#AEBDE5",
+    "#DAAEE5",
+    "#AEE2E5",
+    "#F4F6FA"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "celadon-nocturne",
+  "name": "Celadon Nocturne",
+  "background": "#1B2516",
+  "foreground": "#E1E7DE",
+  "isDark": true,
+  "cursor": "#BDE6A8",
+  "selection": "#405436",
+  "palette": [
+    "#29313B",
+    "#DA8B8F",
+    "#8BDA94",
+    "#DABC8B",
+    "#8BB0DA",
+    "#BC8BDA",
+    "#8BDAD0",
+    "#D5DBE3",
+    "#77828F",
+    "#E9AAAE",
+    "#AAE9B2",
+    "#E9D1AA",
+    "#AAC7E9",
+    "#D1AAE9",
+    "#AAE9E0",
+    "#F4F6FA"
+  ]
+}

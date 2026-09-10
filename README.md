@@ -1,12 +1,14 @@
 <div align="center">
 
-# S P E C T E R
+![Specter — Your shell. Your colors. Your flow.](docs/images/repository-banner.svg)
 
 **A native macOS terminal, drawn with Metal.**
 
-Swift · AppKit · Core Text · POSIX PTYs
+<code>macOS 14+</code> · <code>Apple silicon</code> · <code>Swift 6</code> · <code>MIT</code>
 
-Development preview · macOS 14+ target · Apple silicon · MIT
+[Build & run](#build-and-run) · [Handbook](docs/handbook.md) · [Architecture](#architecture) · [Compatibility](docs/compatibility.md) · [Contribute](CONTRIBUTING.md)
+
+**Development preview** — real shells, original themes, native workspaces.
 
 </div>
 
@@ -22,7 +24,8 @@ This is a working development build, not a claim of complete terminal compatibil
 - Primary and alternate screens, scroll regions, text attributes, ANSI/256/RGB colors, Unicode 17 grapheme segmentation and emoji rendering.
 - Bounded scrollback, primary-screen reflow, selection, copy/paste and search across wrapped lines.
 - Native windows and tabs, horizontal or vertical split panes, profiles, fonts and cursor styles.
-- Ten original themes and validated JSON import/export.
+- 130 original themes, a searchable native gallery with favorites, and validated JSON import/export.
+- A searchable Session Overview for navigating more than ten live shells across tabs and windows.
 - IME composition, AppKit text accessibility, reduced-motion/high-contrast handling and explicit Secure Keyboard Entry.
 - Sanitized hyperlinks, protected paste, optional background bell notifications and explicit file previews.
 - Opt-in metadata restoration with fresh shells; local performance report export.
@@ -54,6 +57,8 @@ For Xcode, open `Specter.xcodeproj` and select the Specter scheme. `project.yml`
 | Copy / paste / select all | ⌘C / ⌘V / ⌘A |
 | Find / next match | ⌘F / ⌘G |
 | Settings | ⌘, |
+| Theme Gallery | ⇧⌘T |
+| Session Overview | ⇧⌘P |
 
 Hold Shift while selecting in an application that has enabled mouse reporting. Command-click a hyperlink to review its destination before opening it. Multiline/control-bearing paste requires confirmation.
 
@@ -79,11 +84,29 @@ Read [architecture decisions](docs/architecture.md), [terminal compatibility](do
 
 Profiles live in the app's local preferences. Shell and working-directory changes apply to new sessions. Appearance changes apply to existing sessions using that profile. Empty shell/directory fields select the account's login shell and home directory.
 
+![Native Specter theme gallery with original palettes](docs/images/theme-gallery.png)
+
 ![Native Specter settings](docs/images/settings.png)
 
-Themes use schema version 1: `id`, `name`, `background`, `foreground`, `cursor`, `selection`, sixteen `palette` colors and `isDark`. Colors are `#RRGGBB`. Use Settings to export a valid example. Imports are capped at 64 KiB, validated and cannot overwrite a bundled theme ID. The bundled themes are original; no third-party palette collection is included.
+Themes use schema version 1: `id`, `name`, `background`, `foreground`, `cursor`, `selection`, sixteen `palette` colors and `isDark`. Colors are `#RRGGBB`. Use Settings to export a valid example. Imports are capped at 64 KiB and validated. Importing an identical built-in theme selects it; modified copies must use a new ID. The bundled themes are original; no third-party palette collection is included.
 
 Restoration is off by default. Enabling it saves window geometry, tab groups, split direction and profile IDs, then starts fresh shells on launch. It does not restore shell processes, command history, terminal output or inferred working directories. Splits currently use a single axis per window and do not restore divider ratios.
+
+## Website and handbook
+
+The local website pairs an original landscape illustration with an interactive 130-theme browser and a thirteen-chapter handbook. The terminal pictured on the website is explicitly illustrative; the native app runs real PTYs.
+
+```sh
+scripts/serve-website.sh
+# Open http://127.0.0.1:4173
+python3 scripts/check-website.py
+```
+
+No JavaScript packages or third-party services are needed to serve the site. Theme data is shared with the app; regenerate it with `python3 scripts/generate-themes.py`. The web handbook is authored in `website/guides.js`; `node scripts/export-handbook.mjs` exports the [offline handbook](docs/handbook.md).
+
+Start with [build and installation](docs/handbook.md#install), [themes](docs/handbook.md#themes), [sessions](docs/handbook.md#sessions), and [compatibility](docs/compatibility.md). See [DESIGN.md](DESIGN.md) for visual tokens, components, motion, accessibility and artwork provenance, and [the reference review](docs/reference-review.md) for the Ghostty/Cursor feature mapping.
+
+The app’s Help → Specter Handbook opens a self-contained offline edition in your browser. A public website deployment and notarized app release remain separate approval steps. There is no promise of full Ghostty feature parity.
 
 ## Tests and measurements
 

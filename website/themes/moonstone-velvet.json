@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "moonstone-velvet",
+  "name": "Moonstone Velvet",
+  "background": "#20202F",
+  "foreground": "#DEDEE7",
+  "isDark": true,
+  "cursor": "#A8A8E6",
+  "selection": "#363654",
+  "palette": [
+    "#29313B",
+    "#D09C95",
+    "#95D0A6",
+    "#D0C395",
+    "#95A7D0",
+    "#C395D0",
+    "#95CED0",
+    "#D5DBE3",
+    "#77828F",
+    "#E1B7B2",
+    "#B2E1BF",
+    "#E1D7B2",
+    "#B2C0E1",
+    "#D7B2E1",
+    "#B2E0E1",
+    "#F4F6FA"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "sequoia-midnight",
+  "name": "Sequoia Midnight",
+  "background": "#0F170F",
+  "foreground": "#DEE7DE",
+  "isDark": true,
+  "cursor": "#A8E6A8",
+  "selection": "#365436",
+  "palette": [
+    "#29313B",
+    "#D59092",
+    "#90D59A",
+    "#D5BC90",
+    "#90AFD5",
+    "#BC90D5",
+    "#90D5CD",
+    "#D5DBE3",
+    "#77828F",
+    "#E5AEB0",
+    "#AEE5B6",
+    "#E5D1AE",
+    "#AEC6E5",
+    "#D1AEE5",
+    "#AEE5DF",
+    "#F4F6FA"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "sequoia-nocturne",
+  "name": "Sequoia Nocturne",
+  "background": "#162516",
+  "foreground": "#DEE7DE",
+  "isDark": true,
+  "cursor": "#A8E6A8",
+  "selection": "#365436",
+  "palette": [
+    "#29313B",
+    "#DA8B8D",
+    "#8BDA96",
+    "#DABE8B",
+    "#8BAEDA",
+    "#BE8BDA",
+    "#8BDAD1",
+    "#D5DBE3",
+    "#77828F",
+    "#E9AAAC",
+    "#AAE9B3",
+    "#E9D2AA",
+    "#AAC6E9",
+    "#D2AAE9",
+    "#AAE9E2",
+    "#F4F6FA"
+  ]
+}

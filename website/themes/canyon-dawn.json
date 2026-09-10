@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "canyon-dawn",
+  "name": "Canyon Dawn",
+  "background": "#F4EEEB",
+  "foreground": "#2F2722",
+  "isDark": false,
+  "cursor": "#7B4124",
+  "selection": "#D7C8C1",
+  "palette": [
+    "#29313B",
+    "#752934",
+    "#29752B",
+    "#755129",
+    "#295475",
+    "#512975",
+    "#297564",
+    "#D5DBE3",
+    "#77828F",
+    "#8D2A39",
+    "#2A8D2C",
+    "#8D5E2A",
+    "#2A628D",
+    "#5E2A8D",
+    "#2A8D77",
+    "#F4F6FA"
+  ]
+}

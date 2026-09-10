@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "saffron-nocturne",
+  "name": "Saffron Nocturne",
+  "background": "#251F16",
+  "foreground": "#E7E4DE",
+  "isDark": true,
+  "cursor": "#E6CDA8",
+  "selection": "#544836",
+  "palette": [
+    "#29313B",
+    "#DA8B95",
+    "#8BDA8E",
+    "#DAB68B",
+    "#8BB6DA",
+    "#B68BDA",
+    "#8BDACA",
+    "#D5DBE3",
+    "#77828F",
+    "#E9AAB2",
+    "#AAE9AD",
+    "#E9CCAA",
+    "#AACCE9",
+    "#CCAAE9",
+    "#AAE9DC",
+    "#F4F6FA"
+  ]
+}

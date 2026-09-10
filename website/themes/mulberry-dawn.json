@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "mulberry-dawn",
+  "name": "Mulberry Dawn",
+  "background": "#F4EBF2",
+  "foreground": "#2F222B",
+  "isDark": false,
+  "cursor": "#7B2460",
+  "selection": "#D7C1D0",
+  "palette": [
+    "#29313B",
+    "#753929",
+    "#297545",
+    "#756B29",
+    "#293975",
+    "#6B2975",
+    "#296C75",
+    "#D5DBE3",
+    "#77828F",
+    "#8D3E2A",
+    "#2A8D4F",
+    "#8D802A",
+    "#2A3F8D",
+    "#802A8D",
+    "#2A818D",
+    "#F4F6FA"
+  ]
+}

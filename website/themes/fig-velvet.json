@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "fig-velvet",
+  "name": "Fig Velvet",
+  "background": "#2B202F",
+  "foreground": "#E5DEE7",
+  "isDark": true,
+  "cursor": "#D6A8E6",
+  "selection": "#4C3654",
+  "palette": [
+    "#29313B",
+    "#D09F95",
+    "#95D0A9",
+    "#D0C695",
+    "#95A4D0",
+    "#C695D0",
+    "#95CBD0",
+    "#D5DBE3",
+    "#77828F",
+    "#E1BAB2",
+    "#B2E1C2",
+    "#E1D9B2",
+    "#B2BEE1",
+    "#D9B2E1",
+    "#B2DDE1",
+    "#F4F6FA"
+  ]
+}

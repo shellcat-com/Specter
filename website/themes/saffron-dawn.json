@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "saffron-dawn",
+  "name": "Saffron Dawn",
+  "background": "#F4F1EB",
+  "foreground": "#2F2A22",
+  "isDark": false,
+  "cursor": "#7B5824",
+  "selection": "#D7CEC1",
+  "palette": [
+    "#29313B",
+    "#752933",
+    "#29752C",
+    "#755229",
+    "#295275",
+    "#522975",
+    "#297565",
+    "#D5DBE3",
+    "#77828F",
+    "#8D2A37",
+    "#2A8D2E",
+    "#8D602A",
+    "#2A608D",
+    "#602A8D",
+    "#2A8D79",
+    "#F4F6FA"
+  ]
+}

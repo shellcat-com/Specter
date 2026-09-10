@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "sequoia-dawn",
+  "name": "Sequoia Dawn",
+  "background": "#EBF4EB",
+  "foreground": "#222F22",
+  "isDark": false,
+  "cursor": "#247B24",
+  "selection": "#C1D7C1",
+  "palette": [
+    "#29313B",
+    "#75292B",
+    "#297534",
+    "#755A29",
+    "#294B75",
+    "#5A2975",
+    "#29756D",
+    "#D5DBE3",
+    "#77828F",
+    "#8D2A2D",
+    "#2A8D38",
+    "#8D6A2A",
+    "#2A568D",
+    "#6A2A8D",
+    "#2A8D82",
+    "#F4F6FA"
+  ]
+}

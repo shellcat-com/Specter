@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "copper-daylight",
+  "name": "Copper Daylight",
+  "background": "#FAF9F7",
+  "foreground": "#2F2822",
+  "isDark": false,
+  "cursor": "#7B4C24",
+  "selection": "#D7CBC1",
+  "palette": [
+    "#29313B",
+    "#7B242F",
+    "#247B26",
+    "#7B5224",
+    "#24547B",
+    "#52247B",
+    "#247B68",
+    "#D5DBE3",
+    "#77828F",
+    "#942433",
+    "#249427",
+    "#945F24",
+    "#246294",
+    "#5F2494",
+    "#24947B",
+    "#F4F6FA"
+  ]
+}

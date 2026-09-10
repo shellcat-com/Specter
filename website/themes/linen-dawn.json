@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "linen-dawn",
+  "name": "Linen Dawn",
+  "background": "#F4F2EB",
+  "foreground": "#2F2B22",
+  "isDark": false,
+  "cursor": "#7B6024",
+  "selection": "#D7D0C1",
+  "palette": [
+    "#29313B",
+    "#752932",
+    "#29752D",
+    "#755329",
+    "#295275",
+    "#532975",
+    "#297566",
+    "#D5DBE3",
+    "#77828F",
+    "#8D2A36",
+    "#2A8D2F",
+    "#8D612A",
+    "#2A5F8D",
+    "#612A8D",
+    "#2A8D79",
+    "#F4F6FA"
+  ]
+}

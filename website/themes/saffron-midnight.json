@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "saffron-midnight",
+  "name": "Saffron Midnight",
+  "background": "#17140F",
+  "foreground": "#E7E4DE",
+  "isDark": true,
+  "cursor": "#E6CDA8",
+  "selection": "#544836",
+  "palette": [
+    "#29313B",
+    "#D59099",
+    "#90D593",
+    "#D5B590",
+    "#90B5D5",
+    "#B590D5",
+    "#90D5C7",
+    "#D5DBE3",
+    "#77828F",
+    "#E5AEB5",
+    "#AEE5B0",
+    "#E5CCAE",
+    "#AECCE5",
+    "#CCAEE5",
+    "#AEE5D9",
+    "#F4F6FA"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "copper-dawn",
+  "name": "Copper Dawn",
+  "background": "#F4EFEB",
+  "foreground": "#2F2822",
+  "isDark": false,
+  "cursor": "#7B4C24",
+  "selection": "#D7CBC1",
+  "palette": [
+    "#29313B",
+    "#752933",
+    "#29752C",
+    "#755129",
+    "#295375",
+    "#512975",
+    "#297564",
+    "#D5DBE3",
+    "#77828F",
+    "#8D2A38",
+    "#2A8D2D",
+    "#8D5F2A",
+    "#2A618D",
+    "#5F2A8D",
+    "#2A8D78",
+    "#F4F6FA"
+  ]
+}

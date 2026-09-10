@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "linen-daylight",
+  "name": "Linen Daylight",
+  "background": "#FAF9F7",
+  "foreground": "#2F2B22",
+  "isDark": false,
+  "cursor": "#7B6024",
+  "selection": "#D7D0C1",
+  "palette": [
+    "#29313B",
+    "#7B242E",
+    "#247B28",
+    "#7B5324",
+    "#24527B",
+    "#53247B",
+    "#247B69",
+    "#D5DBE3",
+    "#77828F",
+    "#942431",
+    "#249429",
+    "#946124",
+    "#246094",
+    "#612494",
+    "#24947D",
+    "#F4F6FA"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "alpine-midnight",
+  "name": "Alpine Midnight",
+  "background": "#0F1714",
+  "foreground": "#DEE7E4",
+  "isDark": true,
+  "cursor": "#A8E6CC",
+  "selection": "#365447",
+  "palette": [
+    "#29313B",
+    "#D59190",
+    "#90D59C",
+    "#D5BF90",
+    "#90ACD5",
+    "#BF90D5",
+    "#90D5D0",
+    "#D5DBE3",
+    "#77828F",
+    "#E5AFAE",
+    "#AEE5B8",
+    "#E5D3AE",
+    "#AEC4E5",
+    "#D3AEE5",
+    "#AEE5E1",
+    "#F4F6FA"
+  ]
+}

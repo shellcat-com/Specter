@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "basalt-daylight",
+  "name": "Basalt Daylight",
+  "background": "#F7F8FA",
+  "foreground": "#22262F",
+  "isDark": false,
+  "cursor": "#24397B",
+  "selection": "#C1C6D7",
+  "palette": [
+    "#29313B",
+    "#7B2C24",
+    "#247B3A",
+    "#7B6624",
+    "#24407B",
+    "#66247B",
+    "#247A7B",
+    "#D5DBE3",
+    "#77828F",
+    "#942E24",
+    "#249441",
+    "#947924",
+    "#244894",
+    "#792494",
+    "#249294",
+    "#F4F6FA"
+  ]
+}

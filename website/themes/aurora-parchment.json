@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "aurora-parchment",
+  "name": "Aurora Parchment",
+  "background": "#DFECEA",
+  "foreground": "#222F2D",
+  "isDark": false,
+  "cursor": "#247B6C",
+  "selection": "#C1D7D3",
+  "palette": [
+    "#29313B",
+    "#6F312F",
+    "#2F6F3C",
+    "#6F5C2F",
+    "#2F486F",
+    "#5C2F6F",
+    "#2F6F6B",
+    "#D5DBE3",
+    "#77828F",
+    "#863432",
+    "#328642",
+    "#866C32",
+    "#325286",
+    "#6C3286",
+    "#328682",
+    "#F4F6FA"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "aurora-dawn",
+  "name": "Aurora Dawn",
+  "background": "#EBF4F3",
+  "foreground": "#222F2D",
+  "isDark": false,
+  "cursor": "#247B6C",
+  "selection": "#C1D7D3",
+  "palette": [
+    "#29313B",
+    "#752B29",
+    "#297538",
+    "#755E29",
+    "#294675",
+    "#5E2975",
+    "#297571",
+    "#D5DBE3",
+    "#77828F",
+    "#8D2D2A",
+    "#2A8D3E",
+    "#8D6F2A",
+    "#2A508D",
+    "#6F2A8D",
+    "#2A8D88",
+    "#F4F6FA"
+  ]
+}

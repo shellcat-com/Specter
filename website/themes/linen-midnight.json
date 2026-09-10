@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "linen-midnight",
+  "name": "Linen Midnight",
+  "background": "#17150F",
+  "foreground": "#E7E5DE",
+  "isDark": true,
+  "cursor": "#E6D3A8",
+  "selection": "#544B36",
+  "palette": [
+    "#29313B",
+    "#D59098",
+    "#90D593",
+    "#D5B690",
+    "#90B5D5",
+    "#B690D5",
+    "#90D5C7",
+    "#D5DBE3",
+    "#77828F",
+    "#E5AEB5",
+    "#AEE5B1",
+    "#E5CCAE",
+    "#AECBE5",
+    "#CCAEE5",
+    "#AEE5DA",
+    "#F4F6FA"
+  ]
+}

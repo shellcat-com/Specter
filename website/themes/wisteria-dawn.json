@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "wisteria-dawn",
+  "name": "Wisteria Dawn",
+  "background": "#F0EBF4",
+  "foreground": "#2A222F",
+  "isDark": false,
+  "cursor": "#56247B",
+  "selection": "#CEC1D7",
+  "palette": [
+    "#29313B",
+    "#753529",
+    "#297541",
+    "#756729",
+    "#293D75",
+    "#672975",
+    "#297075",
+    "#D5DBE3",
+    "#77828F",
+    "#8D392A",
+    "#2A8D4A",
+    "#8D7C2A",
+    "#2A448D",
+    "#7C2A8D",
+    "#2A868D",
+    "#F4F6FA"
+  ]
+}

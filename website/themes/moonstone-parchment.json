@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "moonstone-parchment",
+  "name": "Moonstone Parchment",
+  "background": "#DFDFEC",
+  "foreground": "#22222F",
+  "isDark": false,
+  "cursor": "#24247B",
+  "selection": "#C1C1D7",
+  "palette": [
+    "#29313B",
+    "#6F372F",
+    "#2F6F41",
+    "#6F612F",
+    "#2F436F",
+    "#612F6F",
+    "#2F6D6F",
+    "#D5DBE3",
+    "#77828F",
+    "#863B32",
+    "#328649",
+    "#867332",
+    "#324B86",
+    "#733286",
+    "#328486",
+    "#F4F6FA"
+  ]
+}

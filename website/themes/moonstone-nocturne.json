@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "moonstone-nocturne",
+  "name": "Moonstone Nocturne",
+  "background": "#161625",
+  "foreground": "#DEDEE7",
+  "isDark": true,
+  "cursor": "#A8A8E6",
+  "selection": "#363654",
+  "palette": [
+    "#29313B",
+    "#DA948B",
+    "#8BDAA1",
+    "#DAC98B",
+    "#8BA3DA",
+    "#C98BDA",
+    "#8BD8DA",
+    "#D5DBE3",
+    "#77828F",
+    "#E9B1AA",
+    "#AAE9BC",
+    "#E9DBAA",
+    "#AABDE9",
+    "#DBAAE9",
+    "#AAE7E9",
+    "#F4F6FA"
+  ]
+}

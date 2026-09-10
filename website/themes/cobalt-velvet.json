@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "cobalt-velvet",
+  "name": "Cobalt Velvet",
+  "background": "#20252F",
+  "foreground": "#DEE2E7",
+  "isDark": true,
+  "cursor": "#A8BFE6",
+  "selection": "#364154",
+  "palette": [
+    "#29313B",
+    "#D09A95",
+    "#95D0A4",
+    "#D0C195",
+    "#95A9D0",
+    "#C195D0",
+    "#95CFD0",
+    "#D5DBE3",
+    "#77828F",
+    "#E1B6B2",
+    "#B2E1BE",
+    "#E1D5B2",
+    "#B2C1E1",
+    "#D5B2E1",
+    "#B2E1E1",
+    "#F4F6FA"
+  ]
+}

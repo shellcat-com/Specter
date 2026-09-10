@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "linen-parchment",
+  "name": "Linen Parchment",
+  "background": "#ECE8DF",
+  "foreground": "#2F2B22",
+  "isDark": false,
+  "cursor": "#7B6024",
+  "selection": "#D7D0C1",
+  "palette": [
+    "#29313B",
+    "#6F2F37",
+    "#2F6F32",
+    "#6F522F",
+    "#2F516F",
+    "#522F6F",
+    "#2F6F62",
+    "#D5DBE3",
+    "#77828F",
+    "#86323C",
+    "#328636",
+    "#866032",
+    "#325F86",
+    "#603286",
+    "#328675",
+    "#F4F6FA"
+  ]
+}

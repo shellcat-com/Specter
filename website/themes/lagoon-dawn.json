@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "lagoon-dawn",
+  "name": "Lagoon Dawn",
+  "background": "#EBF4F4",
+  "foreground": "#222F2F",
+  "isDark": false,
+  "cursor": "#24787B",
+  "selection": "#C1D6D7",
+  "palette": [
+    "#29313B",
+    "#752D29",
+    "#297539",
+    "#755F29",
+    "#294575",
+    "#5F2975",
+    "#297572",
+    "#D5DBE3",
+    "#77828F",
+    "#8D2F2A",
+    "#2A8D3F",
+    "#8D712A",
+    "#2A4F8D",
+    "#712A8D",
+    "#2A8D8A",
+    "#F4F6FA"
+  ]
+}

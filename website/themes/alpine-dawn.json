@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "alpine-dawn",
+  "name": "Alpine Dawn",
+  "background": "#EBF4F0",
+  "foreground": "#222F2A",
+  "isDark": false,
+  "cursor": "#247B56",
+  "selection": "#C1D7CE",
+  "palette": [
+    "#29313B",
+    "#752A29",
+    "#297537",
+    "#755D29",
+    "#294875",
+    "#5D2975",
+    "#297570",
+    "#D5DBE3",
+    "#77828F",
+    "#8D2C2A",
+    "#2A8D3C",
+    "#8D6E2A",
+    "#2A528D",
+    "#6E2A8D",
+    "#2A8D86",
+    "#F4F6FA"
+  ]
+}

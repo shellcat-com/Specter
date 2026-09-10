@@ -41,8 +41,37 @@ struct RendererTests {
     #expect(renderer.atlasHits > 0)
   }
   @Test func originalThemesValidate() {
-    #expect(Theme.builtins.count == 10)
+    #expect(Theme.builtins.count == 130)
+    #expect(Set(Theme.builtins.map(\.id)).count == 130)
+    #expect(Set(Theme.builtins.map { [$0.background, $0.foreground] + $0.palette }).count == 130)
+    for theme in Theme.builtins {
+      func luminance(_ hex: String) -> Double {
+        let rgb = Theme.rgba(hex)
+        func linear(_ c: Float) -> Double {
+          let v = Double(c)
+          return v <= 0.04045 ? v / 12.92 : pow((v + 0.055) / 1.055, 2.4)
+        }
+        return 0.2126 * linear(rgb.x) + 0.7152 * linear(rgb.y) + 0.0722 * linear(rgb.z)
+      }
+      let a = luminance(theme.background)
+      let b = luminance(theme.foreground)
+      #expect((max(a, b) + 0.05) / (min(a, b) + 0.05) >= 7, "\(theme.name) text contrast")
+    }
     #expect(Theme.builtins.allSatisfy { $0.validate() })
+  }
+  @Test func malformedThemeDataIsRejected() {
+    var theme = Theme.builtins[0]
+    theme.palette.removeLast()
+    #expect(!theme.validate())
+    theme = Theme.builtins[0]
+    theme.background = "#GG0000"
+    #expect(!theme.validate())
+    theme = Theme.builtins[0]
+    theme.version = 2
+    #expect(!theme.validate())
+    theme = Theme.builtins[0]
+    theme.name = ""
+    #expect(!theme.validate())
   }
   @Test @MainActor func onlyDamagedRowsAreRedrawn() throws {
     let renderer = try Renderer(device: #require(MTLCreateSystemDefaultDevice()), scale: 1)

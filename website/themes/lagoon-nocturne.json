@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "lagoon-nocturne",
+  "name": "Lagoon Nocturne",
+  "background": "#162425",
+  "foreground": "#DEE7E7",
+  "isDark": true,
+  "cursor": "#A8E4E6",
+  "selection": "#365354",
+  "palette": [
+    "#29313B",
+    "#DA8E8B",
+    "#8BDA9C",
+    "#DAC38B",
+    "#8BA8DA",
+    "#C38BDA",
+    "#8BDAD7",
+    "#D5DBE3",
+    "#77828F",
+    "#E9ADAA",
+    "#AAE9B8",
+    "#E9D7AA",
+    "#AAC1E9",
+    "#D7AAE9",
+    "#AAE9E6",
+    "#F4F6FA"
+  ]
+}

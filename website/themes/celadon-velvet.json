@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "celadon-velvet",
+  "name": "Celadon Velvet",
+  "background": "#252F20",
+  "foreground": "#E1E7DE",
+  "isDark": true,
+  "cursor": "#BDE6A8",
+  "selection": "#405436",
+  "palette": [
+    "#29313B",
+    "#D09598",
+    "#95D09C",
+    "#D0B995",
+    "#95B1D0",
+    "#B995D0",
+    "#95D0C8",
+    "#D5DBE3",
+    "#77828F",
+    "#E1B2B4",
+    "#B2E1B7",
+    "#E1CFB2",
+    "#B2C8E1",
+    "#CFB2E1",
+    "#B2E1DB",
+    "#F4F6FA"
+  ]
+}

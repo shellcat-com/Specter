@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "cobalt-dawn",
+  "name": "Cobalt Dawn",
+  "background": "#EBEEF4",
+  "foreground": "#22272F",
+  "isDark": false,
+  "cursor": "#24437B",
+  "selection": "#C1C9D7",
+  "palette": [
+    "#29313B",
+    "#753029",
+    "#29753C",
+    "#756229",
+    "#294275",
+    "#622975",
+    "#297575",
+    "#D5DBE3",
+    "#77828F",
+    "#8D332A",
+    "#2A8D43",
+    "#8D752A",
+    "#2A4B8D",
+    "#752A8D",
+    "#2A8D8D",
+    "#F4F6FA"
+  ]
+}

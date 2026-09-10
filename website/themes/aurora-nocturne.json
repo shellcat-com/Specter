@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "aurora-nocturne",
+  "name": "Aurora Nocturne",
+  "background": "#162522",
+  "foreground": "#DEE7E6",
+  "isDark": true,
+  "cursor": "#A8E6DB",
+  "selection": "#36544F",
+  "palette": [
+    "#29313B",
+    "#DA8D8B",
+    "#8BDA9A",
+    "#DAC28B",
+    "#8BA9DA",
+    "#C28BDA",
+    "#8BDAD6",
+    "#D5DBE3",
+    "#77828F",
+    "#E9ACAA",
+    "#AAE9B7",
+    "#E9D6AA",
+    "#AAC2E9",
+    "#D6AAE9",
+    "#AAE9E5",
+    "#F4F6FA"
+  ]
+}

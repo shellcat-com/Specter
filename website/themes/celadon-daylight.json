@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "celadon-daylight",
+  "name": "Celadon Daylight",
+  "background": "#F8FAF7",
+  "foreground": "#272F22",
+  "isDark": false,
+  "cursor": "#417B24",
+  "selection": "#C8D7C1",
+  "palette": [
+    "#29313B",
+    "#7B2428",
+    "#247B2E",
+    "#7B5924",
+    "#244C7B",
+    "#59247B",
+    "#247B6F",
+    "#D5DBE3",
+    "#77828F",
+    "#942429",
+    "#249431",
+    "#946924",
+    "#245894",
+    "#692494",
+    "#249485",
+    "#F4F6FA"
+  ]
+}

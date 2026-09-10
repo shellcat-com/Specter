@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "heather-velvet",
+  "name": "Heather Velvet",
+  "background": "#26202F",
+  "foreground": "#E2DEE7",
+  "isDark": true,
+  "cursor": "#C2A8E6",
+  "selection": "#423654",
+  "palette": [
+    "#29313B",
+    "#D09E95",
+    "#95D0A7",
+    "#D0C495",
+    "#95A5D0",
+    "#C495D0",
+    "#95CCD0",
+    "#D5DBE3",
+    "#77828F",
+    "#E1B9B2",
+    "#B2E1C0",
+    "#E1D8B2",
+    "#B2BFE1",
+    "#D8B2E1",
+    "#B2DEE1",
+    "#F4F6FA"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "mulberry-velvet",
+  "name": "Mulberry Velvet",
+  "background": "#2F202B",
+  "foreground": "#E7DEE5",
+  "isDark": true,
+  "cursor": "#E6A8D3",
+  "selection": "#54364B",
+  "palette": [
+    "#29313B",
+    "#D0A195",
+    "#95D0AB",
+    "#D0C895",
+    "#95A2D0",
+    "#C895D0",
+    "#95C9D0",
+    "#D5DBE3",
+    "#77828F",
+    "#E1BBB2",
+    "#B2E1C3",
+    "#E1DBB2",
+    "#B2BCE1",
+    "#DBB2E1",
+    "#B2DBE1",
+    "#F4F6FA"
+  ]
+}

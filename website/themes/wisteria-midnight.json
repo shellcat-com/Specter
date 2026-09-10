@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "wisteria-midnight",
+  "name": "Wisteria Midnight",
+  "background": "#140F17",
+  "foreground": "#E4DEE7",
+  "isDark": true,
+  "cursor": "#CCA8E6",
+  "selection": "#473654",
+  "palette": [
+    "#29313B",
+    "#D59B90",
+    "#90D5A6",
+    "#D5C990",
+    "#90A2D5",
+    "#C990D5",
+    "#90D0D5",
+    "#D5DBE3",
+    "#77828F",
+    "#E5B7AE",
+    "#AEE5C0",
+    "#E5DBAE",
+    "#AEBDE5",
+    "#DBAEE5",
+    "#AEE1E5",
+    "#F4F6FA"
+  ]
+}

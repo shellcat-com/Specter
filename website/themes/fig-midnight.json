@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "fig-midnight",
+  "name": "Fig Midnight",
+  "background": "#150F17",
+  "foreground": "#E5DEE7",
+  "isDark": true,
+  "cursor": "#D6A8E6",
+  "selection": "#4C3654",
+  "palette": [
+    "#29313B",
+    "#D59B90",
+    "#90D5A7",
+    "#D5C990",
+    "#90A1D5",
+    "#C990D5",
+    "#90CFD5",
+    "#D5DBE3",
+    "#77828F",
+    "#E5B7AE",
+    "#AEE5C0",
+    "#E5DCAE",
+    "#AEBCE5",
+    "#DCAEE5",
+    "#AEE0E5",
+    "#F4F6FA"
+  ]
+}

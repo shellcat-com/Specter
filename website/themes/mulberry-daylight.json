@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "mulberry-daylight",
+  "name": "Mulberry Daylight",
+  "background": "#FAF7F9",
+  "foreground": "#2F222B",
+  "isDark": false,
+  "cursor": "#7B2460",
+  "selection": "#D7C1D0",
+  "palette": [
+    "#29313B",
+    "#7B3524",
+    "#247B44",
+    "#7B6F24",
+    "#24367B",
+    "#6F247B",
+    "#24707B",
+    "#D5DBE3",
+    "#77828F",
+    "#943B24",
+    "#24944D",
+    "#948524",
+    "#243C94",
+    "#852494",
+    "#248694",
+    "#F4F6FA"
+  ]
+}

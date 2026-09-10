@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "sequoia-parchment",
+  "name": "Sequoia Parchment",
+  "background": "#DFECDF",
+  "foreground": "#222F22",
+  "isDark": false,
+  "cursor": "#247B24",
+  "selection": "#C1D7C1",
+  "palette": [
+    "#29313B",
+    "#6F2F31",
+    "#2F6F38",
+    "#6F582F",
+    "#2F4C6F",
+    "#582F6F",
+    "#2F6F68",
+    "#D5DBE3",
+    "#77828F",
+    "#863234",
+    "#32863D",
+    "#866832",
+    "#325786",
+    "#683286",
+    "#32867D",
+    "#F4F6FA"
+  ]
+}

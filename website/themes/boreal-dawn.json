@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "boreal-dawn",
+  "name": "Boreal Dawn",
+  "background": "#EBF4EE",
+  "foreground": "#222F27",
+  "isDark": false,
+  "cursor": "#247B41",
+  "selection": "#C1D7C8",
+  "palette": [
+    "#29313B",
+    "#752929",
+    "#297535",
+    "#755B29",
+    "#294975",
+    "#5B2975",
+    "#29756E",
+    "#D5DBE3",
+    "#77828F",
+    "#8D2A2B",
+    "#2A8D3A",
+    "#8D6C2A",
+    "#2A548D",
+    "#6C2A8D",
+    "#2A8D85",
+    "#F4F6FA"
+  ]
+}

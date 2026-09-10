@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "alpine-parchment",
+  "name": "Alpine Parchment",
+  "background": "#DFECE7",
+  "foreground": "#222F2A",
+  "isDark": false,
+  "cursor": "#247B56",
+  "selection": "#C1D7CE",
+  "palette": [
+    "#29313B",
+    "#6F302F",
+    "#2F6F3B",
+    "#6F5A2F",
+    "#2F496F",
+    "#5A2F6F",
+    "#2F6F6A",
+    "#D5DBE3",
+    "#77828F",
+    "#863332",
+    "#328641",
+    "#866B32",
+    "#325486",
+    "#6B3286",
+    "#328680",
+    "#F4F6FA"
+  ]
+}

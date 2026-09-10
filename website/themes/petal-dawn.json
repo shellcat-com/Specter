@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "petal-dawn",
+  "name": "Petal Dawn",
+  "background": "#F4EBED",
+  "foreground": "#2F2226",
+  "isDark": false,
+  "cursor": "#7B2439",
+  "selection": "#D7C1C6",
+  "palette": [
+    "#29313B",
+    "#753B29",
+    "#297548",
+    "#756E29",
+    "#293775",
+    "#6E2975",
+    "#296975",
+    "#D5DBE3",
+    "#77828F",
+    "#8D422A",
+    "#2A8D52",
+    "#8D842A",
+    "#2A3C8D",
+    "#842A8D",
+    "#2A7E8D",
+    "#F4F6FA"
+  ]
+}

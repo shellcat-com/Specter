@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "copper-midnight",
+  "name": "Copper Midnight",
+  "background": "#17130F",
+  "foreground": "#E7E3DE",
+  "isDark": true,
+  "cursor": "#E6C5A8",
+  "selection": "#544436",
+  "palette": [
+    "#29313B",
+    "#D59099",
+    "#90D592",
+    "#D5B590",
+    "#90B6D5",
+    "#B590D5",
+    "#90D5C6",
+    "#D5DBE3",
+    "#77828F",
+    "#E5AEB6",
+    "#AEE5B0",
+    "#E5CBAE",
+    "#AECCE5",
+    "#CBAEE5",
+    "#AEE5D9",
+    "#F4F6FA"
+  ]
+}

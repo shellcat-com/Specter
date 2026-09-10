@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "aurora-daylight",
+  "name": "Aurora Daylight",
+  "background": "#F7FAFA",
+  "foreground": "#222F2D",
+  "isDark": false,
+  "cursor": "#247B6C",
+  "selection": "#C1D7D3",
+  "palette": [
+    "#29313B",
+    "#7B2624",
+    "#247B35",
+    "#7B6024",
+    "#24457B",
+    "#60247B",
+    "#247B76",
+    "#D5DBE3",
+    "#77828F",
+    "#942724",
+    "#24943A",
+    "#947224",
+    "#244F94",
+    "#722494",
+    "#24948E",
+    "#F4F6FA"
+  ]
+}

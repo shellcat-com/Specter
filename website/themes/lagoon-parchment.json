@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "lagoon-parchment",
+  "name": "Lagoon Parchment",
+  "background": "#DFEBEC",
+  "foreground": "#222F2F",
+  "isDark": false,
+  "cursor": "#24787B",
+  "selection": "#C1D6D7",
+  "palette": [
+    "#29313B",
+    "#6F322F",
+    "#2F6F3D",
+    "#6F5C2F",
+    "#2F476F",
+    "#5C2F6F",
+    "#2F6F6C",
+    "#D5DBE3",
+    "#77828F",
+    "#863532",
+    "#328643",
+    "#866E32",
+    "#325186",
+    "#6E3286",
+    "#328683",
+    "#F4F6FA"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "cobalt-midnight",
+  "name": "Cobalt Midnight",
+  "background": "#0F1217",
+  "foreground": "#DEE2E7",
+  "isDark": true,
+  "cursor": "#A8BFE6",
+  "selection": "#364154",
+  "palette": [
+    "#29313B",
+    "#D59690",
+    "#90D5A2",
+    "#D5C490",
+    "#90A7D5",
+    "#C490D5",
+    "#90D5D5",
+    "#D5DBE3",
+    "#77828F",
+    "#E5B3AE",
+    "#AEE5BC",
+    "#E5D7AE",
+    "#AEC0E5",
+    "#D7AEE5",
+    "#AEE5E5",
+    "#F4F6FA"
+  ]
+}

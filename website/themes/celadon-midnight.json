@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "celadon-midnight",
+  "name": "Celadon Midnight",
+  "background": "#12170F",
+  "foreground": "#E1E7DE",
+  "isDark": true,
+  "cursor": "#BDE6A8",
+  "selection": "#405436",
+  "palette": [
+    "#29313B",
+    "#D59094",
+    "#90D598",
+    "#D5BA90",
+    "#90B0D5",
+    "#BA90D5",
+    "#90D5CC",
+    "#D5DBE3",
+    "#77828F",
+    "#E5AEB1",
+    "#AEE5B4",
+    "#E5D0AE",
+    "#AEC8E5",
+    "#D0AEE5",
+    "#AEE5DD",
+    "#F4F6FA"
+  ]
+}

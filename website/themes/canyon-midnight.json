@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "canyon-midnight",
+  "name": "Canyon Midnight",
+  "background": "#17120F",
+  "foreground": "#E7E1DE",
+  "isDark": true,
+  "cursor": "#E6BDA8",
+  "selection": "#544036",
+  "palette": [
+    "#29313B",
+    "#D5909A",
+    "#90D592",
+    "#D5B490",
+    "#90B7D5",
+    "#B490D5",
+    "#90D5C5",
+    "#D5DBE3",
+    "#77828F",
+    "#E5AEB6",
+    "#AEE5AF",
+    "#E5CBAE",
+    "#AECDE5",
+    "#CBAEE5",
+    "#AEE5D8",
+    "#F4F6FA"
+  ]
+}

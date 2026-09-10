@@ -3,10 +3,11 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 swift build -c release
 BIN="$(swift build -c release --show-bin-path)"
-APP="$PWD/.build/Specter.app"
+APP="${SPECTER_APP_OUTPUT:-$PWD/.build/Specter.app}"
 mkdir -p "$APP/Contents/MacOS" "$APP/Contents/Resources/terminfo"
 cp "$BIN/Specter" "$BIN/SpecterPTY" "$APP/Contents/MacOS/"
 cp -R "$BIN/Specter_MetalTerminal.bundle" "$APP/Contents/Resources/"
+cp Resources/Handbook.html "$APP/Contents/Resources/Handbook.html"
 tic -x -o "$APP/Contents/Resources/terminfo" Resources/specter.terminfo
 cat > "$APP/Contents/Info.plist" <<'PLIST'
 <?xml version="1.0" encoding="UTF-8"?>

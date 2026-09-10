@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "fig-nocturne",
+  "name": "Fig Nocturne",
+  "background": "#211625",
+  "foreground": "#E5DEE7",
+  "isDark": true,
+  "cursor": "#D6A8E6",
+  "selection": "#4C3654",
+  "palette": [
+    "#29313B",
+    "#DA988B",
+    "#8BDAA5",
+    "#DACD8B",
+    "#8B9FDA",
+    "#CD8BDA",
+    "#8BD4DA",
+    "#D5DBE3",
+    "#77828F",
+    "#E9B5AA",
+    "#AAE9BF",
+    "#E9DEAA",
+    "#AABAE9",
+    "#DEAAE9",
+    "#AAE3E9",
+    "#F4F6FA"
+  ]
+}

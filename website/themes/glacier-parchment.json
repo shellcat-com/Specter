@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "glacier-parchment",
+  "name": "Glacier Parchment",
+  "background": "#DFE9EC",
+  "foreground": "#222C2F",
+  "isDark": false,
+  "cursor": "#24657B",
+  "selection": "#C1D2D7",
+  "palette": [
+    "#29313B",
+    "#6F332F",
+    "#2F6F3E",
+    "#6F5D2F",
+    "#2F466F",
+    "#5D2F6F",
+    "#2F6F6D",
+    "#D5DBE3",
+    "#77828F",
+    "#863732",
+    "#328645",
+    "#866F32",
+    "#325086",
+    "#6F3286",
+    "#328684",
+    "#F4F6FA"
+  ]
+}

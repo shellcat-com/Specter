@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "moonstone-daylight",
+  "name": "Moonstone Daylight",
+  "background": "#F7F7FA",
+  "foreground": "#22222F",
+  "isDark": false,
+  "cursor": "#24247B",
+  "selection": "#C1C1D7",
+  "palette": [
+    "#29313B",
+    "#7B2D24",
+    "#247B3C",
+    "#7B6724",
+    "#243E7B",
+    "#67247B",
+    "#24787B",
+    "#D5DBE3",
+    "#77828F",
+    "#943024",
+    "#249443",
+    "#947B24",
+    "#244694",
+    "#7B2494",
+    "#249194",
+    "#F4F6FA"
+  ]
+}

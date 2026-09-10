@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "ember",
+  "name": "Ember",
+  "background": "#28201E",
+  "foreground": "#EBDCD1",
+  "isDark": true,
+  "cursor": "#A8C2E6",
+  "selection": "#364254",
+  "palette": [
+    "#29313B",
+    "#D7948E",
+    "#8ED7A0",
+    "#D7C58E",
+    "#8EA6D7",
+    "#C58ED7",
+    "#8ED7D7",
+    "#D5DBE3",
+    "#77828F",
+    "#E6B1AD",
+    "#ADE6BB",
+    "#E6D8AD",
+    "#ADC0E6",
+    "#D8ADE6",
+    "#ADE6E6",
+    "#F4F6FA"
+  ]
+}

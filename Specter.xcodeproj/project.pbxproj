@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		139043F02CC38D1216CD8987 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13BB90F169A3F832AFB40A4 /* main.swift */; };
 		1CC619A7D5AE51F93485D973 /* TerminalUI in Frameworks */ = {isa = PBXBuildFile; productRef = AE7571192A3CED361F687AD8 /* TerminalUI */; };
+		D6730595FA137A9E2EDAFE02 /* Handbook.html in Resources */ = {isa = PBXBuildFile; fileRef = C72294FD0DA50454A4E9A9BF /* Handbook.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C3854B5E54BA3E917A2F75DB /* Specter _ GPU-Accelerated macOS Terminal */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Specter _ GPU-Accelerated macOS Terminal"; path = .; sourceTree = SOURCE_ROOT; };
+		C72294FD0DA50454A4E9A9BF /* Handbook.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = Handbook.html; sourceTree = "<group>"; };
 		F13BB90F169A3F832AFB40A4 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		F9E28CEE7EC6C2CBFAFBA21E /* Specter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Specter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -33,6 +35,7 @@
 			isa = PBXGroup;
 			children = (
 				6FD1E768781A1D94CEFC512C /* Packages */,
+				FFF670AAFE88E350F408D870 /* Resources */,
 				CE6325DF06FA98999C44BEFA /* SpecterApp */,
 				ABDE3DD11F2ECF4D244A0F62 /* Products */,
 			);
@@ -63,6 +66,14 @@
 			path = Sources/SpecterApp;
 			sourceTree = "<group>";
 		};
+		FFF670AAFE88E350F408D870 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C72294FD0DA50454A4E9A9BF /* Handbook.html */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,6 +82,7 @@
 			buildConfigurationList = 6A8B3E0CDF6379B596FC7D53 /* Build configuration list for PBXNativeTarget "Specter" */;
 			buildPhases = (
 				B6DB0DC2DD65F6E841067CA1 /* Sources */,
+				D184FB744B98BEC18FA47121 /* Resources */,
 				87504153BEFEFCB77DF47A6E /* Frameworks */,
 				81BEAC7F7190AC58C505D7B0 /* Build and embed PTY helper and terminfo */,
 			);
@@ -121,6 +133,17 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D184FB744B98BEC18FA47121 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6730595FA137A9E2EDAFE02 /* Handbook.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		81BEAC7F7190AC58C505D7B0 /* Build and embed PTY helper and terminfo */ = {

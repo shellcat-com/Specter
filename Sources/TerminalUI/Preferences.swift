@@ -48,6 +48,7 @@ public final class Preferences: ObservableObject {
       if let data = try? JSONEncoder().encode(customThemes) {
         UserDefaults.standard.set(data, forKey: "themes")
       }
+      NotificationCenter.default.post(name: .specterPreferencesChanged, object: nil)
     }
   }
   public var themes: [Theme] { Theme.builtins + customThemes }
@@ -85,8 +86,13 @@ public final class Preferences: ObservableObject {
       let size = try url.resourceValues(forKeys: [.fileSizeKey]).fileSize ?? 0
       guard size <= 65_536 else { throw CocoaError(.fileReadTooLarge) }
       let theme = try JSONDecoder().decode(Theme.self, from: Data(contentsOf: url))
-      guard theme.validate(), !Theme.builtins.contains(where: { $0.id == theme.id }) else {
-        throw CocoaError(.fileReadCorruptFile)
+      guard theme.validate() else { throw CocoaError(.fileReadCorruptFile) }
+      if let builtin = Theme.builtins.first(where: { $0.id == theme.id }) {
+        guard theme == builtin else { throw CocoaError(.fileReadCorruptFile) }
+        if let index = profiles.firstIndex(where: { $0.id == selectedProfile }) {
+          profiles[index].themeID = theme.id
+        }
+        return
       }
       customThemes.removeAll { $0.id == theme.id }
       customThemes.append(theme)
@@ -109,6 +115,7 @@ extension Notification.Name {
 }
 
 public struct SettingsView: View {
+  @State private var showingThemes = false
   @AppStorage("bellNotifications") private var bellNotifications = false
   @ObservedObject private var preferences = Preferences.shared
   public init() {}
@@ -167,6 +174,7 @@ public struct SettingsView: View {
               ForEach(preferences.themes) { Text($0.name).tag($0.id) }
             }
             HStack {
+              Button("Browse themes…") { showingThemes = true }
               Button("Import theme…") { preferences.importTheme() }
               Button("Export theme…") { preferences.exportTheme() }
             }
@@ -186,5 +194,8 @@ public struct SettingsView: View {
         }.formStyle(.grouped).frame(width: 470)
       }
     }.frame(width: 640, height: 600)
+      .sheet(isPresented: $showingThemes) {
+        ThemeGalleryView().frame(width: 860, height: 650)
+      }
   }
 }

@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "canyon-nocturne",
+  "name": "Canyon Nocturne",
+  "background": "#251B16",
+  "foreground": "#E7E1DE",
+  "isDark": true,
+  "cursor": "#E6BDA8",
+  "selection": "#544036",
+  "palette": [
+    "#29313B",
+    "#DA8B96",
+    "#8BDA8D",
+    "#DAB48B",
+    "#8BB7DA",
+    "#B48BDA",
+    "#8BDAC8",
+    "#D5DBE3",
+    "#77828F",
+    "#E9AAB3",
+    "#AAE9AC",
+    "#E9CBAA",
+    "#AACDE9",
+    "#CBAAE9",
+    "#AAE9DA",
+    "#F4F6FA"
+  ]
+}

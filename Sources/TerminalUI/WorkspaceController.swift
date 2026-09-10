@@ -188,6 +188,9 @@ public final class SpecterApplication: NSObject, NSApplicationDelegate, NSMenuIt
   private var windows: [WorkspaceController] = []
   private var settingsController: NSWindowController?
   private var previewURL: NSURL?
+  private var galleryController: NSWindowController?
+  private var overviewController: NSWindowController?
+  private weak var auxiliaryReturnWindow: NSWindow?
   private struct SavedWindow: Codable {
     let frame: String
     let profileIDs: [UUID]
@@ -294,6 +297,69 @@ public final class SpecterApplication: NSObject, NSApplicationDelegate, NSMenuIt
     }
     settingsController?.showWindow(nil)
   }
+  private func closeAuxiliary(_ controller: NSWindowController?) {
+    controller?.close()
+    (auxiliaryReturnWindow ?? windows.last?.window)?.makeKeyAndOrderFront(nil)
+  }
+  @objc private func themes(_ sender: Any?) {
+    if let window = current?.window { auxiliaryReturnWindow = window }
+    if galleryController == nil {
+      let window = NSWindow(
+        contentViewController: NSHostingController(
+          rootView: ThemeGalleryView(onDone: { [weak self] in
+            self?.closeAuxiliary(self?.galleryController)
+          })))
+      window.title = "Specter Themes"
+      window.tabbingMode = .disallowed
+      window.setContentSize(NSSize(width: 860, height: 650))
+      window.styleMask = [.titled, .closable, .resizable]
+      window.minSize = NSSize(width: 600, height: 450)
+      window.center()
+      galleryController = NSWindowController(window: window)
+    }
+    galleryController?.showWindow(nil)
+  }
+  @objc private func sessionOverview(_ sender: Any?) {
+    if let window = current?.window { auxiliaryReturnWindow = window }
+    let entries = windows.enumerated().flatMap { windowIndex, controller in
+      controller.terminals.enumerated().map { paneIndex, terminal in
+        let profile = Preferences.shared.profiles.first { $0.id == terminal.profileID }
+        return SessionEntry(
+          id: ObjectIdentifier(terminal),
+          name: "Session \(windowIndex + 1).\(paneIndex + 1) · \(profile?.name ?? "Terminal")",
+          detail: "\(controller.window?.title ?? "Specter") · Pane \(paneIndex + 1)",
+          activate: { [weak self, weak controller, weak terminal] in
+            self?.overviewController?.close()
+            controller?.window?.makeKeyAndOrderFront(nil)
+            controller?.window?.makeFirstResponder(terminal)
+          })
+      }
+    }
+    overviewController?.close()
+    let window = NSWindow(
+      contentViewController: NSHostingController(
+        rootView: SessionOverview(
+          entries: entries,
+          onDone: { [weak self] in self?.closeAuxiliary(self?.overviewController) })))
+    window.title = "Specter Sessions"
+    window.tabbingMode = .disallowed
+    window.styleMask = [.titled, .closable]
+    window.center()
+    overviewController = NSWindowController(window: window)
+    overviewController?.showWindow(nil)
+  }
+  @objc private func showHandbook(_ sender: Any?) {
+    guard let url = Bundle.main.url(forResource: "Handbook", withExtension: "html"),
+      NSWorkspace.shared.open(url)
+    else {
+      let alert = NSAlert()
+      alert.messageText = "The handbook could not be opened"
+      alert.informativeText =
+        "Build and open the complete Specter.app bundle to read the offline handbook."
+      alert.runModal()
+      return
+    }
+  }
   @objc private func exportPerformance(_ sender: Any?) {
     guard let report = current?.activeTerminal?.renderer?.performanceReport() else { return }
     let panel = NSSavePanel()
@@ -352,6 +418,7 @@ public final class SpecterApplication: NSObject, NSApplicationDelegate, NSMenuIt
       app, "About Specter", #selector(NSApplication.orderFrontStandardAboutPanel(_:)), target: NSApp
     )
     add(app, "Settings…", #selector(settings(_:)), ",", target: self)
+    add(app, "Theme Gallery…", #selector(themes(_:)), "t", [.command, .shift], target: self)
     add(app, "Secure Keyboard Entry", #selector(secure(_:)), target: self)
     app.addItem(.separator())
     add(app, "Hide Specter", #selector(NSApplication.hide(_:)), "h", target: NSApp)
@@ -372,11 +439,17 @@ public final class SpecterApplication: NSObject, NSApplicationDelegate, NSMenuIt
     add(edit, "Find…", #selector(find(_:)), "f", target: self)
     add(edit, "Find Next", #selector(nextMatch(_:)), "g", target: self)
     let window = menu("Window")
+    add(
+      window, "Session Overview…", #selector(sessionOverview(_:)), "p", [.command, .shift],
+      target: self)
     add(window, "Minimize", #selector(NSWindow.performMiniaturize(_:)), "m")
     add(window, "Next Pane", #selector(focusPane(_:)), "\t", [.control], target: self)
     add(window, "Next Tab", #selector(NSWindow.selectNextTab(_:)), "]", [.command, .shift])
     add(window, "Previous Tab", #selector(NSWindow.selectPreviousTab(_:)), "[", [.command, .shift])
     add(window, "Show Tab Bar", #selector(NSWindow.toggleTabBar(_:)))
+    let help = menu("Help")
+    add(help, "Specter Handbook", #selector(showHandbook(_:)), target: self)
+    NSApp.helpMenu = help
     NSApp.windowsMenu = window
     NSApp.mainMenu = main
   }

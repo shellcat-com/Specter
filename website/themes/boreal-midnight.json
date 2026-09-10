@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "boreal-midnight",
+  "name": "Boreal Midnight",
+  "background": "#0F1712",
+  "foreground": "#DEE7E1",
+  "isDark": true,
+  "cursor": "#A8E6BD",
+  "selection": "#365440",
+  "palette": [
+    "#29313B",
+    "#D59090",
+    "#90D59B",
+    "#D5BE90",
+    "#90ADD5",
+    "#BE90D5",
+    "#90D5CF",
+    "#D5DBE3",
+    "#77828F",
+    "#E5AEAE",
+    "#AEE5B7",
+    "#E5D2AE",
+    "#AEC5E5",
+    "#D2AEE5",
+    "#AEE5E0",
+    "#F4F6FA"
+  ]
+}

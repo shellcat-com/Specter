@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "boreal-velvet",
+  "name": "Boreal Velvet",
+  "background": "#202F25",
+  "foreground": "#DEE7E1",
+  "isDark": true,
+  "cursor": "#A8E6BD",
+  "selection": "#365440",
+  "palette": [
+    "#29313B",
+    "#D09596",
+    "#95D09F",
+    "#D0BC95",
+    "#95AED0",
+    "#BC95D0",
+    "#95D0CA",
+    "#D5DBE3",
+    "#77828F",
+    "#E1B2B2",
+    "#B2E1BA",
+    "#E1D1B2",
+    "#B2C6E1",
+    "#D1B2E1",
+    "#B2E1DD",
+    "#F4F6FA"
+  ]
+}

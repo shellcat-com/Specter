@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "boreal-parchment",
+  "name": "Boreal Parchment",
+  "background": "#DFECE3",
+  "foreground": "#222F27",
+  "isDark": false,
+  "cursor": "#247B41",
+  "selection": "#C1D7C8",
+  "palette": [
+    "#29313B",
+    "#6F2F30",
+    "#2F6F3A",
+    "#6F592F",
+    "#2F4A6F",
+    "#592F6F",
+    "#2F6F69",
+    "#D5DBE3",
+    "#77828F",
+    "#863232",
+    "#32863F",
+    "#866A32",
+    "#325586",
+    "#6A3286",
+    "#32867F",
+    "#F4F6FA"
+  ]
+}

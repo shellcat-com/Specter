@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "lagoon-velvet",
+  "name": "Lagoon Velvet",
+  "background": "#202F2F",
+  "foreground": "#DEE7E7",
+  "isDark": true,
+  "cursor": "#A8E4E6",
+  "selection": "#365354",
+  "palette": [
+    "#29313B",
+    "#D09895",
+    "#95D0A2",
+    "#D0BF95",
+    "#95ABD0",
+    "#BF95D0",
+    "#95D0CD",
+    "#D5DBE3",
+    "#77828F",
+    "#E1B4B2",
+    "#B2E1BC",
+    "#E1D3B2",
+    "#B2C3E1",
+    "#D3B2E1",
+    "#B2E1DF",
+    "#F4F6FA"
+  ]
+}

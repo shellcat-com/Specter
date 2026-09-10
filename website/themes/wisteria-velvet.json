@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "wisteria-velvet",
+  "name": "Wisteria Velvet",
+  "background": "#29202F",
+  "foreground": "#E4DEE7",
+  "isDark": true,
+  "cursor": "#CCA8E6",
+  "selection": "#473654",
+  "palette": [
+    "#29313B",
+    "#D09E95",
+    "#95D0A8",
+    "#D0C595",
+    "#95A5D0",
+    "#C595D0",
+    "#95CCD0",
+    "#D5DBE3",
+    "#77828F",
+    "#E1B9B2",
+    "#B2E1C1",
+    "#E1D9B2",
+    "#B2BEE1",
+    "#D9B2E1",
+    "#B2DEE1",
+    "#F4F6FA"
+  ]
+}

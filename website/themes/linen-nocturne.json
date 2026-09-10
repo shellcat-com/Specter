@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "linen-nocturne",
+  "name": "Linen Nocturne",
+  "background": "#252016",
+  "foreground": "#E7E5DE",
+  "isDark": true,
+  "cursor": "#E6D3A8",
+  "selection": "#544B36",
+  "palette": [
+    "#29313B",
+    "#DA8B94",
+    "#8BDA8F",
+    "#DAB68B",
+    "#8BB5DA",
+    "#B68BDA",
+    "#8BDACA",
+    "#D5DBE3",
+    "#77828F",
+    "#E9AAB2",
+    "#AAE9AD",
+    "#E9CCAA",
+    "#AACCE9",
+    "#CCAAE9",
+    "#AAE9DC",
+    "#F4F6FA"
+  ]
+}

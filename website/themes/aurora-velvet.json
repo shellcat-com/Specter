@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "aurora-velvet",
+  "name": "Aurora Velvet",
+  "background": "#202F2D",
+  "foreground": "#DEE7E6",
+  "isDark": true,
+  "cursor": "#A8E6DB",
+  "selection": "#36544F",
+  "palette": [
+    "#29313B",
+    "#D09795",
+    "#95D0A1",
+    "#D0BE95",
+    "#95ACD0",
+    "#BE95D0",
+    "#95D0CD",
+    "#D5DBE3",
+    "#77828F",
+    "#E1B3B2",
+    "#B2E1BB",
+    "#E1D3B2",
+    "#B2C4E1",
+    "#D3B2E1",
+    "#B2E1DF",
+    "#F4F6FA"
+  ]
+}

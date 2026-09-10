@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "saffron-parchment",
+  "name": "Saffron Parchment",
+  "background": "#ECE7DF",
+  "foreground": "#2F2A22",
+  "isDark": false,
+  "cursor": "#7B5824",
+  "selection": "#D7CEC1",
+  "palette": [
+    "#29313B",
+    "#6F2F37",
+    "#2F6F32",
+    "#6F522F",
+    "#2F526F",
+    "#522F6F",
+    "#2F6F61",
+    "#D5DBE3",
+    "#77828F",
+    "#86323C",
+    "#328635",
+    "#865F32",
+    "#325F86",
+    "#5F3286",
+    "#328674",
+    "#F4F6FA"
+  ]
+}

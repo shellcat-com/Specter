@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "mulberry-nocturne",
+  "name": "Mulberry Nocturne",
+  "background": "#251620",
+  "foreground": "#E7DEE5",
+  "isDark": true,
+  "cursor": "#E6A8D3",
+  "selection": "#54364B",
+  "palette": [
+    "#29313B",
+    "#DA9B8B",
+    "#8BDAA8",
+    "#DAD08B",
+    "#8B9CDA",
+    "#D08BDA",
+    "#8BD1DA",
+    "#D5DBE3",
+    "#77828F",
+    "#E9B7AA",
+    "#AAE9C1",
+    "#E9E0AA",
+    "#AAB8E9",
+    "#E0AAE9",
+    "#AAE1E9",
+    "#F4F6FA"
+  ]
+}

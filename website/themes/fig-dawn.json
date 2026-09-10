@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "fig-dawn",
+  "name": "Fig Dawn",
+  "background": "#F2EBF4",
+  "foreground": "#2C222F",
+  "isDark": false,
+  "cursor": "#65247B",
+  "selection": "#D2C1D7",
+  "palette": [
+    "#29313B",
+    "#753629",
+    "#297542",
+    "#756829",
+    "#293C75",
+    "#682975",
+    "#296F75",
+    "#D5DBE3",
+    "#77828F",
+    "#8D3B2A",
+    "#2A8D4B",
+    "#8D7D2A",
+    "#2A438D",
+    "#7D2A8D",
+    "#2A858D",
+    "#F4F6FA"
+  ]
+}

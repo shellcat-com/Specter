@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "canyon-velvet",
+  "name": "Canyon Velvet",
+  "background": "#2F2520",
+  "foreground": "#E7E1DE",
+  "isDark": true,
+  "cursor": "#E6BDA8",
+  "selection": "#544036",
+  "palette": [
+    "#29313B",
+    "#D0959E",
+    "#95D097",
+    "#D0B495",
+    "#95B6D0",
+    "#B495D0",
+    "#95D0C2",
+    "#D5DBE3",
+    "#77828F",
+    "#E1B2B9",
+    "#B2E1B3",
+    "#E1CBB2",
+    "#B2CCE1",
+    "#CBB2E1",
+    "#B2E1D6",
+    "#F4F6FA"
+  ]
+}

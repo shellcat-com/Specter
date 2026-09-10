@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "copper-parchment",
+  "name": "Copper Parchment",
+  "background": "#ECE5DF",
+  "foreground": "#2F2822",
+  "isDark": false,
+  "cursor": "#7B4C24",
+  "selection": "#D7CBC1",
+  "palette": [
+    "#29313B",
+    "#6F2F38",
+    "#2F6F31",
+    "#6F512F",
+    "#2F526F",
+    "#512F6F",
+    "#2F6F61",
+    "#D5DBE3",
+    "#77828F",
+    "#86323D",
+    "#328634",
+    "#865E32",
+    "#326086",
+    "#5E3286",
+    "#328674",
+    "#F4F6FA"
+  ]
+}

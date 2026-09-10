@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "marigold-parchment",
+  "name": "Marigold Parchment",
+  "background": "#ECE9DF",
+  "foreground": "#2F2D22",
+  "isDark": false,
+  "cursor": "#7B6924",
+  "selection": "#D7D3C1",
+  "palette": [
+    "#29313B",
+    "#6F2F36",
+    "#2F6F33",
+    "#6F532F",
+    "#2F516F",
+    "#532F6F",
+    "#2F6F62",
+    "#D5DBE3",
+    "#77828F",
+    "#86323B",
+    "#328636",
+    "#866032",
+    "#325E86",
+    "#603286",
+    "#328676",
+    "#F4F6FA"
+  ]
+}

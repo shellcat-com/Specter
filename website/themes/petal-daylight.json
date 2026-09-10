@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "petal-daylight",
+  "name": "Petal Daylight",
+  "background": "#FAF7F8",
+  "foreground": "#2F2226",
+  "isDark": false,
+  "cursor": "#7B2439",
+  "selection": "#D7C1C6",
+  "palette": [
+    "#29313B",
+    "#7B3824",
+    "#247B46",
+    "#7B7224",
+    "#24337B",
+    "#72247B",
+    "#246D7B",
+    "#D5DBE3",
+    "#77828F",
+    "#943E24",
+    "#249451",
+    "#948924",
+    "#243894",
+    "#892494",
+    "#248394",
+    "#F4F6FA"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "lagoon-midnight",
+  "name": "Lagoon Midnight",
+  "background": "#0F1717",
+  "foreground": "#DEE7E7",
+  "isDark": true,
+  "cursor": "#A8E4E6",
+  "selection": "#365354",
+  "palette": [
+    "#29313B",
+    "#D59390",
+    "#90D59F",
+    "#D5C190",
+    "#90AAD5",
+    "#C190D5",
+    "#90D5D2",
+    "#D5DBE3",
+    "#77828F",
+    "#E5B1AE",
+    "#AEE5BA",
+    "#E5D5AE",
+    "#AEC2E5",
+    "#D5AEE5",
+    "#AEE5E3",
+    "#F4F6FA"
+  ]
+}

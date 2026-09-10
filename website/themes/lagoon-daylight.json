@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "lagoon-daylight",
+  "name": "Lagoon Daylight",
+  "background": "#F7FAFA",
+  "foreground": "#222F2F",
+  "isDark": false,
+  "cursor": "#24787B",
+  "selection": "#C1D6D7",
+  "palette": [
+    "#29313B",
+    "#7B2724",
+    "#247B36",
+    "#7B6124",
+    "#24447B",
+    "#61247B",
+    "#247B77",
+    "#D5DBE3",
+    "#77828F",
+    "#942924",
+    "#24943B",
+    "#947324",
+    "#244D94",
+    "#732494",
+    "#24948F",
+    "#F4F6FA"
+  ]
+}

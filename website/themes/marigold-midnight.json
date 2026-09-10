@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "marigold-midnight",
+  "name": "Marigold Midnight",
+  "background": "#17160F",
+  "foreground": "#E7E6DE",
+  "isDark": true,
+  "cursor": "#E6D9A8",
+  "selection": "#544E36",
+  "palette": [
+    "#29313B",
+    "#D59098",
+    "#90D594",
+    "#D5B690",
+    "#90B4D5",
+    "#B690D5",
+    "#90D5C8",
+    "#D5DBE3",
+    "#77828F",
+    "#E5AEB4",
+    "#AEE5B1",
+    "#E5CCAE",
+    "#AECBE5",
+    "#CCAEE5",
+    "#AEE5DA",
+    "#F4F6FA"
+  ]
+}

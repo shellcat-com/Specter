@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "boreal-daylight",
+  "name": "Boreal Daylight",
+  "background": "#F7FAF8",
+  "foreground": "#222F27",
+  "isDark": false,
+  "cursor": "#247B41",
+  "selection": "#C1D7C8",
+  "palette": [
+    "#29313B",
+    "#7B2424",
+    "#247B32",
+    "#7B5D24",
+    "#24487B",
+    "#5D247B",
+    "#247B73",
+    "#D5DBE3",
+    "#77828F",
+    "#942424",
+    "#249436",
+    "#946E24",
+    "#245394",
+    "#6E2494",
+    "#24948A",
+    "#F4F6FA"
+  ]
+}

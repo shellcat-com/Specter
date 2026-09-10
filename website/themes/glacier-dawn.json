@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "glacier-dawn",
+  "name": "Glacier Dawn",
+  "background": "#EBF2F4",
+  "foreground": "#222C2F",
+  "isDark": false,
+  "cursor": "#24657B",
+  "selection": "#C1D2D7",
+  "palette": [
+    "#29313B",
+    "#752E29",
+    "#29753A",
+    "#756029",
+    "#294475",
+    "#602975",
+    "#297573",
+    "#D5DBE3",
+    "#77828F",
+    "#8D302A",
+    "#2A8D41",
+    "#8D722A",
+    "#2A4E8D",
+    "#722A8D",
+    "#2A8D8B",
+    "#F4F6FA"
+  ]
+}

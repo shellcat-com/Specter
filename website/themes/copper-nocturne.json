@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "copper-nocturne",
+  "name": "Copper Nocturne",
+  "background": "#251D16",
+  "foreground": "#E7E3DE",
+  "isDark": true,
+  "cursor": "#E6C5A8",
+  "selection": "#544436",
+  "palette": [
+    "#29313B",
+    "#DA8B95",
+    "#8BDA8D",
+    "#DAB58B",
+    "#8BB7DA",
+    "#B58BDA",
+    "#8BDAC9",
+    "#D5DBE3",
+    "#77828F",
+    "#E9AAB3",
+    "#AAE9AC",
+    "#E9CBAA",
+    "#AACDE9",
+    "#CBAAE9",
+    "#AAE9DB",
+    "#F4F6FA"
+  ]
+}

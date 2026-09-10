@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "mulberry-midnight",
+  "name": "Mulberry Midnight",
+  "background": "#170F15",
+  "foreground": "#E7DEE5",
+  "isDark": true,
+  "cursor": "#E6A8D3",
+  "selection": "#54364B",
+  "palette": [
+    "#29313B",
+    "#D59E90",
+    "#90D5AA",
+    "#D5CC90",
+    "#909FD5",
+    "#CC90D5",
+    "#90CDD5",
+    "#D5DBE3",
+    "#77828F",
+    "#E5B9AE",
+    "#AEE5C2",
+    "#E5DEAE",
+    "#AEBAE5",
+    "#DEAEE5",
+    "#AEDEE5",
+    "#F4F6FA"
+  ]
+}

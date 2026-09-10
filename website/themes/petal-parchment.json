@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "petal-parchment",
+  "name": "Petal Parchment",
+  "background": "#ECDFE2",
+  "foreground": "#2F2226",
+  "isDark": false,
+  "cursor": "#7B2439",
+  "selection": "#D7C1C6",
+  "palette": [
+    "#29313B",
+    "#6F3E2F",
+    "#2F6F49",
+    "#6F682F",
+    "#2F3B6F",
+    "#682F6F",
+    "#2F656F",
+    "#D5DBE3",
+    "#77828F",
+    "#864532",
+    "#328653",
+    "#867E32",
+    "#324186",
+    "#7E3286",
+    "#327986",
+    "#F4F6FA"
+  ]
+}

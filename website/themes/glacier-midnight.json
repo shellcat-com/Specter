@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "glacier-midnight",
+  "name": "Glacier Midnight",
+  "background": "#0F1517",
+  "foreground": "#DEE5E7",
+  "isDark": true,
+  "cursor": "#A8D6E6",
+  "selection": "#364C54",
+  "palette": [
+    "#29313B",
+    "#D59490",
+    "#90D5A0",
+    "#D5C290",
+    "#90A9D5",
+    "#C290D5",
+    "#90D5D3",
+    "#D5DBE3",
+    "#77828F",
+    "#E5B1AE",
+    "#AEE5BB",
+    "#E5D6AE",
+    "#AEC2E5",
+    "#D6AEE5",
+    "#AEE5E3",
+    "#F4F6FA"
+  ]
+}

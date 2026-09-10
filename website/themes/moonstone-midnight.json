@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "moonstone-midnight",
+  "name": "Moonstone Midnight",
+  "background": "#0F0F17",
+  "foreground": "#DEDEE7",
+  "isDark": true,
+  "cursor": "#A8A8E6",
+  "selection": "#363654",
+  "palette": [
+    "#29313B",
+    "#D59890",
+    "#90D5A3",
+    "#D5C690",
+    "#90A5D5",
+    "#C690D5",
+    "#90D3D5",
+    "#D5DBE3",
+    "#77828F",
+    "#E5B4AE",
+    "#AEE5BD",
+    "#E5D9AE",
+    "#AEBFE5",
+    "#D9AEE5",
+    "#AEE3E5",
+    "#F4F6FA"
+  ]
+}

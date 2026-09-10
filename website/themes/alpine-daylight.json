@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "alpine-daylight",
+  "name": "Alpine Daylight",
+  "background": "#F7FAF9",
+  "foreground": "#222F2A",
+  "isDark": false,
+  "cursor": "#247B56",
+  "selection": "#C1D7CE",
+  "palette": [
+    "#29313B",
+    "#7B2524",
+    "#247B33",
+    "#7B5F24",
+    "#24477B",
+    "#5F247B",
+    "#247B74",
+    "#D5DBE3",
+    "#77828F",
+    "#942524",
+    "#249438",
+    "#947024",
+    "#245194",
+    "#702494",
+    "#24948C",
+    "#F4F6FA"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "marigold-dawn",
+  "name": "Marigold Dawn",
+  "background": "#F4F2EB",
+  "foreground": "#2F2D22",
+  "isDark": false,
+  "cursor": "#7B6924",
+  "selection": "#D7D3C1",
+  "palette": [
+    "#29313B",
+    "#752932",
+    "#29752D",
+    "#755329",
+    "#295175",
+    "#532975",
+    "#297566",
+    "#D5DBE3",
+    "#77828F",
+    "#8D2A35",
+    "#2A8D30",
+    "#8D612A",
+    "#2A5F8D",
+    "#612A8D",
+    "#2A8D7A",
+    "#F4F6FA"
+  ]
+}

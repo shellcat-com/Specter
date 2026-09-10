@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "wisteria-nocturne",
+  "name": "Wisteria Nocturne",
+  "background": "#1F1625",
+  "foreground": "#E4DEE7",
+  "isDark": true,
+  "cursor": "#CCA8E6",
+  "selection": "#473654",
+  "palette": [
+    "#29313B",
+    "#DA978B",
+    "#8BDAA4",
+    "#DACC8B",
+    "#8BA0DA",
+    "#CC8BDA",
+    "#8BD5DA",
+    "#D5DBE3",
+    "#77828F",
+    "#E9B4AA",
+    "#AAE9BE",
+    "#E9DDAA",
+    "#AABBE9",
+    "#DDAAE9",
+    "#AAE4E9",
+    "#F4F6FA"
+  ]
+}

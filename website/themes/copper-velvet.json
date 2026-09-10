@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "copper-velvet",
+  "name": "Copper Velvet",
+  "background": "#2F2720",
+  "foreground": "#E7E3DE",
+  "isDark": true,
+  "cursor": "#E6C5A8",
+  "selection": "#544436",
+  "palette": [
+    "#29313B",
+    "#D0959D",
+    "#95D097",
+    "#D0B495",
+    "#95B5D0",
+    "#B495D0",
+    "#95D0C3",
+    "#D5DBE3",
+    "#77828F",
+    "#E1B2B8",
+    "#B2E1B3",
+    "#E1CBB2",
+    "#B2CCE1",
+    "#CBB2E1",
+    "#B2E1D7",
+    "#F4F6FA"
+  ]
+}

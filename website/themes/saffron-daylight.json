@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "saffron-daylight",
+  "name": "Saffron Daylight",
+  "background": "#FAF9F7",
+  "foreground": "#2F2A22",
+  "isDark": false,
+  "cursor": "#7B5824",
+  "selection": "#D7CEC1",
+  "palette": [
+    "#29313B",
+    "#7B242E",
+    "#247B27",
+    "#7B5324",
+    "#24537B",
+    "#53247B",
+    "#247B68",
+    "#D5DBE3",
+    "#77828F",
+    "#942432",
+    "#249428",
+    "#946024",
+    "#246194",
+    "#602494",
+    "#24947C",
+    "#F4F6FA"
+  ]
+}

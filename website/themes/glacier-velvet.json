@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "glacier-velvet",
+  "name": "Glacier Velvet",
+  "background": "#202B2F",
+  "foreground": "#DEE5E7",
+  "isDark": true,
+  "cursor": "#A8D6E6",
+  "selection": "#364C54",
+  "palette": [
+    "#29313B",
+    "#D09995",
+    "#95D0A3",
+    "#D0C095",
+    "#95AAD0",
+    "#C095D0",
+    "#95D0CE",
+    "#D5DBE3",
+    "#77828F",
+    "#E1B5B2",
+    "#B2E1BD",
+    "#E1D4B2",
+    "#B2C3E1",
+    "#D4B2E1",
+    "#B2E1E0",
+    "#F4F6FA"
+  ]
+}

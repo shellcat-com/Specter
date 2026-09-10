@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "wisteria-parchment",
+  "name": "Wisteria Parchment",
+  "background": "#E7DFEC",
+  "foreground": "#2A222F",
+  "isDark": false,
+  "cursor": "#56247B",
+  "selection": "#CEC1D7",
+  "palette": [
+    "#29313B",
+    "#6F392F",
+    "#2F6F44",
+    "#6F632F",
+    "#2F406F",
+    "#632F6F",
+    "#2F6A6F",
+    "#D5DBE3",
+    "#77828F",
+    "#863F32",
+    "#32864D",
+    "#867732",
+    "#324886",
+    "#773286",
+    "#328086",
+    "#F4F6FA"
+  ]
+}

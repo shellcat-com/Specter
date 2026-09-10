@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "heather-nocturne",
+  "name": "Heather Nocturne",
+  "background": "#1C1625",
+  "foreground": "#E2DEE7",
+  "isDark": true,
+  "cursor": "#C2A8E6",
+  "selection": "#423654",
+  "palette": [
+    "#29313B",
+    "#DA968B",
+    "#8BDAA3",
+    "#DACB8B",
+    "#8BA1DA",
+    "#CB8BDA",
+    "#8BD6DA",
+    "#D5DBE3",
+    "#77828F",
+    "#E9B3AA",
+    "#AAE9BE",
+    "#E9DDAA",
+    "#AABBE9",
+    "#DDAAE9",
+    "#AAE5E9",
+    "#F4F6FA"
+  ]
+}

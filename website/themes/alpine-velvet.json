@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "alpine-velvet",
+  "name": "Alpine Velvet",
+  "background": "#202F29",
+  "foreground": "#DEE7E4",
+  "isDark": true,
+  "cursor": "#A8E6CC",
+  "selection": "#365447",
+  "palette": [
+    "#29313B",
+    "#D09695",
+    "#95D0A0",
+    "#D0BD95",
+    "#95ADD0",
+    "#BD95D0",
+    "#95D0CC",
+    "#D5DBE3",
+    "#77828F",
+    "#E1B3B2",
+    "#B2E1BA",
+    "#E1D2B2",
+    "#B2C5E1",
+    "#D2B2E1",
+    "#B2E1DE",
+    "#F4F6FA"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "glacier-nocturne",
+  "name": "Glacier Nocturne",
+  "background": "#162125",
+  "foreground": "#DEE5E7",
+  "isDark": true,
+  "cursor": "#A8D6E6",
+  "selection": "#364C54",
+  "palette": [
+    "#29313B",
+    "#DA8F8B",
+    "#8BDA9D",
+    "#DAC58B",
+    "#8BA7DA",
+    "#C58BDA",
+    "#8BDAD8",
+    "#D5DBE3",
+    "#77828F",
+    "#E9AEAA",
+    "#AAE9B8",
+    "#E9D8AA",
+    "#AAC1E9",
+    "#D8AAE9",
+    "#AAE9E7",
+    "#F4F6FA"
+  ]
+}

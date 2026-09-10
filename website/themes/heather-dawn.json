@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "heather-dawn",
+  "name": "Heather Dawn",
+  "background": "#EFEBF4",
+  "foreground": "#28222F",
+  "isDark": false,
+  "cursor": "#48247B",
+  "selection": "#CAC1D7",
+  "palette": [
+    "#29313B",
+    "#753429",
+    "#297541",
+    "#756629",
+    "#293E75",
+    "#662975",
+    "#297175",
+    "#D5DBE3",
+    "#77828F",
+    "#8D382A",
+    "#2A8D49",
+    "#8D7A2A",
+    "#2A458D",
+    "#7A2A8D",
+    "#2A888D",
+    "#F4F6FA"
+  ]
+}

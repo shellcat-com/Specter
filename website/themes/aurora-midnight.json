@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "aurora-midnight",
+  "name": "Aurora Midnight",
+  "background": "#0F1716",
+  "foreground": "#DEE7E6",
+  "isDark": true,
+  "cursor": "#A8E6DB",
+  "selection": "#36544F",
+  "palette": [
+    "#29313B",
+    "#D59290",
+    "#90D59E",
+    "#D5C090",
+    "#90ABD5",
+    "#C090D5",
+    "#90D5D1",
+    "#D5DBE3",
+    "#77828F",
+    "#E5B0AE",
+    "#AEE5B9",
+    "#E5D4AE",
+    "#AEC3E5",
+    "#D4AEE5",
+    "#AEE5E2",
+    "#F4F6FA"
+  ]
+}

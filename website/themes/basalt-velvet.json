@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "basalt-velvet",
+  "name": "Basalt Velvet",
+  "background": "#20242F",
+  "foreground": "#DEE1E7",
+  "isDark": true,
+  "cursor": "#A8B7E6",
+  "selection": "#363D54",
+  "palette": [
+    "#29313B",
+    "#D09B95",
+    "#95D0A5",
+    "#D0C295",
+    "#95A8D0",
+    "#C295D0",
+    "#95CFD0",
+    "#D5DBE3",
+    "#77828F",
+    "#E1B6B2",
+    "#B2E1BE",
+    "#E1D6B2",
+    "#B2C1E1",
+    "#D6B2E1",
+    "#B2E0E1",
+    "#F4F6FA"
+  ]
+}

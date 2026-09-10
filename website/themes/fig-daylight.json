@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "fig-daylight",
+  "name": "Fig Daylight",
+  "background": "#F9F7FA",
+  "foreground": "#2C222F",
+  "isDark": false,
+  "cursor": "#65247B",
+  "selection": "#D2C1D7",
+  "palette": [
+    "#29313B",
+    "#7B3224",
+    "#247B40",
+    "#7B6C24",
+    "#24397B",
+    "#6C247B",
+    "#24737B",
+    "#D5DBE3",
+    "#77828F",
+    "#943624",
+    "#249449",
+    "#948124",
+    "#244094",
+    "#812494",
+    "#248B94",
+    "#F4F6FA"
+  ]
+}

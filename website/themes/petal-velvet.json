@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "petal-velvet",
+  "name": "Petal Velvet",
+  "background": "#2F2024",
+  "foreground": "#E7DEE1",
+  "isDark": true,
+  "cursor": "#E6A8B7",
+  "selection": "#54363D",
+  "palette": [
+    "#29313B",
+    "#D0A395",
+    "#95D0AD",
+    "#D0CA95",
+    "#95A0D0",
+    "#CA95D0",
+    "#95C7D0",
+    "#D5DBE3",
+    "#77828F",
+    "#E1BDB2",
+    "#B2E1C5",
+    "#E1DCB2",
+    "#B2BAE1",
+    "#DCB2E1",
+    "#B2DAE1",
+    "#F4F6FA"
+  ]
+}

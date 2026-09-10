@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "canyon-daylight",
+  "name": "Canyon Daylight",
+  "background": "#FAF8F7",
+  "foreground": "#2F2722",
+  "isDark": false,
+  "cursor": "#7B4124",
+  "selection": "#D7C8C1",
+  "palette": [
+    "#29313B",
+    "#7B2430",
+    "#247B26",
+    "#7B5124",
+    "#24547B",
+    "#51247B",
+    "#247B67",
+    "#D5DBE3",
+    "#77828F",
+    "#942434",
+    "#249426",
+    "#945E24",
+    "#246394",
+    "#5E2494",
+    "#24947A",
+    "#F4F6FA"
+  ]
+}

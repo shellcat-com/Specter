@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "basalt-nocturne",
+  "name": "Basalt Nocturne",
+  "background": "#161A25",
+  "foreground": "#DEE1E7",
+  "isDark": true,
+  "cursor": "#A8B7E6",
+  "selection": "#363D54",
+  "palette": [
+    "#29313B",
+    "#DA928B",
+    "#8BDAA0",
+    "#DAC78B",
+    "#8BA4DA",
+    "#C78BDA",
+    "#8BD9DA",
+    "#D5DBE3",
+    "#77828F",
+    "#E9B0AA",
+    "#AAE9BB",
+    "#E9DAAA",
+    "#AABEE9",
+    "#DAAAE9",
+    "#AAE8E9",
+    "#F4F6FA"
+  ]
+}

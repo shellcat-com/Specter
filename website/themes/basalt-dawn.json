@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "basalt-dawn",
+  "name": "Basalt Dawn",
+  "background": "#EBEDF4",
+  "foreground": "#22262F",
+  "isDark": false,
+  "cursor": "#24397B",
+  "selection": "#C1C6D7",
+  "palette": [
+    "#29313B",
+    "#753029",
+    "#29753D",
+    "#756329",
+    "#294275",
+    "#632975",
+    "#297475",
+    "#D5DBE3",
+    "#77828F",
+    "#8D342A",
+    "#2A8D44",
+    "#8D762A",
+    "#2A4A8D",
+    "#762A8D",
+    "#2A8C8D",
+    "#F4F6FA"
+  ]
+}

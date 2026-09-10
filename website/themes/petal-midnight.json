@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "petal-midnight",
+  "name": "Petal Midnight",
+  "background": "#170F11",
+  "foreground": "#E7DEE1",
+  "isDark": true,
+  "cursor": "#E6A8B7",
+  "selection": "#54363D",
+  "palette": [
+    "#29313B",
+    "#D5A090",
+    "#90D5AC",
+    "#D5CE90",
+    "#909DD5",
+    "#CE90D5",
+    "#90CAD5",
+    "#D5DBE3",
+    "#77828F",
+    "#E5BBAE",
+    "#AEE5C4",
+    "#E5DFAE",
+    "#AEB8E5",
+    "#DFAEE5",
+    "#AEDCE5",
+    "#F4F6FA"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "glacier-daylight",
+  "name": "Glacier Daylight",
+  "background": "#F7F9FA",
+  "foreground": "#222C2F",
+  "isDark": false,
+  "cursor": "#24657B",
+  "selection": "#C1D2D7",
+  "palette": [
+    "#29313B",
+    "#7B2924",
+    "#247B37",
+    "#7B6324",
+    "#24437B",
+    "#63247B",
+    "#247B78",
+    "#D5DBE3",
+    "#77828F",
+    "#942B24",
+    "#24943D",
+    "#947524",
+    "#244C94",
+    "#752494",
+    "#249491",
+    "#F4F6FA"
+  ]
+}

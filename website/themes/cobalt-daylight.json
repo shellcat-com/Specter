@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "cobalt-daylight",
+  "name": "Cobalt Daylight",
+  "background": "#F7F8FA",
+  "foreground": "#22272F",
+  "isDark": false,
+  "cursor": "#24437B",
+  "selection": "#C1C9D7",
+  "palette": [
+    "#29313B",
+    "#7B2B24",
+    "#247B3A",
+    "#7B6524",
+    "#24407B",
+    "#65247B",
+    "#247A7B",
+    "#D5DBE3",
+    "#77828F",
+    "#942E24",
+    "#249440",
+    "#947824",
+    "#244994",
+    "#782494",
+    "#249394",
+    "#F4F6FA"
+  ]
+}

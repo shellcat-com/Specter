@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "wisteria-daylight",
+  "name": "Wisteria Daylight",
+  "background": "#F9F7FA",
+  "foreground": "#2A222F",
+  "isDark": false,
+  "cursor": "#56247B",
+  "selection": "#CEC1D7",
+  "palette": [
+    "#29313B",
+    "#7B3124",
+    "#247B3F",
+    "#7B6B24",
+    "#243A7B",
+    "#6B247B",
+    "#24747B",
+    "#D5DBE3",
+    "#77828F",
+    "#943524",
+    "#249448",
+    "#948024",
+    "#244194",
+    "#802494",
+    "#248C94",
+    "#F4F6FA"
+  ]
+}

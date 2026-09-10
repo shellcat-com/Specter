@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "celadon-parchment",
+  "name": "Celadon Parchment",
+  "background": "#E3ECDF",
+  "foreground": "#272F22",
+  "isDark": false,
+  "cursor": "#417B24",
+  "selection": "#C8D7C1",
+  "palette": [
+    "#29313B",
+    "#6F2F33",
+    "#2F6F37",
+    "#6F562F",
+    "#2F4D6F",
+    "#562F6F",
+    "#2F6F66",
+    "#D5DBE3",
+    "#77828F",
+    "#863236",
+    "#32863B",
+    "#866632",
+    "#325986",
+    "#663286",
+    "#32867B",
+    "#F4F6FA"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "basalt-midnight",
+  "name": "Basalt Midnight",
+  "background": "#0F1117",
+  "foreground": "#DEE1E7",
+  "isDark": true,
+  "cursor": "#A8B7E6",
+  "selection": "#363D54",
+  "palette": [
+    "#29313B",
+    "#D59790",
+    "#90D5A2",
+    "#D5C590",
+    "#90A6D5",
+    "#C590D5",
+    "#90D4D5",
+    "#D5DBE3",
+    "#77828F",
+    "#E5B3AE",
+    "#AEE5BC",
+    "#E5D8AE",
+    "#AEC0E5",
+    "#D8AEE5",
+    "#AEE4E5",
+    "#F4F6FA"
+  ]
+}

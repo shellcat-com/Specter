@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "basalt-parchment",
+  "name": "Basalt Parchment",
+  "background": "#DFE2EC",
+  "foreground": "#22262F",
+  "isDark": false,
+  "cursor": "#24397B",
+  "selection": "#C1C6D7",
+  "palette": [
+    "#29313B",
+    "#6F352F",
+    "#2F6F40",
+    "#6F602F",
+    "#2F446F",
+    "#602F6F",
+    "#2F6E6F",
+    "#D5DBE3",
+    "#77828F",
+    "#863A32",
+    "#328648",
+    "#867232",
+    "#324D86",
+    "#723286",
+    "#328586",
+    "#F4F6FA"
+  ]
+}

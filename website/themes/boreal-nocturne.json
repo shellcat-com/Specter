@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "boreal-nocturne",
+  "name": "Boreal Nocturne",
+  "background": "#16251B",
+  "foreground": "#DEE7E1",
+  "isDark": true,
+  "cursor": "#A8E6BD",
+  "selection": "#365440",
+  "palette": [
+    "#29313B",
+    "#DA8B8B",
+    "#8BDA98",
+    "#DABF8B",
+    "#8BACDA",
+    "#BF8BDA",
+    "#8BDAD3",
+    "#D5DBE3",
+    "#77828F",
+    "#E9AAAB",
+    "#AAE9B4",
+    "#E9D4AA",
+    "#AAC5E9",
+    "#D4AAE9",
+    "#AAE9E3",
+    "#F4F6FA"
+  ]
+}

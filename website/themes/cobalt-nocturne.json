@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "cobalt-nocturne",
+  "name": "Cobalt Nocturne",
+  "background": "#161B25",
+  "foreground": "#DEE2E7",
+  "isDark": true,
+  "cursor": "#A8BFE6",
+  "selection": "#364154",
+  "palette": [
+    "#29313B",
+    "#DA928B",
+    "#8BDA9F",
+    "#DAC78B",
+    "#8BA5DA",
+    "#C78BDA",
+    "#8BDADA",
+    "#D5DBE3",
+    "#77828F",
+    "#E9B0AA",
+    "#AAE9BA",
+    "#E9D9AA",
+    "#AABFE9",
+    "#D9AAE9",
+    "#AAE8E9",
+    "#F4F6FA"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "sequoia-velvet",
+  "name": "Sequoia Velvet",
+  "background": "#202F20",
+  "foreground": "#DEE7DE",
+  "isDark": true,
+  "cursor": "#A8E6A8",
+  "selection": "#365436",
+  "palette": [
+    "#29313B",
+    "#D09597",
+    "#95D09E",
+    "#D0BB95",
+    "#95AFD0",
+    "#BB95D0",
+    "#95D0C9",
+    "#D5DBE3",
+    "#77828F",
+    "#E1B2B3",
+    "#B2E1B8",
+    "#E1D0B2",
+    "#B2C7E1",
+    "#D0B2E1",
+    "#B2E1DC",
+    "#F4F6FA"
+  ]
+}

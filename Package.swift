@@ -18,7 +18,7 @@ let package = Package(
     .target(name: "TextLayout", dependencies: ["TerminalCore"]),
     .target(
       name: "MetalTerminal", dependencies: ["TextLayout", "TerminalCore"],
-      resources: [.copy("Shaders.metal")]),
+      resources: [.copy("Shaders.metal"), .copy("Themes")]),
     .target(
       name: "TerminalUI",
       dependencies: ["TerminalCore", "PTYSession", "MetalTerminal", "TextLayout"]),

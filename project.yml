@@ -24,6 +24,8 @@ targets:
     platform: macOS
     sources:
       - Sources/SpecterApp
+      - path: Resources/Handbook.html
+        buildPhase: resources
     dependencies:
       - package: SpecterModules
         product: TerminalUI

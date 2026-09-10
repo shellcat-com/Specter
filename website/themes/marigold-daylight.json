@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "marigold-daylight",
+  "name": "Marigold Daylight",
+  "background": "#FAF9F7",
+  "foreground": "#2F2D22",
+  "isDark": false,
+  "cursor": "#7B6924",
+  "selection": "#D7D3C1",
+  "palette": [
+    "#29313B",
+    "#7B242D",
+    "#247B28",
+    "#7B5424",
+    "#24517B",
+    "#54247B",
+    "#247B6A",
+    "#D5DBE3",
+    "#77828F",
+    "#942430",
+    "#24942A",
+    "#946224",
+    "#245F94",
+    "#622494",
+    "#24947E",
+    "#F4F6FA"
+  ]
+}

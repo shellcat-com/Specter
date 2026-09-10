@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "petal-nocturne",
+  "name": "Petal Nocturne",
+  "background": "#25161A",
+  "foreground": "#E7DEE1",
+  "isDark": true,
+  "cursor": "#E6A8B7",
+  "selection": "#54363D",
+  "palette": [
+    "#29313B",
+    "#DA9D8B",
+    "#8BDAAB",
+    "#DAD28B",
+    "#8B99DA",
+    "#D28BDA",
+    "#8BCEDA",
+    "#D5DBE3",
+    "#77828F",
+    "#E9B9AA",
+    "#AAE9C3",
+    "#E9E2AA",
+    "#AAB6E9",
+    "#E2AAE9",
+    "#AADFE9",
+    "#F4F6FA"
+  ]
+}

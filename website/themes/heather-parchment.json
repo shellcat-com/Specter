@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "heather-parchment",
+  "name": "Heather Parchment",
+  "background": "#E4DFEC",
+  "foreground": "#28222F",
+  "isDark": false,
+  "cursor": "#48247B",
+  "selection": "#CAC1D7",
+  "palette": [
+    "#29313B",
+    "#6F382F",
+    "#2F6F43",
+    "#6F632F",
+    "#2F416F",
+    "#632F6F",
+    "#2F6B6F",
+    "#D5DBE3",
+    "#77828F",
+    "#863E32",
+    "#32864C",
+    "#867632",
+    "#324986",
+    "#763286",
+    "#328186",
+    "#F4F6FA"
+  ]
+}

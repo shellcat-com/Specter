@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "celadon-dawn",
+  "name": "Celadon Dawn",
+  "background": "#EEF4EB",
+  "foreground": "#272F22",
+  "isDark": false,
+  "cursor": "#417B24",
+  "selection": "#C8D7C1",
+  "palette": [
+    "#29313B",
+    "#75292D",
+    "#297532",
+    "#755829",
+    "#294D75",
+    "#582975",
+    "#29756B",
+    "#D5DBE3",
+    "#77828F",
+    "#8D2A2F",
+    "#2A8D36",
+    "#8D672A",
+    "#2A598D",
+    "#672A8D",
+    "#2A8D80",
+    "#F4F6FA"
+  ]
+}

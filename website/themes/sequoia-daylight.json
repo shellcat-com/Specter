@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "sequoia-daylight",
+  "name": "Sequoia Daylight",
+  "background": "#F7FAF7",
+  "foreground": "#222F22",
+  "isDark": false,
+  "cursor": "#247B24",
+  "selection": "#C1D7C1",
+  "palette": [
+    "#29313B",
+    "#7B2426",
+    "#247B30",
+    "#7B5B24",
+    "#244A7B",
+    "#5B247B",
+    "#247B71",
+    "#D5DBE3",
+    "#77828F",
+    "#942427",
+    "#249433",
+    "#946B24",
+    "#245694",
+    "#6B2494",
+    "#249487",
+    "#F4F6FA"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "alpine-nocturne",
+  "name": "Alpine Nocturne",
+  "background": "#16251F",
+  "foreground": "#DEE7E4",
+  "isDark": true,
+  "cursor": "#A8E6CC",
+  "selection": "#365447",
+  "palette": [
+    "#29313B",
+    "#DA8C8B",
+    "#8BDA99",
+    "#DAC18B",
+    "#8BABDA",
+    "#C18BDA",
+    "#8BDAD5",
+    "#D5DBE3",
+    "#77828F",
+    "#E9ABAA",
+    "#AAE9B6",
+    "#E9D5AA",
+    "#AAC3E9",
+    "#D5AAE9",
+    "#AAE9E4",
+    "#F4F6FA"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "linen-velvet",
+  "name": "Linen Velvet",
+  "background": "#2F2B20",
+  "foreground": "#E7E5DE",
+  "isDark": true,
+  "cursor": "#E6D3A8",
+  "selection": "#544B36",
+  "palette": [
+    "#29313B",
+    "#D0959C",
+    "#95D098",
+    "#D0B595",
+    "#95B5D0",
+    "#B595D0",
+    "#95D0C4",
+    "#D5DBE3",
+    "#77828F",
+    "#E1B2B7",
+    "#B2E1B4",
+    "#E1CCB2",
+    "#B2CBE1",
+    "#CCB2E1",
+    "#B2E1D8",
+    "#F4F6FA"
+  ]
+}

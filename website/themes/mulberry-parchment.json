@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "mulberry-parchment",
+  "name": "Mulberry Parchment",
+  "background": "#ECDFE8",
+  "foreground": "#2F222B",
+  "isDark": false,
+  "cursor": "#7B2460",
+  "selection": "#D7C1D0",
+  "palette": [
+    "#29313B",
+    "#6F3C2F",
+    "#2F6F47",
+    "#6F662F",
+    "#2F3D6F",
+    "#662F6F",
+    "#2F676F",
+    "#D5DBE3",
+    "#77828F",
+    "#864332",
+    "#328651",
+    "#867B32",
+    "#324486",
+    "#7B3286",
+    "#327C86",
+    "#F4F6FA"
+  ]
+}

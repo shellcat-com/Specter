@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "id": "heather-daylight",
+  "name": "Heather Daylight",
+  "background": "#F8F7FA",
+  "foreground": "#28222F",
+  "isDark": false,
+  "cursor": "#48247B",
+  "selection": "#CAC1D7",
+  "palette": [
+    "#29313B",
+    "#7B3024",
+    "#247B3E",
+    "#7B6A24",
+    "#243B7B",
+    "#6A247B",
+    "#24757B",
+    "#D5DBE3",
+    "#77828F",
+    "#943424",
+    "#249446",
+    "#947E24",
+    "#244394",
+    "#7E2494",
+    "#248D94",
+    "#F4F6FA"
+  ]
+}
