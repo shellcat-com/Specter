@@ -2,13 +2,13 @@
 
 > Your shell. Your colors. Your flow.
 
-Specter pairs a native macOS terminal with an editorial website. The app puts readable text and real shells first. The website offers room to breathe, original landscape illustration, and an honest route from discovery to daily use.
+Specter pairs a native macOS terminal with an editorial website. The app puts readable text and real shells first. The website offers room to breathe, an abstract studio illustration, and an honest route from discovery to daily use.
 
 ## Visual direction
 
 | Surface | Direction | Purpose |
 | --- | --- | --- |
-| Website | Warm paper, olive ink, landscape art, regular-weight headlines | Welcome the person before describing the machinery |
+| Website | Warm stone, charcoal ink, soft blue studio art, regular-weight headlines | Welcome the person before describing the machinery |
 | Terminal | Native window chrome, legible monospace, selectable palette | Keep output readable and controls predictable |
 | Theme Gallery | Native searchable grid, visible palette samples, favorites | Make a large collection easy to explore |
 | Documentation | Persistent chapter navigation, narrow text measure, useful tables | Let people find an answer quickly |
@@ -19,23 +19,23 @@ The references are [Cursor](https://cursor.com/) for editorial proportion and [G
 
 | Token | Value | Usage |
 | --- | --- | --- |
-| Canvas | `#F7F7F2` | Main page background |
-| Ink | `#282A24` | Headlines, body emphasis, primary action |
-| Body | `#67695F` | Supporting copy |
-| Line | `#DDDFD5` | Quiet divisions and controls |
-| Surface | `#EEEFE7` | Secondary panels |
-| Accent | `#3D5E46` | Text links and interaction feedback |
-| Focus | `#688675` | Visible keyboard outline |
+| Canvas | `#F8F7F5` | Main page background |
+| Ink | `#26262A` | Headlines, body emphasis, primary action |
+| Body | `#68686F` | Supporting copy |
+| Line | `#DEDDE1` | Quiet divisions and controls |
+| Surface | `#EEEDF0` | Secondary panels |
+| Accent | `#4D51A8` | Text links and interaction feedback |
+| Focus | `#6468BA` | Visible keyboard outline |
 
 System sans for website UI; `ui-monospace`, SF Mono and Menlo fallbacks for code. No remote font requests. Use regular-weight headings, tight display tracking, relaxed body line height. The top-level headline scales from 52 px on a phone to 78 px on a wide screen. Documentation text is 15 px with 1.8 line height and a maximum 790 px article measure.
 
-Page content caps at 1,300 px. Desktop gutters are 48 px; compact gutters are 18–24 px. Primary actions have rounded ends. Cards use 4–10 px corners and hairline borders. Reserve deep shadow for the terminal illustration over the landscape; ordinary content uses spacing and borders.
+Page content caps at 1,300 px. Desktop gutters are 48 px; compact gutters are 18–24 px. Primary actions have rounded ends. Cards use 4–10 px corners and hairline borders. Reserve deep shadow for the terminal illustration over the studio backdrop; ordinary content uses spacing and borders.
 
 ## Composition
 
-1. A concise native-macOS identifier and visible preview status.
+1. A concise native-macOS identifier and visible preview status, a direct GitHub link, and Download leading to the repository installation guide.
 2. A substantial headline paired with useful build and theme actions.
-3. An original landscape framing an illustrative terminal.
+3. A neutral studio backdrop framing an illustrative terminal.
 4. Four concrete product facts, without invented usage statistics.
 5. A twelve-session workspace illustration and its real shortcut.
 6. A theme preview row that changes the hero palette.
@@ -69,7 +69,7 @@ Honor `prefers-reduced-motion` in CSS; disable transitions and decorative animat
 
 ## Illustration and provenance
 
-`website/assets/daybreak.png` is an original generated landscape created with the built-in image-generation tool on 2026-09-10. It shows a sunrise valley with sage/olive hills, distant blue-gray mountains, mist, and wildflowers. It is website art, not terminal wallpaper and not a screenshot of the running app.
+`website/assets/daybreak.png` is an original generated landscape created with the built-in image-generation tool on 2026-09-10. It shows a sunrise valley with sage/olive hills, distant blue-gray mountains, mist, and wildflowers. This earlier website artwork is archived; it is no longer displayed. It is not terminal wallpaper or a screenshot of the running app.
 
 Generation prompt: “Use case: stylized-concept. Asset type: panoramic landscape illustration for the Specter native macOS terminal website. Create an original exquisitely detailed painterly landscape: rolling sage and olive grassy hills, distant blue-grey mountains under a vast pale apricot dawn sky, soft mist in valleys, little wildflowers in foreground and warm light. Quiet dreamlike, sophisticated editorial landscape oil painting with visible subtle grain, natural atmospheric depth, beautiful composition. Wide 16:9 composition, airy muted cream, sage, slate and peach palette. The center will have a terminal window overlaid in HTML, so leave its middle visually calm, concentrate expressive landscape detail at the edges. No text, no logos, no computer, no UI, no watermark. This is an original scene, do not imitate any specific existing artwork.”
 
@@ -89,3 +89,9 @@ Do not claim “fastest,” universal compatibility, full Ghostty parity, measur
 - Exercise more than ten simultaneous real PTYs and their lifecycle boundaries.
 - Record local artifacts in `.artifacts/` and report the exact limits of evidence.
 - Keep capability tables, menu shortcuts, and release status consistent with the code.
+
+## Website refinement — September 10, 2026
+
+Website chrome uses stone, charcoal, and restrained blue accents. Green panels, code blocks, focus rings, and workspace illustrations have been replaced. The original Daybreak artwork is retained as a source asset with the provenance above but is no longer displayed on the website. The hero uses an original CSS studio backdrop with concentric light and a neutral Inkstone terminal preview. Theme catalog previews preserve the real palette data so downloads remain accurate.
+
+Every page exposes GitHub and Download in the header, including compact layouts. Download opens `https://github.com/shellcat-com/Specter/blob/main/docs/install.md`; the source-build status is explicit rather than promising an available installer.

@@ -4,7 +4,7 @@ Reviewed 2026-09-10. These sources inform Specter’s design and backlog; they a
 
 | Source reviewed | Useful idea | Specter adaptation |
 | --- | --- | --- |
-| [Cursor homepage](https://cursor.com/) and supplied screenshots | Warm editorial layout, spacious product storytelling, scenic framing | Original landscape, restrained olive palette, concise build and documentation paths |
+| [Cursor homepage](https://cursor.com/) and supplied screenshots | Warm editorial layout, spacious product storytelling, scenic framing | Editorial spacing, neutral studio framing, concise GitHub download and documentation paths |
 | [Ghostty homepage](https://ghostty.org/) and supplied screenshots | Put the terminal itself at the center | Clearly labeled terminal illustration, real native PTY app |
 | [Ghostty docs](https://ghostty.org/docs) | Task-focused documentation hierarchy | Thirteen original Specter handbook chapters with local full-text chapter search |
 | [Features](https://ghostty.org/docs/features) | Distinguish native user features from VT protocol support | Explicit capability matrix and staged backlog |

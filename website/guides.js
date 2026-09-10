@@ -10,7 +10,7 @@ export const guides = [
     <h2>Read what matters next</h2><p><a href="docs.html?guide=sessions">Organize sessions</a> · <a href="docs.html?guide=themes">Choose a theme</a> · <a href="docs.html?guide=compatibility">Check compatibility</a></p>`},
   {id:'install',title:'Build & install',body:`
     <h1>Up and running.</h1><p>Build Specter locally on an Apple silicon Mac running macOS 14 or later, with Xcode and a Swift 6 toolchain. This preview does not offer a signed, notarized public download or an automatic updater.</p>
-    <h2>Build from your checkout</h2><p>In the Specter repository, run:</p><pre><code>scripts/build-app.sh
+    <p><a href="https://github.com/shellcat-com/Specter/blob/main/docs/install.md">Download and installation guide on GitHub →</a> — start here for source downloads, Xcode setup, installing, updating, and troubleshooting.</p><h2>Build from your checkout</h2><p>In the Specter repository, run:</p><pre><code>scripts/build-app.sh
 open .build/Specter.app</code></pre><p>The script compiles a release build, embeds the PTY helper, Metal resources, themes, and terminfo, and signs the bundle ad hoc for local use.</p>
     <h2>Keep it close</h2><p>After trying the app, you can copy the complete <code>.build/Specter.app</code> bundle to your Applications folder and keep it in the Dock. Copy the whole bundle; the helper and resources are required. Rebuilding updates the build folder, so copy the rebuilt bundle again when you want to update an installed copy.</p>
     <h2>Building in a synced folder</h2><p>If signing reports a resource fork or Finder metadata error in an iCloud-synced checkout, package outside that folder:</p><pre><code>SPECTER_APP_OUTPUT=/private/tmp/Specter.app scripts/build-app.sh
@@ -80,7 +80,7 @@ swift run SpecterBench --fuzz 600</code></pre><p>A passing build does not establ
     <h2>Evidence over claims</h2><p>The repository includes parser and Unicode tests, PTY lifecycle checks, Metal snapshot tests, and synthetic benchmarks. Offscreen snapshots are distinct from screenshots of the running app. Local evidence records the toolchain, commands, actual results, and limits of testing.</p>`},
   {id:'credits',title:'Design & credits',body:`
     <h1>Thoughtful references. Original work.</h1><p>Specter’s website draws on the calm editorial spacing of <a href="https://cursor.com">Cursor</a> and the product focus and documentation organization of <a href="https://ghostty.org/docs">Ghostty</a>. Neither company endorses Specter. Their trademarks, testimonials, product screenshots, and proprietary typefaces are not used as Specter assets.</p>
-    <p>The dawn landscape was created specifically for this website using the built-in image-generation tool. The mark, CSS artwork, and theme collection are original Specter assets. UI text uses system fonts.</p>
+    <p>The neutral studio backdrop, mark, orbital artwork, and theme collection are original Specter assets. An earlier generated dawn landscape is retained in the source archive but is no longer displayed. UI text uses system fonts.</p>
     <p>The engineering workflow adapts module boundaries, local evidence, isolated work, and clear writing from the reviewed <a href="https://github.com/michaelshimeles/skills">michaelshimeles/skills</a> repository. Greptile workflows and automatic uploads are excluded.</p>
     <p>Specter source is MIT licensed. Unicode data retains the Unicode license in the repository. See DESIGN.md and the research notes for the design system and reference review.</p>`}
 ];

@@ -6,7 +6,7 @@
 
 <code>macOS 14+</code> · <code>Apple silicon</code> · <code>Swift 6</code> · <code>MIT</code>
 
-[Build & run](#build-and-run) · [Handbook](docs/handbook.md) · [Architecture](#architecture) · [Compatibility](docs/compatibility.md) · [Contribute](CONTRIBUTING.md)
+[Download & install](docs/install.md) · [Handbook](docs/handbook.md) · [Architecture](#architecture) · [Compatibility](docs/compatibility.md) · [Contribute](CONTRIBUTING.md)
 
 **Development preview** — real shells, original themes, native workspaces.
 
@@ -33,6 +33,8 @@ This is a working development build, not a claim of complete terminal compatibil
 No server, account, cloud database, analytics or external AI service is required. Terminal output is not persisted.
 
 ## Build and run
+
+**New to Specter? Start with the [download and installation guide](docs/install.md).** It covers getting the source, setting up Xcode, building, installing in Applications, and updating. This preview is built from source; a ready-to-install DMG is not available yet.
 
 Use Xcode 26.3 / Swift 6.2.4 or a compatible Swift 6 toolchain with the macOS SDK and Metal tools installed. The deployment target is macOS 14. Source compatibility with older toolchains has not been tested.
 
@@ -94,7 +96,7 @@ Restoration is off by default. Enabling it saves window geometry, tab groups, sp
 
 ## Website and handbook
 
-The local website pairs an original landscape illustration with an interactive 130-theme browser and a thirteen-chapter handbook. The terminal pictured on the website is explicitly illustrative; the native app runs real PTYs.
+The local website pairs a neutral studio illustration with an interactive 130-theme browser and a thirteen-chapter handbook. GitHub and Download links in every page header lead to the source repository and installation guide. The terminal pictured on the website is explicitly illustrative; the native app runs real PTYs.
 
 ```sh
 scripts/serve-website.sh

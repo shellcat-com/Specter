@@ -25,7 +25,7 @@ function preview(theme) {
   command.textContent = '❯ swift build';
   const output = document.createElement('span');
   output.textContent = 'Build complete.';
-  output.style.color = theme.palette[2];
+  output.style.color = theme.foreground;
   const palette = document.createElement('span');
   palette.className = 'palette';
   palette.setAttribute('aria-hidden', 'true');
@@ -68,16 +68,16 @@ try {
       const hero = $('#hero-terminal');
       hero.style.setProperty('--terminal-bg', theme.background);
       hero.style.setProperty('--terminal-fg', theme.foreground);
-      hero.style.setProperty('--terminal-accent', theme.palette[2]);
+      hero.style.setProperty('--terminal-accent', theme.cursor);
       hero.style.setProperty('--terminal-cursor', theme.cursor);
       $('#hero-theme-name').textContent = theme.name;
       markSelected(theme);
     };
-    ['specter-night', 'alpine-dawn', 'fig-nocturne'].forEach(id => {
+    ['inkstone', 'porcelain', 'fig-nocturne'].forEach(id => {
       const theme = themes.find(item => item.id === id);
       $('#featured-themes').append(card(theme, choose));
     });
-    choose(themes[0]);
+    choose(themes.find(theme => theme.id === 'inkstone'));
   }
   if ($('#theme-catalog')) {
     let selected = themes.find(t => t.id === new URL(location.href).searchParams.get('theme')) || themes[0];

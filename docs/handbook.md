@@ -55,6 +55,8 @@ Choose Help → Specter Handbook in the app to open the included handbook in you
 
 Build Specter locally on an Apple silicon Mac running macOS 14 or later, with Xcode and a Swift 6 toolchain. This preview does not offer a signed, notarized public download or an automatic updater.
 
+[Download and installation guide on GitHub →](https://github.com/shellcat-com/Specter/blob/main/docs/install.md) — start here for source downloads, Xcode setup, installing, updating, and troubleshooting.
+
 #### Build from your checkout
 
 In the Specter repository, run:
@@ -391,7 +393,7 @@ The repository includes parser and Unicode tests, PTY lifecycle checks, Metal sn
 
 Specter’s website draws on the calm editorial spacing of [Cursor](https://cursor.com) and the product focus and documentation organization of [Ghostty](https://ghostty.org/docs). Neither company endorses Specter. Their trademarks, testimonials, product screenshots, and proprietary typefaces are not used as Specter assets.
 
-The dawn landscape was created specifically for this website using the built-in image-generation tool. The mark, CSS artwork, and theme collection are original Specter assets. UI text uses system fonts.
+The neutral studio backdrop, mark, orbital artwork, and theme collection are original Specter assets. An earlier generated dawn landscape is retained in the source archive but is no longer displayed. UI text uses system fonts.
 
 The engineering workflow adapts module boundaries, local evidence, isolated work, and clear writing from the reviewed [michaelshimeles/skills](https://github.com/michaelshimeles/skills) repository. Greptile workflows and automatic uploads are excluded.
 
