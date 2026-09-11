@@ -11,6 +11,22 @@ Base revision: `dca64f164ca6624822108da103bff7abb150e487`. Work was isolated on 
 - Fifteen unauthenticated Vercel page/resource downloads returned HTTP 200 and matched checkout files byte-for-byte, including the three HTML pages, JS/CSS, catalogs, one theme download, video, poster, and captions. Raw results: `.artifacts/durable-access/vercel-http.json`.
 - The live Vercel homepage rendered in the in-app browser with navigation, companion selectors, themes, installation instructions, and the versioned GitHub download link. This is a website exercise, not a fresh native app runtime test.
 
-## Boundaries
+## Published hosting and independent backup
+
+Deployment revision: `95cc1a5ebb30978b39f73fd91cf007d5f930e682`. Both the main-branch site check and [GitHub Pages deployment](https://github.com/shellcat-com/Specter/actions/runs/34572149202) succeeded. Vercel automatically promoted the same revision; its production alias reported Ready.
+
+The backup website at https://shellcat-com.github.io/Specter/ rendered successfully. Searching for Alpine Dawn produced one result; selecting it updated the preview and the correct `/Specter/themes/alpine-dawn.json` download link. Handbook chapter navigation and the installation guide rendered correctly under the `/Specter/` path.
+
+All 147 files in `website/` were downloaded from GitHub Pages without authentication and returned HTTP 200 with SHA-256 hashes matching source. This includes all 130 individual theme downloads and the full demo video. Raw results: `.artifacts/durable-access/pages-http.json`.
+
+`scripts/install.sh` installed a complete locally signed app outside the source checkout in the user's Applications folder. Signature verification passed. The installed bundle has no symlinks back into the checkout, includes its helper, handbook, and terminfo, and its executable links only system libraries and frameworks. This confirms packaging independence, not a fresh interactive runtime test. Log: `.artifacts/durable-access/install.log`.
+
+A GitHub mirror, complete Git bundle, downloaded preview ZIP, and checksums were saved outside the project directory. The bundle passed `git bundle verify`; a separate clone from the bundle passed `git fsck --full`. The mirror includes published branches and the preview tag. GitHub PR merge refs may appear as dangling objects in a normal clone; they are not corruption or missing source.
+
+`swift run -c release SpecterBench` completed its synthetic 20,000-line workload with 5,765 retained rows. It is not an interactive latency or comparative performance measurement. Log: `.artifacts/durable-access/bench.log`.
+
+`swift run -c release SpecterBench --fuzz 600` completed the full 600-second parser mutation run: seed `0x53504543544552`, 490,271 iterations, zero crashes. Log: `.artifacts/durable-access/fuzz.log`.
+
+## Recovery limits
 
 Restoration covers tracked source, resources, public media, documentation, and the published app attachment. It does not recover private preferences, shell history, live sessions, unpublished edits, or ignored raw captures. Signature verification does not establish notarization or clean-machine installation. An independent copy on the same Mac protects against deleting the project folder, not loss of the entire disk. Provider outages and deletion of remote accounts remain outside this guarantee.
