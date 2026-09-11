@@ -1,6 +1,6 @@
-<div align="center">
+https://github.com/user-attachments/assets/a4791657-5b7d-4264-bdde-ccff85eb13dc
 
-[Watch Specter in action](docs/media/specter-demo.mp4)
+<div align="center">
 
 **A native macOS terminal, drawn with Metal.**
 
@@ -9,6 +9,8 @@
 [Download & install](docs/install.md) · [Handbook](docs/handbook.md) · [Architecture](#architecture) · [Compatibility](docs/compatibility.md) · [Contribute](CONTRIBUTING.md)
 
 **Development preview** — real shells, original themes, native workspaces.
+
+[Demo description](docs/media/README.md) · [Download recording](docs/media/specter-demo.mp4)
 
 </div>
 
