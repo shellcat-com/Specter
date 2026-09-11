@@ -95,3 +95,11 @@ Do not claim “fastest,” universal compatibility, full Ghostty parity, measur
 Website chrome uses stone, charcoal, and restrained blue accents. Green panels, code blocks, focus rings, and workspace illustrations have been replaced. The original Daybreak artwork is retained as a source asset with the provenance above but is no longer displayed on the website. The hero uses an original CSS studio backdrop with concentric light and a neutral Inkstone terminal preview. Theme catalog previews preserve the real palette data so downloads remain accurate.
 
 Every page exposes GitHub and Download in the header, including compact layouts. Download opens `https://github.com/shellcat-com/Specter/blob/main/docs/install.md`; the source-build status is explicit rather than promising an available installer.
+
+## Companions and appearance menus — September 10, 2026
+
+Four original code-drawn companions occupy a 60-point native strip above the terminal: Specter (lavender ghost), Comet (warm star), Sprout (green seedling), and Pixel (mauve robot). The strip belongs to the window/tab and follows the focused pane’s profile. It never occupies terminal cells, intercepts terminal output, or delays shell startup. A 24 Hz SwiftUI timeline handles subtle floating and blinking; inactive/occluded windows pause it, as do Reduce Motion and the animation toggle. Off removes the strip. The Settings sample is a separate small preview.
+
+The Apple Terminal screenshots inform native profile/window/tab menus. TerminalColors (https://terminalcolors.com/, reviewed September 10, 2026) informs categorized theme discovery, previews, and All/Dark/Light filtering. These are design references only; no external palettes, site assets, screenshot content, or Apple profile files were imported. The existing 130 original Specter palettes exceed the requested 40 choices and retain stable IDs.
+
+The gallery’s visual color editor works on an isolated draft with Cancel and Save & Apply. It displays default text contrast, accepts native color pickers and explicit hex colors, and saves a uniquely identified custom palette. Shell menus expose Basic (system), Dark, Light, and saved profiles. Native macOS window chrome is retained; Windows-style chrome, translucent wallpaper, Apple Terminal configuration import, and process inspectors are not introduced by this milestone.

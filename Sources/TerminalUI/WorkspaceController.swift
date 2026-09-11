@@ -8,6 +8,8 @@ public final class WorkspaceController: NSWindowController, NSWindowDelegate, NS
 {
   public private(set) var terminals: [TerminalView] = []
   public private(set) var activeTerminal: TerminalView?
+  public var onThemes: (() -> Void)?
+  private let companionState: CompanionState
   public var onClosed: (() -> Void)?
   public var onLayoutChanged: (() -> Void)?
   public var horizontalSplit: Bool {
@@ -21,6 +23,7 @@ public final class WorkspaceController: NSWindowController, NSWindowDelegate, NS
   private let status = NSTextField(labelWithString: "Starting shell…")
   private let restartButton = NSButton(title: "Restart shell", target: nil, action: nil)
   public init(profile: Profile) {
+    companionState = CompanionState(profileID: profile.id)
     let window = NSWindow(
       contentRect: NSRect(x: 0, y: 0, width: 960, height: 640),
       styleMask: [.titled, .closable, .miniaturizable, .resizable], backing: .buffered, defer: false
@@ -44,6 +47,16 @@ public final class WorkspaceController: NSWindowController, NSWindowDelegate, NS
       root.topAnchor.constraint(equalTo: window.contentView!.topAnchor),
       root.bottomAnchor.constraint(equalTo: window.contentView!.bottomAnchor),
     ])
+    let companion = NSHostingView(
+      rootView: CompanionBar(
+        state: companionState,
+        showThemes: { [weak self] in
+          self?.onThemes?()
+        }))
+    // The strip may collapse, but must never impose SwiftUI's preferred/min/max size on the window.
+    companion.sizingOptions = [.intrinsicContentSize]
+    root.addArrangedSubview(companion)
+    companion.widthAnchor.constraint(equalTo: root.widthAnchor).isActive = true
     findBar.orientation = .horizontal
     findBar.spacing = 8
     findBar.edgeInsets = NSEdgeInsets(top: 8, left: 12, bottom: 8, right: 12)
@@ -98,6 +111,7 @@ public final class WorkspaceController: NSWindowController, NSWindowDelegate, NS
     }
     terminal.onFocus = { [weak self, weak terminal] in
       self?.activeTerminal = terminal
+      if let terminal { self?.companionState.profileID = terminal.profileID }
       if let terminal { self?.updateState(terminal.sessionState) }
     }
     terminal.onState = { [weak self, weak terminal] state in
@@ -106,6 +120,7 @@ public final class WorkspaceController: NSWindowController, NSWindowDelegate, NS
     terminals.append(terminal)
     split.addArrangedSubview(terminal)
     activeTerminal = terminal
+    companionState.profileID = terminal.profileID
     split.adjustSubviews()
     window?.makeFirstResponder(terminal)
     terminal.start()
@@ -171,21 +186,33 @@ public final class WorkspaceController: NSWindowController, NSWindowDelegate, NS
     _ = activeTerminal?.search(searchField.stringValue, direction: -1)
   }
   public func windowWillClose(_ notification: Notification) {
+    companionState.isActive = false
     for terminal in terminals { terminal.close() }
     onClosed?()
   }
   public func windowDidResize(_ notification: Notification) { onLayoutChanged?() }
   public func windowDidMove(_ notification: Notification) { onLayoutChanged?() }
   public func windowDidBecomeKey(_ notification: Notification) {
+    updateCompanionActivity()
     window?.makeFirstResponder(activeTerminal)
+  }
+  public func windowDidResignKey(_ notification: Notification) { updateCompanionActivity() }
+  public func windowDidChangeOcclusionState(_ notification: Notification) {
+    updateCompanionActivity()
+  }
+  private func updateCompanionActivity() {
+    companionState.isActive =
+      window?.isKeyWindow == true && window?.occlusionState.contains(.visible) == true
   }
 }
 
 @MainActor
 public final class SpecterApplication: NSObject, NSApplicationDelegate, NSMenuItemValidation,
+  NSMenuDelegate,
   @preconcurrency QLPreviewPanelDataSource
 {
   private var windows: [WorkspaceController] = []
+  private var appearanceMenuSignatures: [String: [String]] = [:]
   private var settingsController: NSWindowController?
   private var previewURL: NSURL?
   private var galleryController: NSWindowController?
@@ -266,9 +293,16 @@ public final class SpecterApplication: NSObject, NSApplicationDelegate, NSMenuIt
     controller.onClosed = { [weak self, weak controller] in
       self?.windows.removeAll { $0 === controller }
     }
+    controller.onThemes = { [weak self, weak controller] in
+      if let id = controller?.activeTerminal?.profileID { Preferences.shared.selectedProfile = id }
+      self?.themes(nil)
+    }
     controller.onLayoutChanged = { [weak self] in self?.persistLayouts() }
     windows.append(controller)
+    // New Window must stay separate even when macOS prefers tabs. New Tab joins explicitly below.
+    controller.window?.tabbingMode = .disallowed
     controller.showWindow(nil)
+    controller.window?.tabbingMode = .preferred
     return controller
   }
   @objc private func newWindow(_ sender: Any?) { createWindow(profile: Preferences.shared.active) }
@@ -276,6 +310,79 @@ public final class SpecterApplication: NSObject, NSApplicationDelegate, NSMenuIt
     let existing = current?.window
     let controller = createWindow(profile: Preferences.shared.active)
     if let existing, let window = controller.window {
+      existing.addTabbedWindow(window, ordered: .above)
+      window.makeKeyAndOrderFront(nil)
+    }
+  }
+  // Menus refresh on opening, so renamed profiles and imported palettes stay current.
+  public func menuNeedsUpdate(_ menu: NSMenu) {
+    guard
+      menu.title == "New Window with Profile" || menu.title == "New Tab with Profile"
+        || menu.title == "New Window with Theme" || menu.title == "New Tab with Theme"
+    else { return }
+    let preferences = Preferences.shared
+    let signature =
+      menu.title.contains("Profile")
+      ? preferences.profiles.map { $0.id.uuidString + ":" + $0.name }
+      : preferences.themes.map { $0.id + ":" + $0.name + ":" + String($0.isDark) }
+    guard appearanceMenuSignatures[menu.title] != signature else { return }
+    appearanceMenuSignatures[menu.title] = signature
+    menu.removeAllItems()
+    let tab = menu.title.contains("Tab")
+    func choice(_ title: String, _ value: String, in parent: NSMenu) {
+      let item = NSMenuItem(title: title, action: #selector(openAppearance(_:)), keyEquivalent: "")
+      item.target = self
+      item.representedObject = value
+      item.tag = tab ? 1 : 0
+      parent.addItem(item)
+    }
+    if menu.title.contains("Profile") {
+      for profile in Preferences.shared.profiles {
+        choice(profile.name, "profile:" + profile.id.uuidString, in: menu)
+      }
+    } else {
+      choice("Basic · Follow System", "theme:system", in: menu)
+      for dark in [true, false] {
+        let item = NSMenuItem(title: dark ? "Dark" : "Light", action: nil, keyEquivalent: "")
+        let group = NSMenu(title: item.title)
+        item.submenu = group
+        menu.addItem(item)
+        for theme in Preferences.shared.themes.filter({ $0.isDark == dark }) {
+          choice(theme.name, "theme:" + theme.id, in: group)
+        }
+      }
+    }
+  }
+  @objc private func openAppearance(_ sender: NSMenuItem) {
+    guard let value = sender.representedObject as? String else { return }
+    let preferences = Preferences.shared
+    let profile: Profile
+    if value.hasPrefix("profile:"), let id = UUID(uuidString: String(value.dropFirst(8))),
+      let saved = preferences.profiles.first(where: { $0.id == id })
+    {
+      profile = saved
+    } else if value.hasPrefix("theme:") {
+      let themeID = String(value.dropFirst(6))
+      // Copy only appearance into a fresh login-shell profile; palette selection never copies commands.
+      let name = preferences.themes.first(where: { $0.id == themeID })?.name ?? "Basic"
+      if let saved = preferences.profiles.first(where: { $0.name == name && $0.themeID == themeID })
+      {
+        profile = saved
+      } else {
+        var created = Profile()
+        created.name = name
+        created.themeID = themeID
+        created.mascot = preferences.active.mascot
+        created.animateMascot = preferences.active.animateMascot
+        preferences.profiles.append(created)
+        profile = created
+      }
+    } else {
+      return
+    }
+    let existing = current?.window
+    let controller = createWindow(profile: profile)
+    if sender.tag == 1, let existing, let window = controller.window {
       existing.addTabbedWindow(window, ordered: .above)
       window.makeKeyAndOrderFront(nil)
     }
@@ -303,6 +410,7 @@ public final class SpecterApplication: NSObject, NSApplicationDelegate, NSMenuIt
   }
   @objc private func themes(_ sender: Any?) {
     if let window = current?.window { auxiliaryReturnWindow = window }
+    if let id = current?.activeTerminal?.profileID { Preferences.shared.selectedProfile = id }
     if galleryController == nil {
       let window = NSWindow(
         contentViewController: NSHostingController(
@@ -426,6 +534,17 @@ public final class SpecterApplication: NSObject, NSApplicationDelegate, NSMenuIt
     let file = menu("Shell")
     add(file, "New Window", #selector(newWindow(_:)), "n", target: self)
     add(file, "New Tab", #selector(newTab(_:)), "t", target: self)
+    for title in [
+      "New Window with Profile", "New Tab with Profile", "New Window with Theme",
+      "New Tab with Theme",
+    ] {
+      let item = NSMenuItem(title: title, action: nil, keyEquivalent: "")
+      let submenu = NSMenu(title: title)
+      submenu.delegate = self
+      item.submenu = submenu
+      file.addItem(item)
+    }
+    file.addItem(.separator())
     add(file, "Split Right", #selector(splitVertical(_:)), "d", target: self)
     add(file, "Split Below", #selector(splitHorizontal(_:)), "d", [.command, .shift], target: self)
     add(file, "Export Performance Report…", #selector(exportPerformance(_:)), target: self)

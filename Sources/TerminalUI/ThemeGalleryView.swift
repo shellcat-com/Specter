@@ -7,6 +7,9 @@ public struct ThemeGalleryView: View {
   @ObservedObject private var preferences = Preferences.shared
   @Environment(\.dismiss) private var dismiss
   @AppStorage("favoriteThemeIDs") private var favoriteIDs = "[]"
+  @State private var editingTheme: Theme?
+  @State private var editingProfileID = UUID()
+  @Environment(\.colorScheme) private var colorScheme
   @State private var query = ""
   @State private var appearance = "All"
   @State private var favoritesOnly = false
@@ -96,6 +99,10 @@ public struct ThemeGalleryView: View {
         Text("\(filtered.count) \(filtered.count == 1 ? "theme" : "themes")").font(.caption)
           .foregroundStyle(.secondary)
         Spacer()
+        Button("Customize current…") {
+          editingProfileID = preferences.active.id
+          editingTheme = preferences.theme(for: preferences.active, dark: colorScheme == .dark)
+        }
         Button("Follow system appearance") {
           if let index = preferences.profiles.firstIndex(where: {
             $0.id == preferences.selectedProfile
@@ -105,10 +112,13 @@ public struct ThemeGalleryView: View {
         }
       }
     }.padding(24)
+      .sheet(item: $editingTheme) { theme in
+        ThemeEditorView(theme: theme, profileID: editingProfileID)
+      }
   }
 }
 
-private struct ThemePreview: View {
+struct ThemePreview: View {
   let theme: Theme
   private func color(_ hex: String) -> Color {
     let rgba = Theme.rgba(hex)

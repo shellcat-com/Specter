@@ -154,9 +154,23 @@ Open Specter → Theme Gallery, or press `⇧⌘T`. Search by name, choose Light
 
 Use “Follow system appearance” to select Specter Night and Specter Day automatically as your Mac’s appearance changes. Individual light/dark pair customization is not implemented.
 
+#### A companion for every terminal
+
+A slim strip above each terminal tab welcomes you with an original animated companion: Specter the ghost, Comet the star, Sprout, or Pixel the robot. Use the face menu in the strip to choose a design or pause animation. Settings → Companion offers the same controls and an Off option that removes the strip. Choices are saved per profile and apply to matching open and future terminals. In split layouts the strip follows the focused pane.
+
+Animation is decorative, outside shell output, and capped at 24 updates per second. It pauses in inactive or hidden terminal windows and respects macOS Reduce Motion. It never writes a banner or commands into your shell. Turning it off is remembered across launches.
+
+#### Open with a look
+
+Shell → New Window with Theme and New Tab with Theme offer Basic (follow system), Dark, and Light choices across all 130 palettes and your custom themes. A theme choice creates a named profile with the default login shell, or reuses a matching named profile. Shell → New Window with Profile and New Tab with Profile launch your saved setups. The normal ⌘N and ⌘T shortcuts continue to use the profile selected in Settings.
+
+#### Edit colors visually
+
+In the Theme Gallery, select a palette and choose Customize current. Change the name, background, text, cursor, selection, or any of sixteen ANSI colors with native color pickers or hexadecimal fields. The preview and default-text contrast update while you edit. Save & Apply creates a new custom palette; Cancel discards the draft. Built-in palettes remain available. Custom colors are not automatically contrast-corrected: aim for at least 7:1 default text contrast and check ANSI colors separately.
+
 #### Download, import, export
 
-Use the [web theme browser](../website/themes.html) to preview a palette and download its JSON. In Settings → Appearance, choose Import theme. Built-in themes already exist in the app; importing the identical file selects that theme. To author a custom variation, export a theme, give it a new unique ID and name, edit its colors, and import the file.
+Use the [web theme browser](../website/themes.html) to preview a palette and download its JSON. In Settings → Appearance, choose Import theme. Built-in themes already exist in the app; importing the identical file selects that theme. Use Customize current for a visual editor, or export a theme, give it a new unique ID and name, edit its colors, and import the file.
 
 Files are limited to 64 KiB. The schema requires version 1, an ID and name, background, foreground, cursor, selection, an isDark boolean, and exactly sixteen ANSI palette colors. Colors use six-digit `#RRGGBB` notation. A custom theme cannot replace a built-in ID with different colors.
 
@@ -260,7 +274,7 @@ Specter implements its own terminal core. Ghostty’s documentation is a useful 
 | Terminal basics | Cursor movement, erase, insert/delete, scroll regions, alternate screen, attributes, 16/256/RGB colors, application cursor keys and bracketed paste. |
 | Text | UTF-8 decoding, Unicode grapheme handling, wide cells, reflow, Core Text fallback and optional ligatures. Full bidi layout is unsupported. |
 | Native workspace | Windows, tabs, one-axis splits, session overview, profiles, search and selection. |
-| Appearance | 130 original themes, favorites, safe JSON import/export, system light/dark selection. |
+| Appearance | 130 original themes, favorites, visual palette editing, safe JSON import/export, system light/dark selection, and four optional animated companions. |
 | Shell integration | Real login shells; no automatic injection of prompt hooks, command navigation, or SSH wrappers. |
 | Graphics protocols | Kitty image protocol, sixel and image escape sequences are not implemented. |
 | Extended protocols | Kitty keyboard, synchronized-output mode, OSC 133 prompt navigation, and automatic appearance reports are not implemented. |
