@@ -1,6 +1,6 @@
 # Specter demo recording
 
-`specter-demo.mp4` is a 33-second screen-capture demo of the actual native Specter app. It replaces the static repository banner in the main README.
+`specter-demo.mp4` is a 32-second screen-capture demo of the actual native Specter app. It replaces the static repository banner in the main README.
 
 The recording shows synthetic shell output, ANSI colors, combining characters/CJK/emoji, scrollback search, independent split-pane PTYs, the 130-theme gallery, applying a theme, native tabs, and session navigation. No existing user session, private commands, clipboard contents, or credentials are included.
 
