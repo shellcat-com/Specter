@@ -9,7 +9,7 @@ body:
     id: environment
     attributes:
       label: Environment
-      description: macOS version, Mac architecture, Specter commit, shell, and affected terminal program.
+      description: macOS version, Mac model, Specter version or commit, shell, and affected program version. For build failures, include Xcode and Swift versions.
     validations:
       required: true
   - type: textarea

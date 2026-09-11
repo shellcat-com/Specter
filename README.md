@@ -6,7 +6,7 @@ https://github.com/user-attachments/assets/f05ce32a-0130-45da-b15b-b52eea2c67ad
 
 <code>macOS 14+</code> · <code>Apple silicon</code> · <code>Swift 6</code> · <code>MIT</code>
 
-[Download & install](docs/install.md) · [Handbook](docs/handbook.md) · [Architecture](#architecture) · [Compatibility](docs/compatibility.md) · [Contribute](CONTRIBUTING.md)
+[Download & install](docs/install.md) · [Documentation](docs/README.md) · [Handbook](docs/handbook.md) · [Architecture](#architecture) · [Compatibility](docs/compatibility.md) · [Contribute](CONTRIBUTING.md)
 
 **Development preview** — real shells, original themes, native workspaces.
 
@@ -66,6 +66,7 @@ For Xcode, open `Specter.xcodeproj` and select the Specter scheme. `project.yml`
 | Find / next match | ⌘F / ⌘G |
 | Settings | ⌘, |
 | Theme Gallery | ⇧⌘T |
+| Companions | ⇧⌘M |
 | Session Overview | ⇧⌘P |
 
 Hold Shift while selecting in an application that has enabled mouse reporting. Command-click a hyperlink to review its destination before opening it. Multiline/control-bearing paste requires confirmation.
@@ -98,8 +99,7 @@ Try the three independent animated previews on the [website source](website/inde
 
 Open Shell → New Window with Theme or New Tab with Theme for Basic, Dark, and Light designs. In the Theme Gallery (⇧⌘T), use Customize current to edit colors, preview contrast, and save a new palette. See the [appearance handbook](docs/handbook.md#themes) for profile behavior and customization details.
 
-
-Profiles live in the app's local preferences. Shell and working-directory changes apply to new sessions. Appearance changes apply to existing sessions using that profile. Empty shell/directory fields select the account's login shell and home directory.
+Profiles live in the app's local preferences. Shell and working-directory changes apply to new sessions. Appearance changes apply to existing sessions using that profile. Custom theme imports must be selected in the Theme picker after import. Empty shell/directory fields select the account's login shell and home directory.
 
 ![Native Specter theme gallery with original palettes](docs/images/theme-gallery.png)
 
@@ -107,7 +107,7 @@ Profiles live in the app's local preferences. Shell and working-directory change
 
 Themes use schema version 1: `id`, `name`, `background`, `foreground`, `cursor`, `selection`, sixteen `palette` colors and `isDark`. Colors are `#RRGGBB`. Use Settings to export a valid example. Imports are capped at 64 KiB and validated. Importing an identical built-in theme selects it; modified copies must use a new ID. The bundled themes are original; no third-party palette collection is included.
 
-Restoration is off by default. Enabling it saves window geometry, tab groups, split direction and profile IDs, then starts fresh shells on launch. It does not restore shell processes, command history, terminal output or inferred working directories. Splits currently use a single axis per window and do not restore divider ratios.
+Restoration is off by default. Enabling it saves window geometry, tab groups, split direction, profile IDs, and per-pane companion choices, then starts fresh shells on launch. It does not restore shell processes, command history, terminal output or inferred working directories. Splits currently use a single axis per tab and do not restore divider ratios.
 
 ## Website and handbook
 
@@ -119,7 +119,7 @@ scripts/serve-website.sh
 python3 scripts/check-website.py
 ```
 
-No JavaScript packages or third-party services are needed to serve the site. Theme data is shared with the app; regenerate it with `python3 scripts/generate-themes.py`. The web handbook is authored in `website/guides.js`; `node scripts/export-handbook.mjs` exports the [offline handbook](docs/handbook.md).
+No JavaScript packages or third-party services are needed to serve the site. Theme data is shared with the app; regenerate it with `python3 scripts/generate-themes.py`. The web handbook is authored in `website/guides.js`; `node scripts/export-handbook.mjs` exports both the [Markdown handbook](docs/handbook.md) and the app’s self-contained HTML handbook. Run `node scripts/export-handbook.mjs --check` to detect stale copies.
 
 Start with [build and installation](docs/handbook.md#install), [themes](docs/handbook.md#themes), [sessions](docs/handbook.md#sessions), and [compatibility](docs/compatibility.md). See the [companion validation record](docs/companion-validation.md) and [color editor capture](docs/images/theme-editor.png). See [DESIGN.md](DESIGN.md) for visual tokens, components, motion, accessibility and artwork provenance, and [the reference review](docs/reference-review.md) for the Ghostty/Cursor feature mapping.
 
@@ -146,7 +146,7 @@ See [reproducible measurements and test evidence](docs/validation.md). No unmeas
 - Spoken VoiceOver review, more input methods, external displays and macOS 14/15 runtime coverage.
 - Full keypad/modern keyboard protocols, arbitrary nested splits and divider-ratio restoration.
 - Complex-script shaping expansion and measured performance optimization.
-- Optional local AI assistance only after terminal reliability is established. Email integration remains a separate, opt-in idea outside the terminal MVP.
+- Distribution preparation after compatibility and accessibility release gates. No AI, email, accounts, or cloud services are part of the terminal MVP.
 
 ## Contributing and acknowledgements
 
