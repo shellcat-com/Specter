@@ -1,6 +1,6 @@
 <div align="center">
 
-![Specter — Your shell. Your colors. Your flow.](docs/images/repository-banner.svg)
+[Watch Specter in action](docs/media/specter-demo.mp4)
 
 **A native macOS terminal, drawn with Metal.**
 
