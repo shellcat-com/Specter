@@ -8,6 +8,8 @@
 
 **Development preview** — real shells, original themes, native workspaces.
 
+[Backup website](https://shellcat-com.github.io/Specter/) · [Access and recovery](docs/recovery.md)
+
 [Watch the 75-second walkthrough](https://specter-terminal-umber.vercel.app/#demo) · [Download recording](website/assets/specter-demo.mp4) · [Demo provenance](website/assets/DEMO.md)
 
 </div>

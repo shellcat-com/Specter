@@ -4,6 +4,10 @@ The public website is https://specter-terminal-umber.vercel.app. Vercel serves s
 
 ## Website updates
 
+A second copy is hosted at https://shellcat-com.github.io/Specter/. `.github/workflows/pages.yml` validates and publishes only `website/` after pushes to `main`, using GitHub Pages and its built-in Actions token. No local server or Vercel credential is required for this copy. Re-run **Publish backup website** from GitHub Actions on `main` if a deployment fails. Both sites use relative asset paths, including theme downloads and demo video.
+
+See [access and recovery](recovery.md) for durable links, restoring a deleted checkout, and the limits of repository backups.
+
 The Vercel project is `specter-terminal` in the existing `biswas07` Hobby scope, connected to `shellcat-com/Specter`. Production branch: `main`. The repository-root `vercel.json` runs `python3 scripts/check-website.py` and publishes only `website/`. A push to main is intended to deploy the site through the Git integration. Check the Vercel deployment status after each push.
 
 For a manual production deploy from a reviewed checkout:
