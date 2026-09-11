@@ -55,22 +55,41 @@ Choose Help → Specter Handbook in the app to open the included handbook in you
 
 Build Specter locally on an Apple silicon Mac running macOS 14 or later, with Xcode and a Swift 6 toolchain. This preview does not offer a signed, notarized public download or an automatic updater.
 
-[Download and installation guide on GitHub →](https://github.com/shellcat-com/Specter/blob/main/docs/install.md) — start here for source downloads, Xcode setup, installing, updating, and troubleshooting.
+[Download and installation guide on GitHub →](https://github.com/shellcat-com/Specter/blob/main/docs/install.md) — Xcode setup, source downloads, and troubleshooting.
 
-#### Build from your checkout
+#### Install from your terminal
 
-In the Specter repository, run:
+After setting up Xcode and Metal tools, run this in your current terminal:
+
+```sh
+mkdir -p "$HOME/Developer" && git clone https://github.com/shellcat-com/Specter.git "$HOME/Developer/Specter" && "$HOME/Developer/Specter/scripts/install.sh"
+```
+
+This downloads source into `~/Developer/Specter`, builds locally, verifies the app signature, and installs in `~/Applications`. No administrator password is needed. If the source folder exists, run `./scripts/install.sh` from that checkout instead.
+
+```sh
+open "$HOME/Applications/Specter.app"
+```
+
+#### Update your copy
+
+Save your work and quit Specter. From another terminal, update an unmodified checkout and reinstall:
+
+```sh
+cd ~/Developer/Specter
+git pull --ff-only && ./scripts/install.sh --replace
+```
+
+The previous app is kept alongside the new one as a dated backup. To roll back, quit Specter, move the new app aside, and rename the backup to Specter.app. The installer never changes your shell configuration. Use `--destination /Applications` for a shared installation if that folder is writable by your user; use the same destination when updating.
+
+#### Build without installing
 
 ```sh
 scripts/build-app.sh
 open .build/Specter.app
 ```
 
-The script compiles a release build, embeds the PTY helper, Metal resources, themes, and terminfo, and signs the bundle ad hoc for local use.
-
-#### Keep it close
-
-After trying the app, you can copy the complete `.build/Specter.app` bundle to your Applications folder and keep it in the Dock. Copy the whole bundle; the helper and resources are required. Rebuilding updates the build folder, so copy the rebuilt bundle again when you want to update an installed copy.
+The bundle includes the PTY helper, Metal resources, themes, terminfo, and offline handbook. Signing is local and ad hoc.
 
 #### Building in a synced folder
 

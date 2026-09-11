@@ -53,6 +53,16 @@ The script builds the Swift modules and C helper, compiles the bundled terminfo 
 
 For Xcode, open `Specter.xcodeproj` and select the Specter scheme. `project.yml` is the project source; regenerate it with `xcodegen generate` after changing project structure. The command-line build does not require XcodeGen.
 
+## Install from GitHub
+
+With Xcode and Metal tools installed on Apple silicon, run:
+
+```sh
+mkdir -p "$HOME/Developer" && git clone https://github.com/shellcat-com/Specter.git "$HOME/Developer/Specter" && "$HOME/Developer/Specter/scripts/install.sh"
+```
+
+This builds the developer preview and installs it in `~/Applications/Specter.app`. Open it with `open "$HOME/Applications/Specter.app"`. If you already have the checkout, run `./scripts/install.sh` there. Updates use `./scripts/install.sh --replace` and keep the previous app as a backup. See the [install guide](docs/install.md) for requirements and details. No prebuilt or notarized release is available yet.
+
 ## Keyboard workflow
 
 | Action | Shortcut |
