@@ -1,3 +1,15 @@
+const copyInstall = document.querySelector('#copy-install');
+if (copyInstall) {
+  copyInstall.addEventListener('click', async () => {
+    const status = document.querySelector('#install-copy-status');
+    try {
+      await navigator.clipboard.writeText(document.querySelector('#install-command').textContent);
+      status.textContent = 'Copied. Paste into your terminal after setting up Xcode.';
+    } catch {
+      status.textContent = 'Select and copy the command above. Your browser could not access the clipboard.';
+    }
+  });
+}
 const $ = (selector) => document.querySelector(selector);
 const sessionLabels = ['studio', 'server', 'tests', 'scripts', 'docs', 'build', 'sandbox', 'assets', 'notes', 'tools', 'review', 'scratch'];
 if ($('#session-grid')) {

@@ -6,3 +6,5 @@ swift test -j 4
 xcrun clang --analyze -Wall -Wextra -I Sources/PTYBridge/include Sources/PTYBridge/PTYBridge.c -o /dev/null
 xcrun clang --analyze -Wall -Wextra Sources/PTYLauncher/main.c -o /dev/null
 scripts/build-app.sh
+bash -n scripts/install.sh
+python3 scripts/test-install.py

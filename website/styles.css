@@ -15,3 +15,11 @@
 .companion-preview select{width:100%}.companion-preview canvas{display:block;width:144px;height:144px;image-rendering:pixelated;margin:12px auto}
 .companion-preview p{font-size:14px;line-height:1.6;color:#68686f;margin:0;min-height:68px}.companion-tip{color:#68686f;font-size:14px;margin-top:20px}
 @media(max-width:600px){.companion-previews{grid-template-columns:1fr}.companion-preview canvas{margin:0 auto}.companion-preview p{min-height:0}.companion-controls{align-items:flex-start;gap:18px}}
+
+.install-section{padding-top:70px;padding-bottom:40px;border-top:1px solid var(--line,#dedde1)}
+.install-section h2{font-size:clamp(32px,5vw,48px);font-weight:400;letter-spacing:-1.5px;margin:18px 0}
+.install-section p{color:#68686f;line-height:1.7;max-width:800px}
+.install-section pre{padding:24px;background:#27272f;color:#e8e7ef;border-radius:6px;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.8}
+.install-section code{font-family:ui-monospace,Menlo,monospace;font-size:13px}
+.install-section button{font:inherit;cursor:pointer}
+#install-copy-status{min-height:1.7em;margin:12px 0}

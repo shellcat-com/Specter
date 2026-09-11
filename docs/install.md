@@ -27,6 +27,29 @@ xcrun --find metal
 
 If a command fails, finish Xcode setup before continuing. The project does not require Homebrew, Node.js, Python, or XcodeGen just to build the app.
 
+## Quick install from GitHub
+
+After Xcode setup, paste this command into your existing terminal:
+
+```sh
+mkdir -p "$HOME/Developer" && git clone https://github.com/shellcat-com/Specter.git "$HOME/Developer/Specter" && "$HOME/Developer/Specter/scripts/install.sh"
+```
+
+This downloads the source into `~/Developer/Specter`, builds it on your Mac, verifies the local app signature, and installs it in `~/Applications/Specter.app`. It can take several minutes. It requires no administrator password and does not launch the app automatically.
+
+```sh
+open "$HOME/Applications/Specter.app"
+```
+
+If the source folder already exists, use your checkout instead:
+
+```sh
+cd ~/Developer/Specter
+./scripts/install.sh
+```
+
+An existing app is left intact unless you pass `--replace`; see the update instructions below. The installer only builds the checkout you downloaded. You can inspect `scripts/install.sh` and the source before running it, or use the manual steps below. This is a source installation, not a prebuilt binary, Homebrew package, or notarized release.
+
 ## 2. Download the source
 
 **With Git — easiest to update later:** run these commands in your current terminal. If `~/Developer/Specter` already exists, use your existing checkout or choose a different directory instead of cloning over it.
@@ -92,11 +115,19 @@ Try your usual editor, pager, SSH workflow, input method, and accessibility tool
 Save work and quit Specter. For an unmodified Git checkout:
 
 ```sh
-git pull --ff-only
-./scripts/build-app.sh
+git pull --ff-only && ./scripts/install.sh --replace
 ```
 
-Then replace the installed app with the new `.build/Specter.app` in Finder. If Git reports local changes or divergent history, preserve your edits and resolve them before updating; do not discard them just to install an update. ZIP users can download and extract a fresh source copy, build it, and replace the installed app. There is no automatic updater yet.
+The installer builds and verifies the new app before replacing the installed copy. It keeps the previous app beside it as `Specter.backup.<date-time>.<process-id>.app`. After checking the new version, you may move the backup to the Trash. To roll back, quit Specter, move the new app aside, and rename the backup to `Specter.app`. If Git reports local changes or divergent history, preserve your edits and resolve them before updating; do not discard them just to install an update. ZIP users can download and extract a fresh source copy and run `./scripts/install.sh --replace` from that folder. There is no automatic updater yet.
+
+To choose another installation folder, use the same destination for installation and updates:
+
+```sh
+./scripts/install.sh --destination /Applications
+./scripts/install.sh --destination /Applications --replace
+```
+
+The directory must be writable by your user. Do not run the installer with `sudo`; use the default `~/Applications` when the shared Applications folder is not writable. Quit all running Specter copies before installing or updating.
 
 ## Troubleshooting
 
@@ -106,6 +137,7 @@ Then replace the installed app with the new `.build/Specter.app` in Finder. If G
 | Metal compiler or toolchain is missing | Complete Xcode’s component installation. Read the error for any additional Metal toolchain component required by that Xcode version. |
 | `scripts/build-app.sh` or `Package.swift` cannot be found | Change into the extracted or cloned Specter directory first. |
 | Signing rejects a resource fork or Finder metadata | Move the source outside synced folders, or use the alternate output command below. |
+| Installer reports an installation lock | Let the other installation finish. If an installer was interrupted and none is running, remove only the empty `.specter-install.lock` directory in the destination, then retry. |
 | App opens but a profile cannot start a shell | In Settings, check the shell executable and starting directory. Empty fields use your login shell and home folder for new sessions. |
 | A terminal application renders incorrectly | Check [compatibility](compatibility.md) and [open an issue](https://github.com/shellcat-com/Specter/issues/new/choose) with a small synthetic reproduction and your OS/toolchain versions. Omit private terminal contents. |
 | macOS blocks a downloaded app | This guide builds locally; the project does not yet distribute a notarized installer. Verify the source and follow macOS’s displayed guidance. Do not disable system-wide protections. |
