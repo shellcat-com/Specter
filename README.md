@@ -14,7 +14,7 @@ https://github.com/user-attachments/assets/f05ce32a-0130-45da-b15b-b52eea2c67ad
 
 </div>
 
-![Specter running a real shell in its light theme](docs/images/terminal-light.png)
+![Specter running a real light-theme shell with the Pixel companion](docs/images/companion-light.png)
 
 Specter runs your login shell in a real pseudoterminal. Its Swift terminal engine parses bytes independently of the interface, Core Text handles glyphs and font fallback, and Metal draws the grid. Native tabs, split panes and keyboard workflows keep the terminal central.
 
@@ -26,7 +26,9 @@ This is a working development build, not a claim of complete terminal compatibil
 - Primary and alternate screens, scroll regions, text attributes, ANSI/256/RGB colors, Unicode 17 grapheme segmentation and emoji rendering.
 - Bounded scrollback, primary-screen reflow, selection, copy/paste and search across wrapped lines.
 - Native windows and tabs, horizontal or vertical split panes, profiles, fonts and cursor styles.
-- 130 original themes, a searchable native gallery with favorites, and validated JSON import/export.
+- 130 original themes, a searchable native gallery with favorites, a visual color editor, and validated JSON import/export.
+- Four original animated companions above the shell: Specter, Comet, Sprout, and Pixel. Saved per profile, with pause, Off, and Reduce Motion support.
+- Native menus to open windows and tabs with a saved profile or a Basic, Dark, or Light theme.
 - A searchable Session Overview for navigating more than ten live shells across tabs and windows.
 - IME composition, AppKit text accessibility, reduced-motion/high-contrast handling and explicit Secure Keyboard Entry.
 - Sanitized hyperlinks, protected paste, optional background bell notifications and explicit file previews.
@@ -86,6 +88,11 @@ Read [architecture decisions](docs/architecture.md), [terminal compatibility](do
 
 ## Configuration and themes
 
+Choose a companion from the face menu above the shell or in Settings → Companion. It appears in every new terminal using that profile and follows the focused pane in a split. Choose Off to reclaim the strip, or disable animation to keep it still. The strip never becomes shell output.
+
+Open Shell → New Window with Theme or New Tab with Theme for Basic, Dark, and Light designs. In the Theme Gallery (⇧⌘T), use Customize current to edit colors, preview contrast, and save a new palette. See the [appearance handbook](docs/handbook.md#themes) for profile behavior and customization details.
+
+
 Profiles live in the app's local preferences. Shell and working-directory changes apply to new sessions. Appearance changes apply to existing sessions using that profile. Empty shell/directory fields select the account's login shell and home directory.
 
 ![Native Specter theme gallery with original palettes](docs/images/theme-gallery.png)
@@ -108,7 +115,7 @@ python3 scripts/check-website.py
 
 No JavaScript packages or third-party services are needed to serve the site. Theme data is shared with the app; regenerate it with `python3 scripts/generate-themes.py`. The web handbook is authored in `website/guides.js`; `node scripts/export-handbook.mjs` exports the [offline handbook](docs/handbook.md).
 
-Start with [build and installation](docs/handbook.md#install), [themes](docs/handbook.md#themes), [sessions](docs/handbook.md#sessions), and [compatibility](docs/compatibility.md). See [DESIGN.md](DESIGN.md) for visual tokens, components, motion, accessibility and artwork provenance, and [the reference review](docs/reference-review.md) for the Ghostty/Cursor feature mapping.
+Start with [build and installation](docs/handbook.md#install), [themes](docs/handbook.md#themes), [sessions](docs/handbook.md#sessions), and [compatibility](docs/compatibility.md). See the [companion validation record](docs/companion-validation.md) and [color editor capture](docs/images/theme-editor.png). See [DESIGN.md](DESIGN.md) for visual tokens, components, motion, accessibility and artwork provenance, and [the reference review](docs/reference-review.md) for the Ghostty/Cursor feature mapping.
 
 The app’s Help → Specter Handbook opens a self-contained offline edition in your browser. A public website deployment and notarized app release remain separate approval steps. There is no promise of full Ghostty feature parity.
 

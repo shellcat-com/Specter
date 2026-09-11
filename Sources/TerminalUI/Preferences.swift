@@ -12,10 +12,13 @@ public struct Profile: Codable, Identifiable, Equatable {
   public var ligatures = false
   public var cursorStyle = "block"
   public var themeID = "system"
+  public var mascot: MascotStyle = .specter
+  public var animateMascot = true
   public var scrollback = 10_000
   public init() {}
   private enum CodingKeys: String, CodingKey {
     case id, name, shell, directory, fontName, fontSize, ligatures, cursorStyle, themeID, scrollback
+    case mascot, animateMascot
   }
   public init(from decoder: Decoder) throws {
     let c = try decoder.container(keyedBy: CodingKeys.self)
@@ -28,6 +31,10 @@ public struct Profile: Codable, Identifiable, Equatable {
     ligatures = try c.decodeIfPresent(Bool.self, forKey: .ligatures) ?? false
     cursorStyle = try c.decodeIfPresent(String.self, forKey: .cursorStyle) ?? "block"
     themeID = try c.decodeIfPresent(String.self, forKey: .themeID) ?? "system"
+    mascot =
+      (try c.decodeIfPresent(String.self, forKey: .mascot)).flatMap(MascotStyle.init(rawValue:))
+      ?? .specter
+    animateMascot = try c.decodeIfPresent(Bool.self, forKey: .animateMascot) ?? true
     scrollback = max(
       1000, min(100_000, try c.decodeIfPresent(Int.self, forKey: .scrollback) ?? 10_000))
   }
@@ -178,6 +185,24 @@ public struct SettingsView: View {
               Button("Import theme…") { preferences.importTheme() }
               Button("Export theme…") { preferences.exportTheme() }
             }
+          }
+          Section("Companion") {
+            HStack {
+              MascotView(
+                style: preferences.profiles[index].mascot,
+                animated: preferences.profiles[index].animateMascot
+              )
+              .frame(width: 64, height: 64)
+              Picker("Design", selection: $preferences.profiles[index].mascot) {
+                ForEach(MascotStyle.allCases) { Text($0.title).tag($0) }
+              }
+            }
+            Toggle("Animate companion", isOn: $preferences.profiles[index].animateMascot)
+              .disabled(preferences.profiles[index].mascot == .none)
+            Text(
+              "Appears above every new terminal. Reduce Motion keeps it still. Choose Off to hide the strip."
+            )
+            .font(.caption).foregroundStyle(.secondary)
           }
           Section("History and restoration") {
             Stepper(
