@@ -1,6 +1,6 @@
 # Specter mascot studies
 
-Twelve original pixel characters, now integrated into the native companion gallery and pickers. Each uses a 24 × 24 pixel canvas, three colors plus transparency, and twelve frames in each of three states: idle, working, and celebrate. Playback is eight frames per second. These replace the four earlier vector companions. The native default is Wisp; all twelve designs and all three decorative motions are available per profile.
+Twelve original pixel characters, now integrated into the native companion gallery and pickers. Each uses a 24 × 24 pixel canvas, three colors plus transparency, and twelve frames in each of three states: idle, working, and celebrate. Playback is eight frames per second. These replace the four earlier vector companions. The native default is Wisp; all twelve designs and all three decorative motions are available independently in each terminal.
 
 The reference is the compact character-cell silhouette shown in [Anthropic's Claude Code issue #24926](https://github.com/anthropics/claude-code/issues/24926), reviewed September 10, 2026. The design principles are a recognizable silhouette, oversized eyes, very few colors, and movement that survives a monospaced grid. No Claude artwork, source code, names, or animation assets were imported. All sprite drawings and frame transformations are authored in `generate.py`.
 
@@ -51,9 +51,9 @@ python3 design/mascots/validate.py
 
 ## Native integration boundary
 
-The selected design renders in the existing companion strip with pause, Off, per-profile persistence, inactive-window behavior, and macOS Reduce Motion support. The native gallery keeps the profile captured at opening. Animation stays outside the terminal grid and PTY data path. Busy and Celebrate are explicitly selected decorative motions, not inferred command status. Legacy Specter, Comet, Sprout, and Pixel values migrate to Wisp, Cinder, Moss, and Rover. See `docs/pixel-companion-validation.md` for native integration evidence.
+The selected design renders in the existing companion strip with pause, Off, per-terminal selection, optional layout persistence, inactive-window behavior, and macOS Reduce Motion support. The terminal gallery keeps the terminal captured at opening; the Settings gallery edits defaults for new terminals. Animation stays outside the terminal grid and PTY data path. Busy and Celebrate are explicitly selected decorative motions, not inferred command status. Legacy Specter, Comet, Sprout, and Pixel values migrate to Wisp, Cinder, Moss, and Rover. See `docs/pixel-companion-validation.md` for the initial integration and `docs/companion-sessions-validation.md` for independent-session evidence.
 
-The generator also writes `Sources/TerminalUI/Resources/Mascots.json`, packaged in `Specter_TerminalUI.bundle`. Native code validates its version, dimensions, frame counts, colors, and pixel alphabet before compiling paths.
+The generator also writes `website/mascots.json` and `Sources/TerminalUI/Resources/Mascots.json`, packaged in `Specter_TerminalUI.bundle`. Native code validates its version, dimensions, frame counts, colors, and pixel alphabet before compiling paths.
 
 ## Original study evidence (before native integration)
 

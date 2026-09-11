@@ -1,5 +1,7 @@
 # Twelve native pixel companions
 
+Historical record of the initial profile-based integration. See [independent terminal companions](companion-sessions-validation.md) for the current selection scope and later runtime checks.
+
 Validated September 10, 2026, on Apple silicon, macOS 26.3.1 (a), build 25D771280a, Apple Swift 6.2.4. Base revision `2a8a6b2`, branch `codex/mascot-integration`. The final revision is the commit containing this record. macOS 14 is a deployment target, not a hardware-tested claim.
 
 All twelve approved characters are native choices in the face menu, Settings, and a visual gallery. Wisp is the default. Idle, Busy, and Celebrate are explicit decorative motions, never inferred shell status. The gallery captures the target profile ID at opening.

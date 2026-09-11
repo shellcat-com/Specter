@@ -13,6 +13,7 @@ public final class TerminalView: NSView, @preconcurrency NSTextInputClient {
   public var onTitle: ((String) -> Void)?
   public var onState: ((SessionState) -> Void)?
   public var onFocus: (() -> Void)?
+  let companion: SessionCompanion
   public let profileID: UUID
   public private(set) var renderer: Renderer?
   private var metalView: MTKView?
@@ -34,6 +35,7 @@ public final class TerminalView: NSView, @preconcurrency NSTextInputClient {
   public override var acceptsFirstResponder: Bool { true }
   public init(profile: Profile) {
     profileID = profile.id
+    companion = SessionCompanion(profile: profile)
     super.init(frame: CGRect(x: 0, y: 0, width: 800, height: 500))
     wantsLayer = true
     composition.isHidden = true

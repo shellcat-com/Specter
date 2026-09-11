@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Original Specter sprite studies. No imported art or executable catalog data."""
 import json
+from html import escape
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -248,6 +249,24 @@ def main():
     resource = HERE.parents[1] / "Sources/TerminalUI/Resources/Mascots.json"
     resource.parent.mkdir(parents=True, exist_ok=True)
     resource.write_text(encoded)
+    (HERE.parents[1] / "website/mascots.json").write_text(encoded)
+    # Static, accessible GitHub catalog illustration; animation stays in the app and live previews.
+    svg = ['<svg xmlns="http://www.w3.org/2000/svg" width="960" height="588" viewBox="0 0 960 588" role="img" aria-labelledby="title desc">',
+           '<title id="title">Twelve Specter companions</title>',
+           '<desc id="desc">Original pixel character catalog, arranged in three rows. Static illustration, not an app screenshot.</desc>',
+           '<rect width="960" height="588" rx="16" fill="#191D25"/>',
+           '<g font-family="system-ui,sans-serif" fill="#EFEFF6"><text x="32" y="44" font-size="22">A little company. Twelve ways.</text>',
+           '<text x="32" y="71" font-size="13" fill="#B2B5C2">Choose independently in each terminal · Companions… or ⇧⌘M</text></g>']
+    for index, mascot in enumerate(catalog['mascots']):
+        x0, y0 = 24 + (index % 4) * 234, 94 + (index // 4) * 158
+        svg.append(f'<rect x="{x0}" y="{y0}" width="210" height="142" rx="8" fill="#242935"/>')
+        for y, row in enumerate(mascot['states']['idle'][0]):
+            for x, token in enumerate(row):
+                if token != '.':
+                    svg.append(f'<rect x="{x0+57+x*4}" y="{y0+5+y*4}" width="4" height="4" fill="{mascot["colors"][token]}"/>')
+        svg.append(f'<text x="{x0+105}" y="{y0+126}" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" fill="#EFEFF6">{escape(mascot["name"])}</text>')
+    svg.append('</svg>')
+    (HERE.parents[1] / 'docs/images/companions.svg').write_text('\n'.join(svg) + '\n')
 
 
 if __name__ == "__main__":

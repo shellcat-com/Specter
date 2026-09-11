@@ -156,11 +156,13 @@ Use “Follow system appearance” to select Specter Night and Specter Day autom
 
 #### A companion for every terminal
 
-Choose from twelve original pixel companions: Wisp, Moth, Kettle, Mimic, Orbit, Moss, Bytebat, Cinder, Jelly, Origami, Imp, and Rover. Wisp is the default. Open the face menu above the terminal for quick selection, or choose Browse companions… for the native visual gallery. Settings → Companion offers the same gallery, design picker, animation toggle, and Off option.
+Choose from twelve original pixel companions: Wisp, Moth, Kettle, Mimic, Orbit, Moss, Bytebat, Cinder, Jelly, Origami, Imp, and Rover. Wisp is the default. Click Companions… above the shell or press `⇧⌘M` to open the native visual gallery. The options menu beside it offers quick design, motion, and animation controls.
 
-Choose Idle, Busy, or Celebrate motion. These are decorative choices, not shell command status. Choices are saved per profile and apply to matching open and future terminals. The strip follows the focused pane in split layouts. An open gallery keeps the profile named in its header.
+Each terminal keeps its own companion, even when several terminals use the same profile. Open another window (`⌘N`), tab (`⌘T`), or split (`⌘D`) and choose a different character. In a split, the single strip follows the pane you focus. The gallery stays attached to the terminal that opened it. Session Overview (`⇧⌘P`) includes each terminal’s companion name.
 
-Animation runs at eight updates per second outside shell output. Pause preserves the current pose; inactive windows and hidden views stop playback, and macOS Reduce Motion uses a still pose. Off removes the strip. Existing Specter, Comet, Sprout, and Pixel selections migrate to Wisp, Cinder, Moss, and Rover, while preserving Off and the animation setting. To turn a companion back on, use Settings → Companion.
+Choose Idle, Busy, or Celebrate motion. These are decorative choices, not shell command status. Settings → Companion defaults for new terminals sets the initial choice for future terminals using that profile; existing terminals keep their own choices. If window restoration is enabled, each pane’s companion, motion, and animation setting are restored with fresh shells.
+
+Animation runs at eight updates per second outside shell output. Pause preserves the current pose; inactive terminal windows and hidden views stop playback, and macOS Reduce Motion uses a still pose. Off removes the strip. Press `⇧⌘M` or choose Specter → Companions… to bring it back. Existing Specter, Comet, Sprout, and Pixel defaults migrate to Wisp, Cinder, Moss, and Rover, preserving Off and the animation setting.
 
 #### Open with a look
 
@@ -250,7 +252,7 @@ Specter uses the native text input client for marked-text composition. Font fall
 
 ### Return to a familiar layout.
 
-Enable “Reopen window layouts with fresh shells” in Settings. Restoration stores window geometry, tab grouping, split orientation, and profile identifiers. It starts fresh shell processes on the next launch.
+Enable “Reopen window layouts with fresh shells” in Settings. Restoration stores window geometry, tab grouping, split orientation, profile identifiers, and each pane’s companion choice, motion, and animation setting. It starts fresh shell processes on the next launch.
 
 > Restoration does not resume running jobs or recover terminal output. It does not save commands, passwords, screen contents, or scrollback.
 

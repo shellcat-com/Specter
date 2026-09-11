@@ -39,7 +39,7 @@ def check_pty(mode):
                 if not chunk:
                     break
                 output.extend(chunk)
-            if mode != "normal" and not sent and time.monotonic() - start > 0.3:
+            if mode != "normal" and not sent and output.count(b"\x1b[H") >= 2:
                 process.send_signal(signal.SIGTERM if mode == "sigterm" else signal.SIGINT)
                 sent = True
         process.wait(timeout=2)

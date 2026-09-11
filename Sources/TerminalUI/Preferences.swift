@@ -199,7 +199,7 @@ public struct SettingsView: View {
               Button("Export theme…") { preferences.exportTheme() }
             }
           }
-          Section("Companion") {
+          Section("Companion defaults for new terminals") {
             HStack {
               MascotView(
                 style: preferences.profiles[index].mascot,
@@ -231,7 +231,7 @@ public struct SettingsView: View {
               of: bellNotifications
             ) { _, enabled in BellNotifications.setEnabled(enabled) }
             Text(
-              "Terminal output and commands are never saved. Restoration saves window layout and profile identifiers."
+              "Terminal output and commands are never saved. Restoration saves window layout, profile identifiers, and companion choices."
             ).font(.caption).foregroundStyle(.secondary)
           }
         }.formStyle(.grouped).frame(width: 470)

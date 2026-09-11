@@ -46,6 +46,11 @@ for match in re.findall(r'href="([^"]+)"', guides):
     if match.startswith('docs.html?guide='):
         assert match.split('=')[-1] in chapters, match
 
+mascots = json.loads((SITE / 'mascots.json').read_text())
+assert mascots == json.loads((ROOT / 'design/mascots/catalog.json').read_text())
+assert mascots == json.loads((ROOT / 'Sources/TerminalUI/Resources/Mascots.json').read_text())
+assert len(mascots['mascots']) == 12
+
 catalog = json.loads((SITE / 'themes.json').read_text())
 assert catalog == json.loads((ROOT / 'Sources/MetalTerminal/Themes/catalog.json').read_text())
 assert len(catalog) == len({t['id'] for t in catalog}) == 130
