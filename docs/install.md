@@ -125,4 +125,6 @@ Quit Specter and move its application bundle to the Trash. Local profile prefere
 
 ## Next steps
 
+[Watch a real Claude Code + DeepSeek session in Specter](claude-deepseek-demo.md), including a simple question, generated Python, and successful shell execution. Claude Code and provider access require separate setup.
+
 [Handbook](handbook.md) · [Themes](handbook.md#themes) · [Keyboard shortcuts](handbook.md#shortcuts) · [Report an issue](https://github.com/shellcat-com/Specter/issues/new/choose) · [Contribute](../CONTRIBUTING.md)
