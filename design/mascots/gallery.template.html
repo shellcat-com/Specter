@@ -1,0 +1,91 @@
+<div id="specter-mascot-studies">
+  <div class="viz-controls">
+    <label class="form-label">Motion <select class="form-select" id="sm-state"><option value="idle">Idle</option><option value="working">Working</option><option value="celebrate">Celebrate</option></select></label>
+    <button class="btn" type="button" id="sm-pause" aria-pressed="false">Pause animation</button>
+  </div>
+  <div class="sm-feature">
+    <svg id="sm-large" viewBox="0 0 24 24" role="img" aria-label="Wisp animation study" shape-rendering="crispEdges"></svg>
+    <div><strong id="sm-name">Wisp</strong><div id="sm-description" aria-live="polite"></div><span class="text-small" id="sm-gesture"></span></div>
+  </div>
+  <div id="sm-grid" class="viz-grid"></div>
+  <div class="text-small">12 original concepts · 8 frames/second · simulated activity states · app integration pending</div>
+</div>
+<style>
+  #specter-mascot-studies .sm-feature { display:flex; align-items:center; gap:24px; padding:16px 0; }
+  #specter-mascot-studies #sm-large { width:168px; height:168px; flex-shrink:0; }
+  #specter-mascot-studies .sm-sprite { display:block; width:96px; height:96px; margin:auto; }
+  #specter-mascot-studies #sm-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+  @media(max-width:440px) {
+    #specter-mascot-studies #sm-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    #specter-mascot-studies .sm-feature { gap:12px; }
+    #specter-mascot-studies #sm-large { width:108px; height:108px; }
+  }
+</style>
+<script>
+(() => {
+  const catalog = __CATALOG__;
+  const root = document.getElementById('specter-mascot-studies');
+  const grid = root.querySelector('#sm-grid');
+  const state = root.querySelector('#sm-state');
+  const pause = root.querySelector('#sm-pause');
+  const large = root.querySelector('#sm-large');
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  let selected = 0, tick = 0, paused = reduced.matches;
+  const svgNS = 'http://www.w3.org/2000/svg';
+  function draw(svg, mascot, index) {
+    const rows = mascot.states[state.value][index];
+    const fragment = document.createDocumentFragment();
+    const paths = {B:[],A:[],o:[]};
+    rows.forEach((row,y) => [...row].forEach((pixel,x) => {
+      if (pixel === '.') return;
+      paths[pixel].push(`M${x} ${y}h1v1h-1z`);
+    }));
+    Object.entries(paths).forEach(([pixel,commands]) => {
+      const path = document.createElementNS(svgNS,'path');
+      path.setAttribute('d',commands.join(''));
+      path.setAttribute('fill',mascot.colors[pixel]); fragment.appendChild(path);
+    });
+    svg.replaceChildren(fragment);
+  }
+  const sprites = catalog.mascots.map((mascot,index) => {
+    const button = document.createElement('button');
+    button.className = 'btn viz-tile'; button.type = 'button';
+    button.setAttribute('aria-label',mascot.name + ': ' + mascot.description);
+    const svg = document.createElementNS(svgNS,'svg');
+    svg.setAttribute('viewBox','0 0 24 24'); svg.setAttribute('class','sm-sprite');
+    svg.setAttribute('shape-rendering','crispEdges'); svg.setAttribute('aria-hidden','true');
+    const content = document.createElement('div');
+    const label = document.createElement('div'); label.textContent = mascot.name;
+    content.append(svg,label); button.append(content);
+    button.addEventListener('click',() => { selected = index; describe(); paint(); });
+    grid.append(button); return svg;
+  });
+  function describe() {
+    const m = catalog.mascots[selected];
+    root.querySelector('#sm-name').textContent = m.name;
+    root.querySelector('#sm-description').textContent = m.description;
+    root.querySelector('#sm-gesture').textContent = m.gesture;
+    large.setAttribute('aria-label',m.name + ': ' + state.value + ' animation study');
+    [...grid.children].forEach((b,i) => b.setAttribute('aria-pressed',String(i === selected)));
+  }
+  function paint() {
+    const frame = reduced.matches ? 0 : tick % 12;
+    sprites.forEach((svg,i) => draw(svg,catalog.mascots[i],frame));
+    draw(large,catalog.mascots[selected],frame);
+  }
+  function syncPause() {
+    pause.textContent = reduced.matches ? 'Reduce Motion enabled' : paused ? 'Play animation' : 'Pause animation';
+    pause.setAttribute('aria-pressed',String(paused || reduced.matches));
+    pause.disabled = reduced.matches;
+  }
+  pause.addEventListener('click',() => { paused = !paused; syncPause(); paint(); });
+  state.addEventListener('change',() => { tick = 0; describe(); paint(); });
+  reduced.addEventListener('change',() => { paused = reduced.matches; syncPause(); paint(); });
+  describe(); syncPause(); paint();
+  const timer = setInterval(() => {
+    if (!root.isConnected) { clearInterval(timer); return; }
+    if (paused || reduced.matches || document.hidden) return;
+    tick++; paint();
+  },1000/catalog.fps);
+})();
+</script>

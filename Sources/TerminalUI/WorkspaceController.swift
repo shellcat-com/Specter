@@ -23,7 +23,7 @@ public final class WorkspaceController: NSWindowController, NSWindowDelegate, NS
   private let status = NSTextField(labelWithString: "Starting shell…")
   private let restartButton = NSButton(title: "Restart shell", target: nil, action: nil)
   public init(profile: Profile) {
-    companionState = CompanionState(profileID: profile.id)
+    companionState = CompanionState()
     let window = NSWindow(
       contentRect: NSRect(x: 0, y: 0, width: 960, height: 640),
       styleMask: [.titled, .closable, .miniaturizable, .resizable], backing: .buffered, defer: false
@@ -111,16 +111,17 @@ public final class WorkspaceController: NSWindowController, NSWindowDelegate, NS
     }
     terminal.onFocus = { [weak self, weak terminal] in
       self?.activeTerminal = terminal
-      if let terminal { self?.companionState.profileID = terminal.profileID }
+      if let terminal { self?.companionState.session = terminal.companion }
       if let terminal { self?.updateState(terminal.sessionState) }
     }
     terminal.onState = { [weak self, weak terminal] state in
       if self?.activeTerminal === terminal { self?.updateState(state) }
     }
+    terminal.companion.onChange = { [weak self] in self?.onLayoutChanged?() }
     terminals.append(terminal)
     split.addArrangedSubview(terminal)
     activeTerminal = terminal
-    companionState.profileID = terminal.profileID
+    companionState.session = terminal.companion
     split.adjustSubviews()
     window?.makeFirstResponder(terminal)
     terminal.start()
@@ -166,6 +167,9 @@ public final class WorkspaceController: NSWindowController, NSWindowDelegate, NS
     }
   }
   @objc private func restart() { activeTerminal?.restart() }
+  public func showCompanions() {
+    companionState.gallery = activeTerminal?.companion
+  }
   public func showFind() {
     findBar.isHidden = false
     window?.makeFirstResponder(searchField)
@@ -223,6 +227,7 @@ public final class SpecterApplication: NSObject, NSApplicationDelegate, NSMenuIt
     let profileIDs: [UUID]
     var horizontal: Bool?
     var tabGroup: String?
+    var companions: [CompanionSelection]?
   }
   public override init() { super.init() }
   public func applicationDidFinishLaunching(_ notification: Notification) {
@@ -234,10 +239,18 @@ public final class SpecterApplication: NSObject, NSApplicationDelegate, NSMenuIt
     {
       var restoredGroups: [String: NSWindow] = [:]
       for record in saved.prefix(12) {
-        let profiles = record.profileIDs.compactMap { id in
-          Preferences.shared.profiles.first { $0.id == id }
+        let panes = record.profileIDs.enumerated().compactMap {
+          index, id -> (Profile, CompanionSelection?)? in
+          guard let profile = Preferences.shared.profiles.first(where: { $0.id == id }) else {
+            return nil
+          }
+          let selection = record.companions.flatMap { index < $0.count ? $0[index] : nil }
+          return (profile, selection)
         }
-        let controller = createWindow(profile: profiles.first ?? Preferences.shared.active)
+        let controller = createWindow(profile: panes.first?.0 ?? Preferences.shared.active)
+        if let selection = panes.first?.1 {
+          controller.activeTerminal?.companion.selection = selection
+        }
         controller.window?.setFrame(NSRectFromString(record.frame), display: true)
         controller.horizontalSplit = record.horizontal ?? false
         if let group = record.tabGroup, let window = controller.window {
@@ -247,7 +260,10 @@ public final class SpecterApplication: NSObject, NSApplicationDelegate, NSMenuIt
             restoredGroups[group] = window
           }
         }
-        for profile in profiles.dropFirst().prefix(7) { controller.addPane(profile: profile) }
+        for (profile, selection) in panes.dropFirst().prefix(7) {
+          controller.addPane(profile: profile)
+          if let selection { controller.activeTerminal?.companion.selection = selection }
+        }
       }
     } else {
       newWindow(nil)
@@ -267,7 +283,8 @@ public final class SpecterApplication: NSObject, NSApplicationDelegate, NSMenuIt
       groups[key] = group
       return SavedWindow(
         frame: NSStringFromRect(window.frame), profileIDs: controller.terminals.map(\.profileID),
-        horizontal: controller.horizontalSplit, tabGroup: group)
+        horizontal: controller.horizontalSplit, tabGroup: group,
+        companions: controller.terminals.map { $0.companion.selection })
     }
     if let data = try? JSONEncoder().encode(saved) {
       UserDefaults.standard.set(data, forKey: "windowLayouts")
@@ -373,6 +390,7 @@ public final class SpecterApplication: NSObject, NSApplicationDelegate, NSMenuIt
         created.name = name
         created.themeID = themeID
         created.mascot = preferences.active.mascot
+        created.mascotMotion = preferences.active.mascotMotion
         created.animateMascot = preferences.active.animateMascot
         preferences.profiles.append(created)
         profile = created
@@ -394,6 +412,7 @@ public final class SpecterApplication: NSObject, NSApplicationDelegate, NSMenuIt
   @objc private func find(_ sender: Any?) { current?.showFind() }
   @objc private func nextMatch(_ sender: Any?) { current?.nextMatch() }
   @objc private func secure(_ sender: Any?) { current?.activeTerminal?.toggleSecureInput() }
+  @objc private func companions(_ sender: Any?) { current?.showCompanions() }
   @objc private func settings(_ sender: Any?) {
     if settingsController == nil {
       let window = NSWindow(contentViewController: NSHostingController(rootView: SettingsView()))
@@ -435,7 +454,8 @@ public final class SpecterApplication: NSObject, NSApplicationDelegate, NSMenuIt
         return SessionEntry(
           id: ObjectIdentifier(terminal),
           name: "Session \(windowIndex + 1).\(paneIndex + 1) · \(profile?.name ?? "Terminal")",
-          detail: "\(controller.window?.title ?? "Specter") · Pane \(paneIndex + 1)",
+          detail:
+            "\(controller.window?.title ?? "Specter") · Pane \(paneIndex + 1) · \(terminal.companion.selection.style.title)",
           activate: { [weak self, weak controller, weak terminal] in
             self?.overviewController?.close()
             controller?.window?.makeKeyAndOrderFront(nil)
@@ -500,6 +520,7 @@ public final class SpecterApplication: NSObject, NSApplicationDelegate, NSMenuIt
     if menuItem.action == #selector(secure(_:)) {
       menuItem.state = current?.activeTerminal?.secureInputEnabled == true ? .on : .off
     }
+    if menuItem.action == #selector(companions(_:)) { return current?.activeTerminal != nil }
     return true
   }
   private func buildMenu() {
@@ -527,6 +548,7 @@ public final class SpecterApplication: NSObject, NSApplicationDelegate, NSMenuIt
     )
     add(app, "Settings…", #selector(settings(_:)), ",", target: self)
     add(app, "Theme Gallery…", #selector(themes(_:)), "t", [.command, .shift], target: self)
+    add(app, "Companions…", #selector(companions(_:)), "m", [.command, .shift], target: self)
     add(app, "Secure Keyboard Entry", #selector(secure(_:)), target: self)
     app.addItem(.separator())
     add(app, "Hide Specter", #selector(NSApplication.hide(_:)), "h", target: NSApp)

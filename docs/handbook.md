@@ -156,9 +156,13 @@ Use “Follow system appearance” to select Specter Night and Specter Day autom
 
 #### A companion for every terminal
 
-A slim strip above each terminal tab welcomes you with an original animated companion: Specter the ghost, Comet the star, Sprout, or Pixel the robot. Use the face menu in the strip to choose a design or pause animation. Settings → Companion offers the same controls and an Off option that removes the strip. Choices are saved per profile and apply to matching open and future terminals. In split layouts the strip follows the focused pane.
+Choose from twelve original pixel companions: Wisp, Moth, Kettle, Mimic, Orbit, Moss, Bytebat, Cinder, Jelly, Origami, Imp, and Rover. Wisp is the default. Click Companions… above the shell or press `⇧⌘M` to open the native visual gallery. The options menu beside it offers quick design, motion, and animation controls.
 
-Animation is decorative, outside shell output, and capped at 24 updates per second. It pauses in inactive or hidden terminal windows and respects macOS Reduce Motion. It never writes a banner or commands into your shell. Turning it off is remembered across launches.
+Each terminal keeps its own companion, even when several terminals use the same profile. Open another window (`⌘N`), tab (`⌘T`), or split (`⌘D`) and choose a different character. In a split, the single strip follows the pane you focus. The gallery stays attached to the terminal that opened it. Session Overview (`⇧⌘P`) includes each terminal’s companion name.
+
+Choose Idle, Busy, or Celebrate motion. These are decorative choices, not shell command status. Settings → Companion defaults for new terminals sets the initial choice for future terminals using that profile; existing terminals keep their own choices. If window restoration is enabled, each pane’s companion, motion, and animation setting are restored with fresh shells.
+
+Animation runs at eight updates per second outside shell output. Pause preserves the current pose; inactive terminal windows and hidden views stop playback, and macOS Reduce Motion uses a still pose. Off removes the strip. Press `⇧⌘M` or choose Specter → Companions… to bring it back. Existing Specter, Comet, Sprout, and Pixel defaults migrate to Wisp, Cinder, Moss, and Rover, preserving Off and the animation setting.
 
 #### Open with a look
 
@@ -248,7 +252,7 @@ Specter uses the native text input client for marked-text composition. Font fall
 
 ### Return to a familiar layout.
 
-Enable “Reopen window layouts with fresh shells” in Settings. Restoration stores window geometry, tab grouping, split orientation, and profile identifiers. It starts fresh shell processes on the next launch.
+Enable “Reopen window layouts with fresh shells” in Settings. Restoration stores window geometry, tab grouping, split orientation, profile identifiers, and each pane’s companion choice, motion, and animation setting. It starts fresh shell processes on the next launch.
 
 > Restoration does not resume running jobs or recover terminal output. It does not save commands, passwords, screen contents, or scrollback.
 
@@ -274,7 +278,7 @@ Specter implements its own terminal core. Ghostty’s documentation is a useful 
 | Terminal basics | Cursor movement, erase, insert/delete, scroll regions, alternate screen, attributes, 16/256/RGB colors, application cursor keys and bracketed paste. |
 | Text | UTF-8 decoding, Unicode grapheme handling, wide cells, reflow, Core Text fallback and optional ligatures. Full bidi layout is unsupported. |
 | Native workspace | Windows, tabs, one-axis splits, session overview, profiles, search and selection. |
-| Appearance | 130 original themes, favorites, visual palette editing, safe JSON import/export, system light/dark selection, and four optional animated companions. |
+| Appearance | 130 original themes, favorites, visual palette editing, safe JSON import/export, system light/dark selection, and twelve optional animated pixel companions. |
 | Shell integration | Real login shells; no automatic injection of prompt hooks, command navigation, or SSH wrappers. |
 | Graphics protocols | Kitty image protocol, sixel and image escape sequences are not implemented. |
 | Extended protocols | Kitty keyboard, synchronized-output mode, OSC 133 prompt navigation, and automatic appearance reports are not implemented. |

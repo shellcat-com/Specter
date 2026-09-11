@@ -103,3 +103,17 @@ Four original code-drawn companions occupy a 60-point native strip above the ter
 The Apple Terminal screenshots inform native profile/window/tab menus. TerminalColors (https://terminalcolors.com/, reviewed September 10, 2026) informs categorized theme discovery, previews, and All/Dark/Light filtering. These are design references only; no external palettes, site assets, screenshot content, or Apple profile files were imported. The existing 130 original Specter palettes exceed the requested 40 choices and retain stable IDs.
 
 The gallery’s visual color editor works on an isolated draft with Cancel and Save & Apply. It displays default text contrast, accepts native color pickers and explicit hex colors, and saves a uniquely identified custom palette. Shell menus expose Basic (system), Dark, Light, and saved profiles. Native macOS window chrome is retained; Windows-style chrome, translucent wallpaper, Apple Terminal configuration import, and process inspectors are not introduced by this milestone.
+
+## Pixel companions — September 10, 2026
+
+The approved twelve-character study replaces the four original vector companions. Wisp is the default; Moth, Kettle, Mimic, Orbit, Moss, Bytebat, Cinder, Jelly, Origami, Imp, and Rover are equally available. The native companion gallery uses static grid thumbnails and one animated selected preview. Quick pickers remain in the strip and Settings. The initial integration saved Idle/Busy/Celebrate and character choices per profile; the independent-terminal update below replaces that selection scope. Legacy Specter/Comet/Sprout/Pixel IDs migrate to Wisp/Cinder/Moss/Rover; Off remains Off.
+
+`design/mascots/generate.py` produces identical passive frame data for the native app, comparison gallery, and explicitly launched ANSI demo. The original Claude Code block-art reference and original sprite provenance are recorded in `design/mascots/README.md`. No reference artwork or source was imported.
+
+The native renderer validates the bounded resource once and caches three colored paths per frame. It draws crisp whole-device-pixel geometry on an eight-Hz SwiftUI timeline, separate from the terminal output path. Pause freezes the pose; inactive/hidden views do not accumulate animation time. Reduce Motion shows frame zero. Decorative motion is chosen by the user, never inferred by inspecting terminal contents or running processes. The strip remains 60 points tall and its gallery stays attached to the destination captured when opened.
+
+## Independent terminal companions — September 11, 2026
+
+Each TerminalView owns its companion choice, seeded from its profile on creation. The strip follows the focused pane; opening its gallery captures that terminal, including when Off collapses the strip. A labeled Companions… button and Specter → Companions… (⇧⌘M) provide direct discovery and recovery from Off. Settings now labels companion values as defaults for new terminals. Optional layout restoration includes each pane’s independent selection; no terminal contents are saved.
+
+The website shows three independently selectable character illustrations using the same generated frame catalog. Playback pauses when offscreen, hidden, manually paused, or reduced motion is requested. These previews do not change the native app or execute commands. No remote assets or animation libraries are used.

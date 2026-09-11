@@ -12,13 +12,14 @@ public struct Profile: Codable, Identifiable, Equatable {
   public var ligatures = false
   public var cursorStyle = "block"
   public var themeID = "system"
-  public var mascot: MascotStyle = .specter
+  public var mascot: MascotStyle = .wisp
+  public var mascotMotion: MascotMotion = .idle
   public var animateMascot = true
   public var scrollback = 10_000
   public init() {}
   private enum CodingKeys: String, CodingKey {
     case id, name, shell, directory, fontName, fontSize, ligatures, cursorStyle, themeID, scrollback
-    case mascot, animateMascot
+    case mascot, mascotMotion, animateMascot
   }
   public init(from decoder: Decoder) throws {
     let c = try decoder.container(keyedBy: CodingKeys.self)
@@ -31,9 +32,11 @@ public struct Profile: Codable, Identifiable, Equatable {
     ligatures = try c.decodeIfPresent(Bool.self, forKey: .ligatures) ?? false
     cursorStyle = try c.decodeIfPresent(String.self, forKey: .cursorStyle) ?? "block"
     themeID = try c.decodeIfPresent(String.self, forKey: .themeID) ?? "system"
-    mascot =
-      (try c.decodeIfPresent(String.self, forKey: .mascot)).flatMap(MascotStyle.init(rawValue:))
-      ?? .specter
+    mascot = MascotStyle.restored(from: try c.decodeIfPresent(String.self, forKey: .mascot))
+    mascotMotion =
+      (try c.decodeIfPresent(String.self, forKey: .mascotMotion)).flatMap(
+        MascotMotion.init(rawValue:))
+      ?? .idle
     animateMascot = try c.decodeIfPresent(Bool.self, forKey: .animateMascot) ?? true
     scrollback = max(
       1000, min(100_000, try c.decodeIfPresent(Int.self, forKey: .scrollback) ?? 10_000))
@@ -122,7 +125,17 @@ extension Notification.Name {
 }
 
 public struct SettingsView: View {
-  @State private var showingThemes = false
+  private enum Sheet: Identifiable {
+    case themes
+    case companions(UUID)
+    var id: String {
+      switch self {
+      case .themes: "themes"
+      case .companions(let id): "companions-" + id.uuidString
+      }
+    }
+  }
+  @State private var sheet: Sheet?
   @AppStorage("bellNotifications") private var bellNotifications = false
   @ObservedObject private var preferences = Preferences.shared
   public init() {}
@@ -181,15 +194,16 @@ public struct SettingsView: View {
               ForEach(preferences.themes) { Text($0.name).tag($0.id) }
             }
             HStack {
-              Button("Browse themes…") { showingThemes = true }
+              Button("Browse themes…") { sheet = .themes }
               Button("Import theme…") { preferences.importTheme() }
               Button("Export theme…") { preferences.exportTheme() }
             }
           }
-          Section("Companion") {
+          Section("Companion defaults for new terminals") {
             HStack {
               MascotView(
                 style: preferences.profiles[index].mascot,
+                motion: preferences.profiles[index].mascotMotion,
                 animated: preferences.profiles[index].animateMascot
               )
               .frame(width: 64, height: 64)
@@ -197,10 +211,14 @@ public struct SettingsView: View {
                 ForEach(MascotStyle.allCases) { Text($0.title).tag($0) }
               }
             }
+            Button("Browse companions…") { sheet = .companions(preferences.profiles[index].id) }
+            Picker("Motion", selection: $preferences.profiles[index].mascotMotion) {
+              ForEach(MascotMotion.allCases) { Text($0.title).tag($0) }
+            }.disabled(preferences.profiles[index].mascot == .none)
             Toggle("Animate companion", isOn: $preferences.profiles[index].animateMascot)
               .disabled(preferences.profiles[index].mascot == .none)
             Text(
-              "Appears above every new terminal. Reduce Motion keeps it still. Choose Off to hide the strip."
+              "Appears above the shell. Motion is decorative. Reduce Motion keeps it still; Off hides the strip."
             )
             .font(.caption).foregroundStyle(.secondary)
           }
@@ -213,14 +231,17 @@ public struct SettingsView: View {
               of: bellNotifications
             ) { _, enabled in BellNotifications.setEnabled(enabled) }
             Text(
-              "Terminal output and commands are never saved. Restoration saves window layout and profile identifiers."
+              "Terminal output and commands are never saved. Restoration saves window layout, profile identifiers, and companion choices."
             ).font(.caption).foregroundStyle(.secondary)
           }
         }.formStyle(.grouped).frame(width: 470)
       }
     }.frame(width: 640, height: 600)
-      .sheet(isPresented: $showingThemes) {
-        ThemeGalleryView().frame(width: 860, height: 650)
+      .sheet(item: $sheet) { destination in
+        switch destination {
+        case .themes: ThemeGalleryView().frame(width: 860, height: 650)
+        case .companions(let profileID): CompanionGalleryView(profileID: profileID)
+        }
       }
   }
 }

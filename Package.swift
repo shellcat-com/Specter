@@ -21,7 +21,8 @@ let package = Package(
       resources: [.copy("Shaders.metal"), .copy("Themes")]),
     .target(
       name: "TerminalUI",
-      dependencies: ["TerminalCore", "PTYSession", "MetalTerminal", "TextLayout"]),
+      dependencies: ["TerminalCore", "PTYSession", "MetalTerminal", "TextLayout"],
+      resources: [.copy("Resources/Mascots.json")]),
     .executableTarget(name: "SpecterApp", dependencies: ["TerminalUI"]),
     .executableTarget(name: "SpecterBench", dependencies: ["TerminalCore"]),
     .testTarget(
