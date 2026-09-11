@@ -18,6 +18,8 @@ Specter runs your login shell in a real pseudoterminal. Its Swift terminal engin
 
 This is a working development build, not a claim of complete terminal compatibility or production readiness. Runtime validation currently covers an M3 MacBook Air on macOS 26.3.1. See [compatibility and limitations](docs/compatibility.md) before relying on it for daily work.
 
+**Real terminal demo:** [Watch Claude Code with DeepSeek write and run Python in Specter](docs/claude-deepseek-demo.md). The guide includes the recording, reproduction steps, and the observed classic-renderer fallback.
+
 ## What works
 
 - Interactive login shells, resize propagation, foreground interruption and child cleanup.
