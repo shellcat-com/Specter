@@ -121,3 +121,7 @@ The website shows three independently selectable character illustrations using t
 ## Source installation — September 11, 2026
 
 The landing page includes a selectable GitHub source-install command and a native copy button with an accessible success/failure status. Requirements sit directly above it: developer preview, Apple silicon, macOS 14+ deployment target, full Xcode and Metal tools. The command builds locally and installs in the user’s Applications folder; it does not promise a prebuilt or notarized download. The web and offline installation guides describe the same installer, explicit replacement, backup, and rollback behavior. Publish these instructions only alongside the installer on GitHub main; the local branch alone does not make the command publicly available.
+
+## Public developer preview — September 11, 2026
+
+The public site adds a manually played 75-second actual-app walkthrough with a recording-derived poster, descriptive captions, and a written walkthrough. Music never autoplays. Download actions lead to an explicitly unnotarized tester ZIP; the Xcode source installer remains a separate option. Vercel serves the static site and video; GitHub Releases serves the versioned app and checksum. The terminal itself requires no hosted service.

@@ -1,0 +1,6 @@
+.artifacts
+.build
+.worktrees
+.git
+docs/media
+docs/images

@@ -20,8 +20,11 @@ class Page(HTMLParser):
             self.ids.add(a['id'])
         if tag == 'h1': self.headings.append(tag)
         if tag == 'a' and 'href' in a: self.links.append(a['href'])
-        if tag in ('img', 'script') and 'src' in a: self.resources.append(a['src'])
+        if tag in ('img', 'script', 'source', 'track') and 'src' in a: self.resources.append(a['src'])
         if tag == 'img': assert 'alt' in a, 'Image missing alt'
+        if tag == 'video':
+            assert 'controls' in a and 'autoplay' not in a, 'Video must use deliberate playback'
+            if 'poster' in a: self.resources.append(a['poster'])
         if tag == 'link' and a.get('rel') in ('stylesheet', 'icon'): self.resources.append(a['href'])
 
 pages = {p.name: Page(p.read_text()) for p in SITE.glob('*.html')}

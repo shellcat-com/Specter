@@ -1,16 +1,14 @@
-https://github.com/user-attachments/assets/f05ce32a-0130-45da-b15b-b52eea2c67ad
-
 <div align="center">
 
 **A native macOS terminal, drawn with Metal.**
 
 <code>macOS 14+</code> · <code>Apple silicon</code> · <code>Swift 6</code> · <code>MIT</code>
 
-[Download & install](docs/install.md) · [Handbook](docs/handbook.md) · [Architecture](#architecture) · [Compatibility](docs/compatibility.md) · [Contribute](CONTRIBUTING.md)
+[Website](https://specter-terminal-umber.vercel.app) · [Download & install](docs/install.md) · [Handbook](docs/handbook.md) · [Architecture](#architecture) · [Compatibility](docs/compatibility.md) · [Contribute](CONTRIBUTING.md)
 
 **Development preview** — real shells, original themes, native workspaces.
 
-[Demo description](docs/media/README.md) · [Download recording](docs/media/specter-demo.mp4)
+[Watch the 75-second walkthrough](https://specter-terminal-umber.vercel.app/#demo) · [Download recording](website/assets/specter-demo.mp4) · [Demo provenance](website/assets/DEMO.md)
 
 </div>
 
@@ -40,7 +38,7 @@ No server, account, cloud database, analytics or external AI service is required
 
 ## Build and run
 
-**New to Specter? Start with the [download and installation guide](docs/install.md).** It covers getting the source, setting up Xcode, building, installing in Applications, and updating. This preview is built from source; a ready-to-install DMG is not available yet.
+**New to Specter? Start with the [download and installation guide](docs/install.md).** It covers getting the source, setting up Xcode, building, installing in Applications, and updating. A prebuilt tester ZIP is available from [GitHub Releases](https://github.com/shellcat-com/Specter/releases/tag/v0.1.0-preview.1). It is ad-hoc signed and **not notarized**; macOS may block it. The source installer requires Xcode. There is no stable release or automatic updater yet.
 
 Use Xcode 26.3 / Swift 6.2.4 or a compatible Swift 6 toolchain with the macOS SDK and Metal tools installed. The deployment target is macOS 14. Source compatibility with older toolchains has not been tested.
 
@@ -121,7 +119,7 @@ Restoration is off by default. Enabling it saves window geometry, tab groups, sp
 
 ## Website and handbook
 
-The local website pairs a neutral studio illustration with an interactive 130-theme browser and a thirteen-chapter handbook. GitHub and Download links in every page header lead to the source repository and installation guide. The terminal pictured on the website is explicitly illustrative; the native app runs real PTYs.
+The public website pairs a neutral studio illustration with an interactive 130-theme browser and a thirteen-chapter handbook. GitHub and Download links in every page header lead to the source repository and installation guide. The terminal pictured on the website is explicitly illustrative; the native app runs real PTYs.
 
 ```sh
 scripts/serve-website.sh
@@ -133,7 +131,7 @@ No JavaScript packages or third-party services are needed to serve the site. The
 
 Start with [build and installation](docs/handbook.md#install), [themes](docs/handbook.md#themes), [sessions](docs/handbook.md#sessions), and [compatibility](docs/compatibility.md). See the [companion validation record](docs/companion-validation.md) and [color editor capture](docs/images/theme-editor.png). See [DESIGN.md](DESIGN.md) for visual tokens, components, motion, accessibility and artwork provenance, and [the reference review](docs/reference-review.md) for the Ghostty/Cursor feature mapping.
 
-The app’s Help → Specter Handbook opens a self-contained offline edition in your browser. A public website deployment and notarized app release remain separate approval steps. There is no promise of full Ghostty feature parity.
+The app’s Help → Specter Handbook opens a self-contained offline edition in your browser. The public website runs on Vercel; the downloadable tester ZIP is not notarized. See [hosting and release maintenance](docs/hosting.md). There is no promise of full Ghostty feature parity.
 
 ## Tests and measurements
 

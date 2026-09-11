@@ -2,9 +2,23 @@
 
 **Your shell. Your colors. Your Mac.**
 
-Specter is currently a **source-build developer preview** for Apple silicon. There is no ready-to-install DMG or notarized app download yet. The website’s Download button brings you here so you can get the source and build the app locally.
+Specter is a **developer preview for Apple silicon**. Choose the prebuilt ZIP (no Xcode needed) or the source installer below (full Xcode required).
 
-[Download source ZIP](https://github.com/shellcat-com/Specter/archive/refs/heads/main.zip) · [Browse the source](https://github.com/shellcat-com/Specter) · [Release page](https://github.com/shellcat-com/Specter/releases) · [Compatibility](compatibility.md)
+## Download the prebuilt preview
+
+[Download Specter 0.1.0-preview.1 for Apple silicon](https://github.com/shellcat-com/Specter/releases/download/v0.1.0-preview.1/Specter-0.1.0-preview.1-arm64.zip) · [Release notes and SHA-256 checksum](https://github.com/shellcat-com/Specter/releases/tag/v0.1.0-preview.1)
+
+1. Download the ZIP and `SHA256SUMS.txt` from that release. In the download folder, run `shasum -a 256 -c SHA256SUMS.txt` to check file integrity. This is not proof of publisher identity.
+2. Extract the ZIP, then move the complete **Specter.app** into Applications.
+3. Open Specter. **This tester build is ad-hoc signed, without Developer ID or Apple notarization. macOS may block it.** Read [Apple’s guidance for downloaded apps](https://support.apple.com/en-us/102445) and only make an app-specific exception if you trust the source. Do not disable system-wide protections. Building from reviewed source is another option.
+
+The deployment target is macOS 14+; runtime validation currently covers an M3 Mac on macOS 26.3.1. This is not a broadly validated stable release. No Intel build is provided.
+
+The app runs locally. You do not need a Specter account, a hosted server, or this website to remain open. Network commands and external AI tools need their own connections and accounts. The site and GitHub download remain available when the maintainer’s computer is off.
+
+Updates are manual: save work, quit Specter, keep a backup of your previous app, and replace it with the next release. The source installer below also supports safe replacement with `--replace`.
+
+[Download source ZIP](https://github.com/shellcat-com/Specter/archive/refs/heads/main.zip) · [Browse source](https://github.com/shellcat-com/Specter) · [Compatibility](compatibility.md)
 
 ## 1. Get your Mac ready
 
@@ -140,7 +154,7 @@ The directory must be writable by your user. Do not run the installer with `sudo
 | Installer reports an installation lock | Let the other installation finish. If an installer was interrupted and none is running, remove only the empty `.specter-install.lock` directory in the destination, then retry. |
 | App opens but a profile cannot start a shell | In Settings, check the shell executable and starting directory. Empty fields use your login shell and home folder for new sessions. |
 | A terminal application renders incorrectly | Check [compatibility](compatibility.md) and [open an issue](https://github.com/shellcat-com/Specter/issues/new/choose) with a small synthetic reproduction and your OS/toolchain versions. Omit private terminal contents. |
-| macOS blocks a downloaded app | This guide builds locally; the project does not yet distribute a notarized installer. Verify the source and follow macOS’s displayed guidance. Do not disable system-wide protections. |
+| macOS blocks a downloaded app | The prebuilt tester ZIP is not notarized; the source route builds locally. Verify the source and follow macOS’s displayed guidance. Do not disable system-wide protections. |
 
 To package outside a synced checkout:
 

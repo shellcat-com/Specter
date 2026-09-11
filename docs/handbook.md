@@ -3,7 +3,7 @@
 Generated from `website/guides.js` with `node scripts/export-handbook.mjs`.
 
 - [Welcome to Specter](#overview)
-- [Build & install](#install)
+- [Download & install](#install)
 - [Tabs, splits & sessions](#sessions)
 - [Themes & appearance](#themes)
 - [Profiles & configuration](#profiles)
@@ -49,13 +49,21 @@ Choose Help → Specter Handbook in the app to open the included handbook in you
 
 <a id="install"></a>
 
-## Build & install
+## Download & install
 
 ### Up and running.
 
-Build Specter locally on an Apple silicon Mac running macOS 14 or later, with Xcode and a Swift 6 toolchain. This preview does not offer a signed, notarized public download or an automatic updater.
+Download the prebuilt developer preview for an Apple silicon Mac, or build from source with full Xcode, Swift 6, and Metal tools. macOS 14 is the deployment target; runtime testing covers an M3 Mac on macOS 26.3.1. There is no automatic updater.
 
 [Download and installation guide on GitHub →](https://github.com/shellcat-com/Specter/blob/main/docs/install.md) — Xcode setup, source downloads, and troubleshooting.
+
+#### Download the app
+
+[Get the preview ZIP and SHA-256 checksum on GitHub](https://github.com/shellcat-com/Specter/releases/tag/v0.1.0-preview.1). Extract it and move Specter.app into Applications. No Xcode is needed for this package.
+
+> This tester build is signed ad hoc, without Developer ID or Apple notarization. macOS may block it. Check the release and checksum, then follow [Apple’s guidance for downloaded apps](https://support.apple.com/en-us/102445) if you decide to trust it. Do not disable system protections. A checksum verifies file integrity, not publisher identity. The source build below is another option.
+
+Specter runs locally and needs no hosted Specter server or account. Internet tools use their own connections. To update a ZIP installation, save your work, quit Specter, and replace the app with a newer downloaded version. Keep your old copy if you want to roll back.
 
 #### Install from your terminal
 
@@ -302,7 +310,7 @@ Specter implements its own terminal core. Ghostty’s documentation is a useful 
 | Graphics protocols | Kitty image protocol, sixel and image escape sequences are not implemented. |
 | Extended protocols | Kitty keyboard, synchronized-output mode, OSC 133 prompt navigation, and automatic appearance reports are not implemented. |
 | Customization | Native settings; no Ghostty config compatibility, arbitrary shaders, terminal wallpapers, global quick terminal, or AppleScript dictionary. |
-| Distribution | Local ad-hoc build; no public notarized release or auto-updater. |
+| Distribution | Ad-hoc developer preview ZIP and source installer; no notarized release or auto-updater. |
 
 #### Before making it your main terminal
 
@@ -368,7 +376,7 @@ Profiles and themes are stored in preferences. Optional restoration stores layou
 
 #### This website
 
-The site uses local assets and scripts, has no analytics or account system, and makes no third-party requests. Theme downloads contain only static palette JSON. Search text is not sent to a server.
+The site serves its own assets and video from Vercel, with no added analytics or account system. Vercel handles ordinary web requests; downloads and source links go to GitHub. Theme files contain static palette JSON. Theme and documentation searches run in your browser; their text is not sent to a server.
 
 ---
 
