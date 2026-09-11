@@ -14,3 +14,11 @@ Base `2692fb7`; source installer milestone `95a1b11` carried into isolated branc
 ## Limits
 
 Native runtime evidence remains the actual source-installer and companion-session exercises documented in their validation reports (M3, macOS 26.3.1). This milestone does not establish clean-machine Gatekeeper installation, macOS 14/15 compatibility, notarization, or stable release readiness. Video generation is accelerated; external AI CLIs are not built into Specter.
+
+## Published result
+
+Release source revision: `8c980f64d28cbd636f15131ce4825f0174bf072c`. GitHub main and the public-preview branch were pushed without force; both GitHub site-check runs passed. The linked Vercel project automatically built and promoted main on the existing Hobby plan. Its production URL is https://specter-terminal-umber.vercel.app; an unauthenticated HTTP request returned 200.
+
+GitHub prerelease `v0.1.0-preview.1` contains the 599,003-byte ZIP and SHA256SUMS.txt. ZIP SHA-256: `e747fa33bb37301b25401c6ccf1f88ac5731b1d5e96c17e8843e75587c0862f7`. The extracted app passed signature verification and its two executable files matched the built bundle.
+
+Independent unauthenticated downloads of the published video, app ZIP, and main-branch installer each returned HTTP 200 and matched their local SHA-256 hashes. Public browser playback advanced past 31 seconds, reported a 74.7-second duration with readyState 4 and no media error, and paused successfully. The public installation chapter rendered the ZIP, checksum, source command, and notarization limitations. Hosting and downloads do not depend on the local preview server.
