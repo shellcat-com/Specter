@@ -1,7 +1,5 @@
 # Download and install Specter
 
-**Your shell. Your colors. Your Mac.**
-
 Specter is currently a **source-build developer preview** for Apple silicon. There is no ready-to-install DMG or notarized app download yet. The website’s Download button brings you here so you can get the source and build the app locally.
 
 [Download source ZIP](https://github.com/shellcat-com/Specter/archive/refs/heads/main.zip) · [Browse the source](https://github.com/shellcat-com/Specter) · [Release page](https://github.com/shellcat-com/Specter/releases) · [Compatibility](compatibility.md)
@@ -77,6 +75,7 @@ stty size
 | Start here | Shortcut |
 | --- | --- |
 | Choose from 130 themes | ⇧⌘T |
+| Choose, pause, or hide a companion | ⇧⌘M |
 | Open Settings for fonts, profiles, and shell settings | ⌘, |
 | Open another tab | ⌘T |
 | Split right / below | ⌘D / ⇧⌘D |
@@ -121,7 +120,9 @@ Copy that complete bundle into Applications to keep it; temporary folders are no
 
 ## Uninstall
 
-Quit Specter and move its application bundle to the Trash. Local profile preferences are separate from the app bundle. Your shell configuration, project files, and other terminals are not removed.
+Quit Specter and move its application bundle to the Trash. Profiles, custom themes, favorites, and optional layout metadata remain in the macOS preferences domain `app.specter.terminal`, separate from the app bundle. Your shell configuration, project files, and other terminals are not removed.
+
+For input, rendering, theme, companion, restoration, and reporting help, see [Troubleshooting](handbook.md#troubleshooting).
 
 ## Next steps
 

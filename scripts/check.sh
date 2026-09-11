@@ -1,6 +1,9 @@
 #!/bin/bash
 set -euo pipefail
 cd "$(dirname "$0")/.."
+node scripts/export-handbook.mjs --check
+python3 scripts/check-website.py
+python3 scripts/check-docs.py
 xcrun swift-format lint --strict --recursive Sources Tests Package.swift
 swift test -j 4
 xcrun clang --analyze -Wall -Wextra -I Sources/PTYBridge/include Sources/PTYBridge/PTYBridge.c -o /dev/null

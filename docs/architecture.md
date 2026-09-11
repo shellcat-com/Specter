@@ -6,7 +6,7 @@ A standalone C helper owns shell lifecycle. Swift uses posix_spawn to start it. 
 
 Support target: macOS 14+, arm64. Local execution may use ad-hoc signing. No distribution signing or publication is authorized.
 
-The planned milestones are foundation, working terminal, native tabs/splits, profiles/themes, metadata restoration/integration, then measured compatibility/performance expansion. AI and email integrations are deferred.
+The current implementation includes the terminal engine, native tabs and splits, profiles and themes, independent companions, and optional metadata restoration. Next work centers on measured compatibility, accessibility, and performance expansion. AI, email, accounts, and cloud services are outside the terminal MVP.
 
 ## Implementation details
 
@@ -19,4 +19,4 @@ The planned milestones are foundation, working terminal, native tabs/splits, pro
 
 ## Discovered regressions
 
-Live top testing exposed incorrect G1 designation activating line drawing; separate G0/G1 designation and shift state fixed it, with a regression fixture. Split testing exposed stale drawable scaling; explicit backing-pixel sizing and frame scheduling fixed it. A shifted-pane hit-test regression now has a native view test. The initial disk-full failure was recovered by removing the regenerable Xcode module cache, preserving projects and personal files.
+Live top testing exposed incorrect G1 designation activating line drawing; separate G0/G1 designation and shift state fixed it, with a regression fixture. Split testing exposed stale drawable scaling; explicit backing-pixel sizing and frame scheduling fixed it. A shifted-pane hit-test regression now has a native view test.

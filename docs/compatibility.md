@@ -21,8 +21,8 @@ Known limits:
 - Unicode width is Specter's documented policy, not a guarantee that every program's wcwidth tables agree. Ambiguous characters use one cell. The official Unicode 17 GraphemeBreakTest corpus passes; visual glyph availability depends on installed fonts and macOS.
 - Programming ligatures cover common operator sequences in fonts that supply those ligatures. They do not change cell widths. General complex-script run shaping and bidirectional layout need broader visual conformance work.
 - Alternate-screen resize uses grid semantics. Saved primary contents are normalized when returning from an alternate screen that was resized. This edge case needs broader editor regression coverage.
-- Splits share one axis per window; arbitrary nested split trees and saved divider ratios are not supported.
-- Restoration preserves window frames, tab groups, split direction and profile identifiers. It starts new login shells using profile directories, not the last directory inferred from terminal output. No terminal output is saved.
+- Splits share one axis per tab; arbitrary nested split trees and saved divider ratios are not supported.
+- Restoration preserves window frames, tab groups, split direction, profile identifiers, and each pane’s companion choice, motion, and animation setting. On launch it reads at most twelve window/tab records with eight panes each; it does not restore divider ratios. It starts new login shells using profile directories, not the last directory inferred from terminal output. No terminal output is saved.
 - AppKit text accessibility, ranges, selection exposure and IME paths are implemented. End-to-end spoken VoiceOver review and additional input-method testing remain release gates.
 - Runtime validation currently covers Apple M3 and macOS 26.3.1. macOS 14/15, other GPUs and external display configurations are unverified.
 

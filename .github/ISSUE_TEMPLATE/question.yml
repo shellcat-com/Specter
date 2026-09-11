@@ -1,0 +1,28 @@
+name: Usage question
+description: Ask about a Specter workflow or unclear documentation.
+title: "question: "
+body:
+  - type: markdown
+    attributes:
+      value: Read the handbook and search existing issues first. Use synthetic examples and omit credentials, private paths, and real terminal transcripts. Report security concerns through private vulnerability reporting.
+  - type: textarea
+    id: task
+    attributes:
+      label: What are you trying to do?
+      description: Describe the result you want and where you are getting stuck.
+    validations:
+      required: true
+  - type: textarea
+    id: tried
+    attributes:
+      label: What have you tried or read?
+      description: Include the handbook chapter or menu involved and any relevant error using synthetic text.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Specter version or source commit, macOS version, and relevant shell or program version.
+    validations:
+      required: true
