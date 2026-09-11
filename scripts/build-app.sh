@@ -7,6 +7,7 @@ APP="${SPECTER_APP_OUTPUT:-$PWD/.build/Specter.app}"
 mkdir -p "$APP/Contents/MacOS" "$APP/Contents/Resources/terminfo"
 cp "$BIN/Specter" "$BIN/SpecterPTY" "$APP/Contents/MacOS/"
 cp -R "$BIN/Specter_MetalTerminal.bundle" "$APP/Contents/Resources/"
+cp -R "$BIN/Specter_TerminalUI.bundle" "$APP/Contents/Resources/"
 cp Resources/Handbook.html "$APP/Contents/Resources/Handbook.html"
 tic -x -o "$APP/Contents/Resources/terminfo" Resources/specter.terminfo
 cat > "$APP/Contents/Info.plist" <<'PLIST'

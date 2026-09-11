@@ -14,7 +14,7 @@ https://github.com/user-attachments/assets/f05ce32a-0130-45da-b15b-b52eea2c67ad
 
 </div>
 
-![Specter running a real light-theme shell with the Pixel companion](docs/images/companion-light.png)
+![Earlier Specter build running a real light-theme shell with the original Pixel companion](docs/images/companion-light.png)
 
 Specter runs your login shell in a real pseudoterminal. Its Swift terminal engine parses bytes independently of the interface, Core Text handles glyphs and font fallback, and Metal draws the grid. Native tabs, split panes and keyboard workflows keep the terminal central.
 
@@ -27,7 +27,7 @@ This is a working development build, not a claim of complete terminal compatibil
 - Bounded scrollback, primary-screen reflow, selection, copy/paste and search across wrapped lines.
 - Native windows and tabs, horizontal or vertical split panes, profiles, fonts and cursor styles.
 - 130 original themes, a searchable native gallery with favorites, a visual color editor, and validated JSON import/export.
-- Four original animated companions above the shell: Specter, Comet, Sprout, and Pixel. Saved per profile, with pause, Off, and Reduce Motion support.
+- Twelve original animated pixel companions above the shell, with a native visual gallery and Idle, Busy, and Celebrate motion. Saved per profile, with pause, Off, and Reduce Motion support.
 - Native menus to open windows and tabs with a saved profile or a Basic, Dark, or Light theme.
 - A searchable Session Overview for navigating more than ten live shells across tabs and windows.
 - IME composition, AppKit text accessibility, reduced-motion/high-contrast handling and explicit Secure Keyboard Entry.
@@ -88,7 +88,7 @@ Read [architecture decisions](docs/architecture.md), [terminal compatibility](do
 
 ## Configuration and themes
 
-Choose a companion from the face menu above the shell or in Settings → Companion. It appears in every new terminal using that profile and follows the focused pane in a split. Choose Off to reclaim the strip, or disable animation to keep it still. The strip never becomes shell output.
+Choose any of the twelve companions from the face menu above the shell or in Settings → Companion. Open Browse companions… to compare their silhouettes and preview motion. Wisp is the default; motion choices are decorative and do not report shell status. It appears in every new terminal using that profile and follows the focused pane in a split. Choose Off to reclaim the strip, or disable animation to keep it still. The strip never becomes shell output.
 
 Open Shell → New Window with Theme or New Tab with Theme for Basic, Dark, and Light designs. In the Theme Gallery (⇧⌘T), use Customize current to edit colors, preview contrast, and save a new palette. See the [appearance handbook](docs/handbook.md#themes) for profile behavior and customization details.
 

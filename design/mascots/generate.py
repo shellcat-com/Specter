@@ -243,7 +243,11 @@ def main():
             "states": {state: [frame(study, state, t) for t in range(12)]
                        for state in ("idle", "working", "celebrate")},
         })
-    (HERE / "catalog.json").write_text(json.dumps(catalog, separators=(",", ":")) + "\n")
+    encoded = json.dumps(catalog, separators=(",", ":")) + "\n"
+    (HERE / "catalog.json").write_text(encoded)
+    resource = HERE.parents[1] / "Sources/TerminalUI/Resources/Mascots.json"
+    resource.parent.mkdir(parents=True, exist_ok=True)
+    resource.write_text(encoded)
 
 
 if __name__ == "__main__":

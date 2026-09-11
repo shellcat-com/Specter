@@ -43,12 +43,13 @@ struct NativeTests {
       var profile = Profile()
       profile.mascot = style
       profile.animateMascot = false
+      profile.mascotMotion = .celebrate
       let restored = try JSONDecoder().decode(Profile.self, from: JSONEncoder().encode(profile))
       #expect(restored == profile)
     }
     let unknown = try JSONDecoder().decode(
       Profile.self, from: Data("{\"mascot\":\"future-design\"}".utf8))
-    #expect(unknown.mascot == .specter)
+    #expect(unknown.mascot == .wisp)
   }
   @Test func customContrastAndColorValidation() {
     var theme = Theme.builtins[0]
@@ -66,7 +67,7 @@ struct NativeTests {
     let profile = try JSONDecoder().decode(Profile.self, from: data)
     #expect(profile.name == "Legacy")
     #expect(profile.fontSize == 40)
-    #expect(profile.mascot == .specter)
+    #expect(profile.mascot == .wisp)
     #expect(profile.animateMascot)
     #expect(!profile.ligatures)
     #expect(profile.scrollback == 10_000)

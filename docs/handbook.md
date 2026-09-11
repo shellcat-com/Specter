@@ -156,9 +156,11 @@ Use “Follow system appearance” to select Specter Night and Specter Day autom
 
 #### A companion for every terminal
 
-A slim strip above each terminal tab welcomes you with an original animated companion: Specter the ghost, Comet the star, Sprout, or Pixel the robot. Use the face menu in the strip to choose a design or pause animation. Settings → Companion offers the same controls and an Off option that removes the strip. Choices are saved per profile and apply to matching open and future terminals. In split layouts the strip follows the focused pane.
+Choose from twelve original pixel companions: Wisp, Moth, Kettle, Mimic, Orbit, Moss, Bytebat, Cinder, Jelly, Origami, Imp, and Rover. Wisp is the default. Open the face menu above the terminal for quick selection, or choose Browse companions… for the native visual gallery. Settings → Companion offers the same gallery, design picker, animation toggle, and Off option.
 
-Animation is decorative, outside shell output, and capped at 24 updates per second. It pauses in inactive or hidden terminal windows and respects macOS Reduce Motion. It never writes a banner or commands into your shell. Turning it off is remembered across launches.
+Choose Idle, Busy, or Celebrate motion. These are decorative choices, not shell command status. Choices are saved per profile and apply to matching open and future terminals. The strip follows the focused pane in split layouts. An open gallery keeps the profile named in its header.
+
+Animation runs at eight updates per second outside shell output. Pause preserves the current pose; inactive windows and hidden views stop playback, and macOS Reduce Motion uses a still pose. Off removes the strip. Existing Specter, Comet, Sprout, and Pixel selections migrate to Wisp, Cinder, Moss, and Rover, while preserving Off and the animation setting. To turn a companion back on, use Settings → Companion.
 
 #### Open with a look
 
@@ -274,7 +276,7 @@ Specter implements its own terminal core. Ghostty’s documentation is a useful 
 | Terminal basics | Cursor movement, erase, insert/delete, scroll regions, alternate screen, attributes, 16/256/RGB colors, application cursor keys and bracketed paste. |
 | Text | UTF-8 decoding, Unicode grapheme handling, wide cells, reflow, Core Text fallback and optional ligatures. Full bidi layout is unsupported. |
 | Native workspace | Windows, tabs, one-axis splits, session overview, profiles, search and selection. |
-| Appearance | 130 original themes, favorites, visual palette editing, safe JSON import/export, system light/dark selection, and four optional animated companions. |
+| Appearance | 130 original themes, favorites, visual palette editing, safe JSON import/export, system light/dark selection, and twelve optional animated pixel companions. |
 | Shell integration | Real login shells; no automatic injection of prompt hooks, command navigation, or SSH wrappers. |
 | Graphics protocols | Kitty image protocol, sixel and image escape sequences are not implemented. |
 | Extended protocols | Kitty keyboard, synchronized-output mode, OSC 133 prompt navigation, and automatic appearance reports are not implemented. |

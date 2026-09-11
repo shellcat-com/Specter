@@ -373,6 +373,7 @@ public final class SpecterApplication: NSObject, NSApplicationDelegate, NSMenuIt
         created.name = name
         created.themeID = themeID
         created.mascot = preferences.active.mascot
+        created.mascotMotion = preferences.active.mascotMotion
         created.animateMascot = preferences.active.animateMascot
         preferences.profiles.append(created)
         profile = created
